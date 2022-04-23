@@ -1,0 +1,99 @@
+@import url("reset.css"); /*import reset*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+    color: grey;
+    background-color: lightgrey;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+}
+
+#students {
+    display:inline-block;
+    flex-direction:column;
+    margin-left: 1em;
+    width: 100%;
+}
+
+#students p{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    position: relative;
+    margin-left: 11em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+}
+
+#students h1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 7em;
+    margin-bottom: 0.5em;
+    color: black;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container{
+    background-color: white;
+    width: 55%;
+    min-height: 400px;
+    max-height: 600px;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin: 5em auto;
+    border-radius: 1em;
+    box-shadow: grey 0px 4px 4px;
+    position: relative;
+}
+
+#icon {
+    
+    font-size: 3em;
+    color: gray;
+    position: absolute;
+    margin-left: 14.5em; 
+    margin-top: -0.47em; 
+}
+
+button{
+    color: gray;
+    background-color: white;
+    border: none;
+}
+
+.student{
+    margin-left: -1em;
+    border-bottom: 1px solid lightgray;
+    padding: 1em;
+}
+
+img {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 4em;
+    border: solid 1px grey;
+    margin-left: 1em;
+    justify-self: center;
+    border: solid 1px gray;
+}
+
+input {
+    border: none;
+    border-bottom: solid 1px lightgray;
+    width: 96%;
+    margin-left: 0.5em;
+    font-size: 1.5em;
+    color: gray;
+    
+}
+
+input[type=text]{
+    justify-content: center;
+    padding: 0.6em 0.2em;
+}
+

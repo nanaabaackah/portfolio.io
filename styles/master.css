@@ -1,0 +1,273 @@
+@import url("reset.css"); /*import reset*/
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+
+
+:root{
+    --dark: #201801;
+    --back: #fff;
+    --border: #c99423;
+    --other: #968700;
+    --light: #f1ebac;
+    --black: #0c0c0c;
+
+    color: #201801;
+    background-color: #fff;
+    background-color: var(--back);
+    color: var(--dark);
+    /*font-family: 'Bree Serif', serif;*/
+    font-family: 'Space Mono', monospace;
+    
+}
+
+body{
+    width: 100%;
+    min-height: 100vh; /*fill page vertically, but still get bigger*/
+    min-width: 100vw; /*fille page horizontally, but still get bigger*/
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+}
+
+/**********************************************/
+/*                Nav Styles                  */
+/**********************************************/
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+}
+
+header nav li{
+    margin-right: 2em;
+}
+
+header nav a,
+header nav a:visited {
+    text-decoration: none;
+    color: var(--dark);
+    display: block;
+    border-bottom: var(--border) solid 3px;
+    padding: 1em;
+}
+
+header nav a:hover{
+    background-color: var(--dark);
+    color: var(--light);
+    
+}
+
+header nav a:active{
+    border: var(--border) solid 2px;
+    background-color: var(--dark);
+}
+
+/**********************************************/
+/*               Main Styles                  */
+/**********************************************/
+
+main {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.grid main{
+    align-items: flex-start;
+    margin-left: 15em;
+}
+
+#description h1{
+    font-family: 'Space Mono', monospace;
+    font-size: 4em;
+    color: var(--dark);
+    border: var(--dark) 3px solid;
+    margin-top: 0.5em;
+    padding: 1em;
+}
+
+#description h2, h3, h4,
+#description a{
+    text-align: center;
+}
+
+#description h2{
+    margin-top: 1.5em;
+    font-weight: bolder;
+}
+
+button {
+    background-color: var(--back);
+    color: var(--dark);
+    border: none;
+    display: block;
+    padding: 1em;
+    font-size: larger;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+#group{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+}
+#group div{
+    margin-bottom: 2em;
+}
+#group, 
+#group2{
+    width: 45%;
+}
+
+#group h2,
+#group2 h2{
+    width: 80%;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+#group2{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 30em;
+    
+}
+
+#group a,
+#group2 a{
+    color: blue;
+    width: fit-content;
+}
+
+em {
+    text-decoration: var(--border) underline;
+    font-weight: bolder;
+}
+
+#group p,
+#group2 p{
+    margin-bottom: 0.5em;
+}
+#group img{
+    margin-top: 1em;
+    width: 23em;
+    margin-bottom: 0.5em;
+}
+
+#group2 img{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 22em;
+}
+
+
+/**********************************************/
+/*               Dark Mode Styles             */
+/**********************************************/
+
+.dark-mode {
+    color: #f1ebac;
+    background-color: #000;
+    background-color: var(--black);
+    color: var(--light);
+}
+.dark-mode nav a,
+.dark-mode nav a:visited{
+
+    color: var(--light);
+
+    border-bottom: var(--back) solid 3px;
+
+}
+
+.dark-mode #description h1{
+    color: var(--light);
+    border: var(--light) 3px solid;
+}
+
+.dark-mode button{
+    background-color: var(--black);
+    color: var(--light);
+}
+
+.dark-mode nav a:hover{
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.dark-mode footer{
+
+    background-color: var(--dark);
+
+}
+
+.dark-mode footer a, 
+.dark-mode footer a:visited{
+
+    text-decoration: none;
+    color: var(--light);
+}
+
+/**********************************************/
+/*               Footer Styles                */
+/**********************************************/
+
+footer{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+    justify-items: baseline;
+    background-color: var(--light);
+    padding: 2em;
+    margin-top: 1em;
+}
+
+footer a, 
+footer a:visited{
+    margin: 0.5em;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+@media screen and (max-width: 600px) {
+    .sectionc nav{
+        float: none;
+        display: block;
+        text-align: left;
+        flex-direction: row;
+    }
+    .sectionc .searchbox-container {
+      float: none;
+    }
+    .sectionc .searchbox input[type=text], .sectionc .searchbox-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .sectionc input[type=text] {
+      border: 1px solid #ccc;  
+    }
+}
