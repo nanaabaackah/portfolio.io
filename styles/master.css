@@ -29,6 +29,13 @@ body{
     display: flex;
     flex-direction: column;
     margin-bottom: auto;
+    
+}
+
+/*.home {
+    background-image: url("/website/imgs/background.PNG");
+    background-size: auto ;
+    background-repeat: no-repeat;
 }
 
 /**********************************************/
@@ -86,6 +93,11 @@ main {
 .grid main{
     align-items: flex-start;
     margin-left: 15em;
+}
+
+#description{
+    background-color: transparent;
+    
 }
 
 #description h1{
@@ -236,7 +248,7 @@ footer{
     flex-direction: column; 
     align-items: center;  
     justify-items: baseline;
-    background-color: var(--light);
+    background-color:#f1ebacaf;
     padding: 2em;
     margin-top: 1em;
 }
