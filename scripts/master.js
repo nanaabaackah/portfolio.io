@@ -1,7 +1,7 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", () => {
-    let element = document.getElementById("dark-mode");
+    /*let element = document.getElementById("dark-mode");
     element.addEventListener("click", () => {
         
         const dark = document.body;
@@ -9,6 +9,6 @@ window.addEventListener("DOMContentLoaded", () => {
         
         console.log("Dark Mode Activated");
 
-    });
+    });*/
 
 })

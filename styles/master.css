@@ -2,6 +2,8 @@
 /* import google font */
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 
 
 
@@ -16,7 +18,7 @@
     color: #201801;
     background-color: #fff;
     background-color: var(--back);
-    color: var(--dark);
+    color: var(--back);
     /*font-family: 'Bree Serif', serif;*/
     font-family: 'Space Mono', monospace;
     
@@ -32,10 +34,16 @@ body{
     
 }
 
-/*.home {
-    background-image: url("/website/imgs/background.PNG");
-    background-size: auto ;
+.home {
+    background-image: url("/imgs/background2.PNG");
+    background-size: cover;
     background-repeat: no-repeat;
+}
+
+.grid {
+    background-image: url("/imgs/background3.PNG");
+    background-size: contain;
+    background-repeat: repeat;
 }
 
 /**********************************************/
@@ -44,9 +52,22 @@ body{
 
 header{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    margin: 1em;
+    margin-top: 2em;
+    background-color: transparent;
+    justify-content: center;
+}
+
+header i{
+    font-size: 2em;
+    color: var(--black);
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    margin: 2em;
 }
 
 header nav ul {
@@ -57,26 +78,26 @@ header nav ul {
 
 header nav li{
     margin-right: 2em;
+    text-align: center;
+    margin-left: 6em;
+    border-bottom: solid white 0.5px;
 }
 
 header nav a,
 header nav a:visited {
     text-decoration: none;
-    color: var(--dark);
     display: block;
-    border-bottom: var(--border) solid 3px;
     padding: 1em;
+    color: var(--back);
 }
 
 header nav a:hover{
-    background-color: var(--dark);
+    background-color: #0077ff;
     color: var(--light);
-    
 }
 
 header nav a:active{
-    border: var(--border) solid 2px;
-    background-color: var(--dark);
+    border: white solid 2px;
 }
 
 /**********************************************/
@@ -92,34 +113,54 @@ main {
 
 .grid main{
     align-items: flex-start;
-    margin-left: 15em;
+    margin-left: 9em;
 }
 
 #description{
     background-color: transparent;
+    margin: 8em;
+    margin-top: 12em;
+    margin-bottom: 1em;
     
 }
 
 #description h1{
-    font-family: 'Space Mono', monospace;
-    font-size: 4em;
-    color: var(--dark);
-    border: var(--dark) 3px solid;
-    margin-top: 0.5em;
-    padding: 1em;
+    font-family: 'Bad Script', cursive;
+    font-size: 2.5em;
+    color: var(--back);
+    margin-left: 5em;
+    text-align: center;
+    
 }
 
-#description h2, h3, h4,
-#description a{
-    text-align: center;
+#description em{
+    text-decoration: none;
+    font-family: 'Satisfy', cursive;
+    font-size: 1.5em;
 }
 
 #description h2{
-    margin-top: 1.5em;
-    font-weight: bolder;
+    
+    text-align: center;
+    font-size: 2.5em;
+    margin-left: 5em;
+    font-family: 'Bad Script', cursive;
 }
 
-button {
+#links{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12em;
+}
+
+#links a{
+    margin-top: 0.5em;
+    color: var(--black);
+    font-weight: bold;
+}
+
+/*button {
     background-color: var(--back);
     color: var(--dark);
     border: none;
@@ -128,7 +169,7 @@ button {
     font-size: larger;
     flex-direction: column;
     align-items: center;
-}
+}*/
 
 .grid{
     display: flex;
@@ -146,7 +187,7 @@ button {
 }
 #group, 
 #group2{
-    width: 45%;
+    width: 35%;
 }
 
 #group h2,
@@ -160,13 +201,13 @@ button {
     display: flex;
     flex-direction: column;
     position: absolute;
-    margin-left: 30em;
+    margin-left: 45em;
     
 }
 
 #group a,
 #group2 a{
-    color: blue;
+    color: white;
     width: fit-content;
 }
 
