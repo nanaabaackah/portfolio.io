@@ -15,9 +15,7 @@
     --light: #f1ebac;
     --black: #0c0c0c;
 
-    color: #201801;
-    background-color: #fff;
-    background-color: var(--back);
+    
     color: var(--back);
     /*font-family: 'Bree Serif', serif;*/
     font-family: 'Space Mono', monospace;
@@ -35,7 +33,7 @@ body{
 }
 
 .home {
-    background-image: url("../../imgs/background2.PNG");
+    background-image: url("/imgs/background2.PNG");
     background-size: cover;
     background-repeat: no-repeat;
 }
