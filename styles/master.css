@@ -35,7 +35,7 @@ body{
 }
 
 .home {
-    background-image: url("./imgs/background2.PNG");
+    background-image: url("../../imgs/background2.PNG");
     background-size: cover;
     background-repeat: no-repeat;
 }
