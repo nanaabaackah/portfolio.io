@@ -35,13 +35,13 @@ body{
 }
 
 .home {
-    background-image: url("../imgs/background2.PNG");
+    background-image: url("./imgs/background2.PNG");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .grid {
-    background-image: url("../imgs/background3.PNG");
+    background-image: url("./imgs/background3.PNG");
     background-size: contain;
     background-repeat: repeat;
 }
