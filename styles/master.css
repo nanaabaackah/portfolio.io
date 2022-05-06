@@ -231,6 +231,7 @@ em {
 }
 
 
+
 /**********************************************/
 /*               Dark Mode Styles             */
 /*********************************************
@@ -299,7 +300,7 @@ footer a:visited{
     color: var(--dark);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 450px) {
     .home {
         background-color: #0c0c0c;
         background-image: none;
@@ -316,12 +317,13 @@ footer a:visited{
         align-items: left;
         margin-top: 0.5em;
         background-color: transparent;
-        justify-content: left;
+        justify-content: center;
     }
     
     header nav ul {
         display: flex;
         flex-direction: row;
+        font-size: 0.65em;
     }
     
     header nav li{
@@ -329,6 +331,7 @@ footer a:visited{
         text-align: left;
         margin-left: 1em;
         border-bottom: solid #0077ff 0.5px;
+        
     }
     
     header nav a,
@@ -339,7 +342,7 @@ footer a:visited{
         color: var(--back);
     }
     
-    header nav a:hover{
+    header nav a:active{
         background-color: #0077ff;
         color: var(--light);
     }
@@ -353,7 +356,7 @@ footer a:visited{
     
     #description{
         background-color: transparent;
-        margin-top: 9em;
+        margin-top: 8em;
         margin-bottom: 1em;
         margin-left: 0.5em;
     }
@@ -412,8 +415,8 @@ footer a:visited{
     #group h2,
     #group2 h2{
         width: 100%;
-        font-size: 1em;
-        margin-top: 0.2em;
+        font-size: 0.8em;
+        margin-top: 1em;
         color: #0077ff;
     }
     
@@ -430,6 +433,7 @@ footer a:visited{
         width:max-content;
         margin-bottom: 0.2em;
         text-decoration: underline;
+        font-size: 0.6em;
     }
     
     em {
@@ -455,7 +459,7 @@ footer a:visited{
     }
 }
 
-@media screen and (max-width: 815px) {
+@media screen and (min-width: 500px) and (max-width: 815px){
     .home {
         background-color: #0c0c0c;
         background-image: none;
