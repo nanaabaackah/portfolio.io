@@ -39,7 +39,7 @@ body{
 }
 
 .grid {
-    background-image: url("../imgs/background3.png");
+    background-image: url("../imgs/background3.PNG");
     background-size: contain;
     background-repeat: repeat;
 }
