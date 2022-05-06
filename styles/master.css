@@ -120,11 +120,16 @@ main {
     
 }
 
+#description i{
+    color: white;
+    text-shadow: 4px 4px 10px red;
+}
+
 #description h1{
     font-family: 'Bad Script', cursive;
-    font-size: 2.5em;
+    font-size: 1.9em;
     color: var(--back);
-    margin-left: 5em;
+    margin-left: 6em;
     text-align: center;
     
 }
@@ -132,14 +137,14 @@ main {
 #description em{
     text-decoration: none;
     font-family: 'Satisfy', cursive;
-    font-size: 1.5em;
+    font-size: 2.1em;
 }
 
 #description h2{
     
     text-align: center;
-    font-size: 2.5em;
-    margin-left: 5em;
+    font-size: 1.9em;
+    margin-left: 6em;
     font-family: 'Bad Script', cursive;
 }
 
@@ -296,11 +301,15 @@ footer{
 footer a, 
 footer a:visited{
     margin: 0.5em;
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--dark);
 }
 
-@media screen and (max-width: 450px) {
+span{
+    color: var(--black);
+}
+
+@media screen and (max-width: 420px) {
     .home {
         background-color: #0c0c0c;
         background-image: none;
@@ -315,7 +324,7 @@ footer a:visited{
         display: flex;
         flex-direction: row;
         align-items: left;
-        margin-top: 0.5em;
+        margin-top: 1.5em;
         background-color: transparent;
         justify-content: center;
     }
@@ -323,7 +332,7 @@ footer a:visited{
     header nav ul {
         display: flex;
         flex-direction: row;
-        font-size: 0.65em;
+        font-size: 0.8em;
     }
     
     header nav li{
@@ -356,14 +365,14 @@ footer a:visited{
     
     #description{
         background-color: transparent;
-        margin-top: 8em;
+        margin-top: 9em;
         margin-bottom: 1em;
-        margin-left: 0.5em;
+        margin-left: 1em;
     }
     
     #description h1{
         font-family: 'Bad Script', cursive;
-        font-size: 1.5em;
+        font-size: 1em;
         color: var(--back);
         text-align: center;
         margin-bottom: 0.5em;
@@ -373,14 +382,14 @@ footer a:visited{
     #description em{
         text-decoration: none;
         font-family: 'Satisfy', cursive;
-        font-size: 2em;
+        font-size: 1.8em;
         color: #0077ff;
     }
     
     #description h2{
-        margin-left: 7em;
+        margin-left: 6em;
         text-align: center;
-        font-size: 0.9em;
+        font-size: 1em;
         font-family: 'Bad Script', cursive;
     }
     
@@ -388,7 +397,8 @@ footer a:visited{
         text-align: center;
         display: flex;
         flex-direction: column;
-        margin-left: 1em;
+        margin-left:-3em;
+        font-size: 0.5em;
     }
     
     #links a{
@@ -457,7 +467,29 @@ footer a:visited{
         margin-bottom: 1em;
         width: 10em;
     }
+
+    footer{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;  
+        justify-items: baseline;
+        background-color:#ffffffaf;
+        padding: 2em;
+        margin-top: 1em;
+    }
+    
+    footer a, 
+    footer a:visited{
+        margin: 0.5em;
+        text-decoration: none;
+        color: #0077ff;
+    }
+
+    span{
+        color: var(--black);
+    }
 }
+
 
 @media screen and (min-width: 500px) and (max-width: 815px){
     .home {
