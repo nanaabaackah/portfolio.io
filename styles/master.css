@@ -32,281 +32,570 @@ body{
     
 }
 
-.home {
-    background-image: url("../imgs/background2.PNG");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.grid {
-    background-image: url("../imgs/background3.PNG");
-    background-size: contain;
-    background-repeat: repeat;
-}
-
-/**********************************************/
-/*                Nav Styles                  */
-/**********************************************/
-
-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 0.5em;
-    background-color: transparent;
-    justify-content: center;
-}
-
-header i{
-    font-size: 2em;
-    color: var(--black);
-}
-
-button{
-    background-color: transparent;
-    border: none;
-    margin: 2em;
-}
-
-header nav ul {
-    display: flex;
-    flex-direction: row;
-    padding: 1em;
-}
-
-header nav li{
-    margin-right: 2em;
-    text-align: center;
-    margin-left: 6em;
-    border-bottom: solid white 0.5px;
-}
-
-header nav a,
-header nav a:visited {
-    text-decoration: none;
-    display: block;
-    padding: 1em;
-    color: var(--back);
-}
-
-header nav a:hover{
-    background-color: #0077ff;
-    color: var(--light);
-}
-
-
-
-/**********************************************/
-/*               Main Styles                  */
-/**********************************************/
-
-main {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    margin-bottom: auto;
-}
-
-.grid main{
-    align-items: flex-start;
-    margin-left: 9em;
-}
-
-#description{
-    background-color: transparent;
-    margin: 8em;
-    margin-top: 12em;
-    margin-bottom: 1em;
+@media screen and (min-width: 2560px) {
+    .home {
+        background-image: url("../imgs/background2.PNG");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .grid {
+        background-image: url("../imgs/background3.PNG");
+        background-size: contain;
+        background-repeat: repeat;
+    }
+    
+    /**********************************************/
+    /*                Nav Styles                  */
+    /**********************************************/
+    
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0.5em;
+        background-color: transparent;
+        justify-content: center;
+    }
+    
+    header i{
+        font-size: 5em;
+        color: var(--black);
+    }
+    
+    button{
+        background-color: transparent;
+        border: none;
+        margin: 2em;
+    }
+    
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        padding: 2em;
+    }
+    
+    header nav li{
+        margin-right: 4em;
+        text-align: center;
+        margin-left: 6em;
+        border-bottom: solid white 0.5px;
+        font-size: 2em;
+    }
+    
+    header nav a,
+    header nav a:visited {
+        text-decoration: none;
+        display: block;
+        padding: 2em;
+        color: var(--back);
+    }
+    
+    header nav a:hover{
+        background-color: #0077ff;
+        color: var(--black);
+    }
+    
+    
+    
+    /**********************************************/
+    /*               Main Styles                  */
+    /**********************************************/
+    
+    main {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        margin-bottom: auto;
+    }
+    
+    .grid main{
+        align-items: flex-start;
+        margin-left: 15em;
+    }
+    
+    #description{
+        background-color: transparent;
+        margin: 10em;
+        margin-top: 20em;
+        margin-bottom: 1em;
+        
+    }
+    
+    #description i{
+        color: white;
+        text-shadow: 4px 4px 10px red;
+    }
+    
+    #description h1{
+        font-family: 'Bad Script', cursive;
+        font-size: 2.8em;
+        color: var(--back);
+        margin-left: 15em;
+        text-align: center;
+        
+    }
+    
+    #description em{
+        text-decoration: none;
+        font-family: 'Satisfy', cursive;
+        font-size: 3em;
+    }
+    
+    #description h2{
+        
+        text-align: center;
+        font-size: 2.8em;
+        margin-left: 15em;
+        font-family: 'Bad Script', cursive;
+    }
+    
+    #links{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20em;
+        font-size: 2em;
+        margin-top: 3em;
+    }
+    
+    #links a{
+        margin-top: 0.5em;
+        color: var(--back);
+        
+    }
+    
+    /*button {
+        background-color: var(--back);
+        color: var(--dark);
+        border: none;
+        display: block;
+        padding: 1em;
+        font-size: larger;
+        flex-direction: column;
+        align-items: center;
+    }*/
+    
+    .grid{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+    #group{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5em;
+    }
+    #group div{
+        margin-bottom: 2em;
+    }
+    #group, 
+    #group2{
+        width: 30%;
+    }
+    
+    #group h2,
+    #group2 h2{
+        width: fit-content;
+        font-size: 2.5em;
+        margin-top: 1em;
+        
+    }
+    
+    #group2{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-left: 95em;
+        
+        
+    }
+    
+    #group a,
+    #group2 a{
+        color: white;
+        width: fit-content;
+        font-size: 2em;
+    }
+    
+    em {
+        text-decoration: var(--border) underline;
+        font-weight: bolder;
+    }
+    
+    #group p,
+    #group2 p{
+        margin-bottom: 0.5em;
+    }
+    #group img{
+        margin-top: 1em;
+        width: 33em;
+        margin-bottom: 0.5em;
+        
+    }
+    
+    #group2 img{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 32em;
+    }
+    
+    
+    
+    /**********************************************/
+    /*               Dark Mode Styles             */
+    /*********************************************
+    
+    .dark-mode {
+        color: #f1ebac;
+        background-color: #000;
+        background-color: var(--black);
+        color: var(--light);
+    }
+    .dark-mode nav a,
+    .dark-mode nav a:visited{
+    
+        color: var(--light);
+    
+        border-bottom: var(--back) solid 3px;
+    
+    }
+    
+    .dark-mode #description h1{
+        color: var(--light);
+        border: var(--light) 3px solid;
+    }
+    
+    .dark-mode button{
+        background-color: var(--black);
+        color: var(--light);
+    }
+    
+    .dark-mode nav a:hover{
+        background-color: var(--light);
+        color: var(--dark);
+    }
+    
+    .dark-mode footer{
+    
+        background-color: var(--dark);
+    
+    }
+    
+    .dark-mode footer a, 
+    .dark-mode footer a:visited{
+    
+        text-decoration: none;
+        color: var(--light);
+    }
+    
+    /**********************************************/
+    /*               Footer Styles                */
+    /**********************************************/
+    
+    footer{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;  
+       
+        background-color:#ffffffaf;
+        padding: 2em;
+        margin-top: 1em;
+    }
+    
+    footer a, 
+    footer a:visited{
+        margin: 0.5em;
+        text-decoration: underline;
+        color: var(--dark);
+        font-size: 1.5em;
+    }
+    
+    span{
+        color: var(--black);
+    }
     
 }
 
-#description i{
-    color: white;
-    text-shadow: 4px 4px 10px red;
-}
-
-#description h1{
-    font-family: 'Bad Script', cursive;
-    font-size: 1.9em;
-    color: var(--back);
-    margin-left: 6em;
-    text-align: center;
+@media screen and (min-width: 1360px) and (max-width: 2559px){
+    .home {
+        background-image: url("../imgs/background2.PNG");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     
-}
-
-#description em{
-    text-decoration: none;
-    font-family: 'Satisfy', cursive;
-    font-size: 2.1em;
-}
-
-#description h2{
+    .grid {
+        background-image: url("../imgs/background3.PNG");
+        background-size: contain;
+        background-repeat: repeat;
+    }
     
-    text-align: center;
-    font-size: 1.9em;
-    margin-left: 6em;
-    font-family: 'Bad Script', cursive;
-}
-
-#links{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-left: 12em;
-}
-
-#links a{
-    margin-top: 0.5em;
-    color: var(--black);
-    font-weight: bold;
-}
-
-/*button {
-    background-color: var(--back);
-    color: var(--dark);
-    border: none;
-    display: block;
-    padding: 1em;
-    font-size: larger;
-    flex-direction: column;
-    align-items: center;
-}*/
-
-.grid{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-}
-#group{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.5em;
-}
-#group div{
-    margin-bottom: 2em;
-}
-#group, 
-#group2{
-    width: 35%;
-}
-
-#group h2,
-#group2 h2{
-    width: fit-content;
-    font-size: 1.5em;
-    margin-top: 1em;
+    /**********************************************/
+    /*                Nav Styles                  */
+    /**********************************************/
     
-}
-
-#group2{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-left: 45em;
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0.5em;
+        background-color: transparent;
+        justify-content: center;
+    }
     
-}
-
-#group a,
-#group2 a{
-    color: white;
-    width: fit-content;
-}
-
-em {
-    text-decoration: var(--border) underline;
-    font-weight: bolder;
-}
-
-#group p,
-#group2 p{
-    margin-bottom: 0.5em;
-}
-#group img{
-    margin-top: 1em;
-    width: 23em;
-    margin-bottom: 0.5em;
+    header i{
+        font-size: 2em;
+        color: var(--black);
+    }
     
-}
-
-#group2 img{
-    margin-top: 1em;
-    margin-bottom: 1em;
-    width: 22em;
-}
-
-
-
-/**********************************************/
-/*               Dark Mode Styles             */
-/*********************************************
-
-.dark-mode {
-    color: #f1ebac;
-    background-color: #000;
-    background-color: var(--black);
-    color: var(--light);
-}
-.dark-mode nav a,
-.dark-mode nav a:visited{
-
-    color: var(--light);
-
-    border-bottom: var(--back) solid 3px;
-
-}
-
-.dark-mode #description h1{
-    color: var(--light);
-    border: var(--light) 3px solid;
-}
-
-.dark-mode button{
-    background-color: var(--black);
-    color: var(--light);
-}
-
-.dark-mode nav a:hover{
-    background-color: var(--light);
-    color: var(--dark);
-}
-
-.dark-mode footer{
-
-    background-color: var(--dark);
-
-}
-
-.dark-mode footer a, 
-.dark-mode footer a:visited{
-
-    text-decoration: none;
-    color: var(--light);
-}
-
-/**********************************************/
-/*               Footer Styles                */
-/**********************************************/
-
-footer{
-    display: flex;
-    flex-direction: column; 
-    align-items: center;  
-    justify-items: baseline;
-    background-color:#ffffffaf;
-    padding: 2em;
-    margin-top: 1em;
-}
-
-footer a, 
-footer a:visited{
-    margin: 0.5em;
-    text-decoration: underline;
-    color: var(--dark);
-}
-
-span{
-    color: var(--black);
+    button{
+        background-color: transparent;
+        border: none;
+        margin: 2em;
+    }
+    
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        padding: 1em;
+    }
+    
+    header nav li{
+        margin-right: 2em;
+        text-align: center;
+        margin-left: 6em;
+        border-bottom: solid white 0.5px;
+    }
+    
+    header nav a,
+    header nav a:visited {
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+        color: var(--back);
+    }
+    
+    header nav a:hover{
+        background-color: #0077ff;
+        color: var(--light);
+    }
+    
+    
+    
+    /**********************************************/
+    /*               Main Styles                  */
+    /**********************************************/
+    
+    main {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        margin-bottom: auto;
+    }
+    
+    .grid main{
+        align-items: flex-start;
+        margin-left: 9em;
+    }
+    
+    #description{
+        background-color: transparent;
+        margin: 8em;
+        margin-top: 12em;
+        margin-bottom: 1em;
+        
+    }
+    
+    #description i{
+        color: white;
+        text-shadow: 4px 4px 10px red;
+    }
+    
+    #description h1{
+        font-family: 'Bad Script', cursive;
+        font-size: 1.9em;
+        color: var(--back);
+        margin-left: 6em;
+        text-align: center;
+        
+    }
+    
+    #description em{
+        text-decoration: none;
+        font-family: 'Satisfy', cursive;
+        font-size: 2.1em;
+    }
+    
+    #description h2{
+        
+        text-align: center;
+        font-size: 1.9em;
+        margin-left: 6em;
+        font-family: 'Bad Script', cursive;
+    }
+    
+    #links{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: 12em;
+    }
+    
+    #links a{
+        margin-top: 0.5em;
+        color: var(--black);
+        font-weight: bold;
+    }
+    
+    /*button {
+        background-color: var(--back);
+        color: var(--dark);
+        border: none;
+        display: block;
+        padding: 1em;
+        font-size: larger;
+        flex-direction: column;
+        align-items: center;
+    }*/
+    
+    .grid{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+    #group{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5em;
+    }
+    #group div{
+        margin-bottom: 2em;
+    }
+    #group, 
+    #group2{
+        width: 35%;
+    }
+    
+    #group h2,
+    #group2 h2{
+        width: fit-content;
+        font-size: 1.5em;
+        margin-top: 1em;
+        
+    }
+    
+    #group2{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-left: 45em;
+        
+    }
+    
+    #group a,
+    #group2 a{
+        color: white;
+        width: fit-content;
+    }
+    
+    em {
+        text-decoration: var(--border) underline;
+        font-weight: bolder;
+    }
+    
+    #group p,
+    #group2 p{
+        margin-bottom: 0.5em;
+    }
+    #group img{
+        margin-top: 1em;
+        width: 23em;
+        margin-bottom: 0.5em;
+        
+    }
+    
+    #group2 img{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 22em;
+    }
+    
+    
+    
+    /**********************************************/
+    /*               Dark Mode Styles             */
+    /*********************************************
+    
+    .dark-mode {
+        color: #f1ebac;
+        background-color: #000;
+        background-color: var(--black);
+        color: var(--light);
+    }
+    .dark-mode nav a,
+    .dark-mode nav a:visited{
+    
+        color: var(--light);
+    
+        border-bottom: var(--back) solid 3px;
+    
+    }
+    
+    .dark-mode #description h1{
+        color: var(--light);
+        border: var(--light) 3px solid;
+    }
+    
+    .dark-mode button{
+        background-color: var(--black);
+        color: var(--light);
+    }
+    
+    .dark-mode nav a:hover{
+        background-color: var(--light);
+        color: var(--dark);
+    }
+    
+    .dark-mode footer{
+    
+        background-color: var(--dark);
+    
+    }
+    
+    .dark-mode footer a, 
+    .dark-mode footer a:visited{
+    
+        text-decoration: none;
+        color: var(--light);
+    }
+    
+    /**********************************************/
+    /*               Footer Styles                */
+    /**********************************************/
+    
+    footer{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;  
+        justify-items: baseline;
+        background-color:#ffffffaf;
+        padding: 2em;
+        margin-top: 1em;
+    }
+    
+    footer a, 
+    footer a:visited{
+        margin: 0.5em;
+        text-decoration: underline;
+        color: var(--dark);
+    }
+    
+    span{
+        color: var(--black);
+    }
+    
 }
 
 @media screen and (max-width: 550px) {
@@ -501,7 +790,7 @@ span{
 }
 
 
-@media screen and (min-width: 551px) and (max-width: 1080px){
+@media screen and (min-width: 551px) and (max-width: 1359px){
     .home {
         background-image: url("../imgs/b10.png");
         background-size:contain;
