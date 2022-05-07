@@ -312,8 +312,8 @@ span{
 @media screen and (max-width: 550px) {
     .home {
         background-image: url("../imgs/background9.png");
-        background-size: contain;
-        background-repeat: no-repeat;
+        background-size:auto;
+        background-repeat: repeat;
     }
     
     .grid {
@@ -325,23 +325,20 @@ span{
         display: flex;
         flex-direction: row;
         margin-top: 0em;
-        
-        justify-content: left;
+        justify-content: center;
     }
     
     header nav ul {
         display: flex;
-        flex-direction: column;
-        font-size: 0.8em;
+        flex-direction: row;
+        font-size: 0.7em;
     }
     
     header nav li{
         margin-right: 1em;
-        text-align: left;
+        text-align: center;
         margin-left: 0em;
         border-bottom: solid #0077ff 0.5px;
-  
-        
     }
     
     header nav a,
@@ -366,7 +363,7 @@ span{
     
     #description{
         background-color: transparent;
-        margin-top: 9em;
+        margin-top: 8em;
         margin-bottom: 1em;
         margin-left: 1em;
     }
@@ -377,7 +374,7 @@ span{
     
     #description h1{
         font-family: 'Bad Script', cursive;
-        font-size: 1.2em;
+        font-size: 1.3em;
         color: #b9daff;
         text-align: center;
         margin-bottom: 0.5em;
@@ -387,14 +384,14 @@ span{
     #description em{
         text-decoration: none;
         font-family: 'Satisfy', cursive;
-        font-size: 2em;
+        font-size: 1.8em;
         color: #b9daff;
     }
     
     #description h2{
-        margin-left: 6em;
+        margin-left: 8em;
         text-align: center;
-        font-size: 1em;
+        font-size: 0.9em;
         font-family: 'Bad Script', cursive;
         color: #b9daff;
     }
@@ -403,7 +400,7 @@ span{
         text-align: center;
         display: flex;
         flex-direction: column;
-        margin-left:-3em;
+        margin-left:-1em;
         font-size: 0.5em;
     }
     
