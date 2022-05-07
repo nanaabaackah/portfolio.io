@@ -309,9 +309,9 @@ span{
     color: var(--black);
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 550px) {
     .home {
-        background-image: url("../imgs/background9.PNG");
+        background-image: url("../imgs/background9.png");
         background-size: contain;
         background-repeat: no-repeat;
     }
@@ -497,7 +497,7 @@ span{
 }
 
 
-@media screen and (min-width: 500px) and (max-width: 815px){
+@media screen and (min-width: 551px) and (max-width: 815px){
     .home {
         background-color: #0c0c0c;
         background-image: none;
