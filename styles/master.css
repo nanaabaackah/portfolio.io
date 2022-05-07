@@ -317,8 +317,13 @@ span{
     }
     
     .grid {
-        background-color: #0c0c0c;
-        background-image: none;
+        background-image: url("../imgs/background9.png");
+        background-size:cover;
+        background-repeat: repeat;
+    }
+
+    .grid main{
+        margin-left: 5em;
     }
     
     header{
@@ -422,7 +427,7 @@ span{
     #group, 
     #group2{
         width: 100%;
-        margin-left: 0em;
+        margin: 0.9em;
     }
     
     #group h2,
@@ -430,19 +435,19 @@ span{
         width: 100%;
         font-size: 0.8em;
         margin-top: 1em;
-        color: #b9daff;
+        color: #0077ff;
     }
     
     #group2{
         display: flex;
         flex-direction: column;
         position: relative;  
-        margin-left: 0.2em;     
+        margin-left: 0.6em;     
     }
     
     #group a,
     #group2 a{
-        color: white;
+        color: var(--black);
         width:max-content;
         margin-bottom: 0.2em;
         text-decoration: underline;
@@ -476,9 +481,10 @@ span{
         flex-direction: column; 
         align-items: center;  
         justify-items: baseline;
-        background-color:#ffffffaf;
+        background-color:#000000af;
         padding: 2em;
         margin-top: 1em;
+        font-size: 0.7em;
     }
     
     footer a, 
@@ -489,7 +495,7 @@ span{
     }
 
     span{
-        color: var(--black);
+        color: var(--back);
     }
 }
 
