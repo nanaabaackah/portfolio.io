@@ -340,7 +340,7 @@ span{
     }
     
     header nav li{
-        margin-right: 1em;
+
         text-align: center;
         margin-left: 0em;
         border-bottom: solid #0077ff 0.5px;
@@ -363,7 +363,7 @@ span{
         display: flex;
         flex-direction: column; 
         margin-bottom: auto;
-        justify-items: center;
+        justify-items: left;
     }
     
     #description{
@@ -380,7 +380,7 @@ span{
     #description h1{
         font-family: 'Bad Script', cursive;
         font-size: 1.3em;
-        color: #b9daff;
+        color: #001125;
         text-align: center;
         margin-bottom: 0.5em;
         
@@ -390,7 +390,7 @@ span{
         text-decoration: none;
         font-family: 'Satisfy', cursive;
         font-size: 1.8em;
-        color: #b9daff;
+        color: #001125;
     }
     
     #description h2{
@@ -398,20 +398,21 @@ span{
         text-align: center;
         font-size: 0.9em;
         font-family: 'Bad Script', cursive;
-        color: #b9daff;
+        color: #001125;
     }
     
     #links{
         text-align: center;
         display: flex;
         flex-direction: column;
-        margin-left:-1em;
-        font-size: 0.5em;
+        margin-left:1em;
+        font-size: 0.6em;
+        margin-top: 15em;
     }
     
     #links a{
         margin-top: 0.5em;
-        color: #b9daff;
+        color: #001125;
         font-weight: bold;
     }
    
@@ -426,7 +427,7 @@ span{
     }
     #group, 
     #group2{
-        width: 100%;
+        width: 90%;
         margin: 0.9em;
     }
     
@@ -435,7 +436,7 @@ span{
         width: 100%;
         font-size: 0.8em;
         margin-top: 1em;
-        color: #0077ff;
+        color: #001125;
     }
     
     #group2{
@@ -500,16 +501,19 @@ span{
 }
 
 
-@media screen and (min-width: 551px) and (max-width: 815px){
+@media screen and (min-width: 551px) and (max-width: 1080px){
     .home {
-        background-color: #0c0c0c;
-        background-image: none;
+        background-image: url("../imgs/b10.png");
+        background-size:contain;
+        background-repeat: no-repeat;
     }
     
     .grid {
-        background-color: #0c0c0c;
-        background-image: none;
+        background-image: url("../imgs/background9.png");
+        background-size:cover;
+        background-repeat: repeat;
     }
+
     
     header{
         display: flex;
@@ -527,7 +531,7 @@ span{
     }
     
     header nav li{
-        margin-right: 1em;
+        margin-right: 5em;
         text-align: left;
         margin-left: 1em;
         border-bottom: solid #0077ff 0.5px;
@@ -538,7 +542,8 @@ span{
         text-decoration: none;
         display: block;
         padding: 0.5em;
-        color: var(--back);
+        color: #001125;
+        font-weight: bold;
     }
     
     header nav a:hover{
@@ -562,7 +567,7 @@ span{
     }
 
     #description i{
-        color:red;
+        color:white;
     }
     
     #description h1{
@@ -582,7 +587,7 @@ span{
     }
     
     #description h2{
-        margin-left: 4em;
+        margin-left: 6em;
         text-align: center;
         font-size: 2.5em;
         font-family: 'Bad Script', cursive;
@@ -592,13 +597,15 @@ span{
         text-align: center;
         display: flex;
         flex-direction: column;
-        margin-left: 1em;
+        margin-left: 5em;
+        margin-top: 5em;
     }
     
     #links a{
         margin-top: 0.5em;
         color: #b9daff;
         font-weight: bold;
+        font-size: 1.2em;
     }
    
     #group{
@@ -609,7 +616,7 @@ span{
    
     #group, 
     #group2{
-        width: 100%;
+        width: 50%;
         margin-left: 0em;
     }
     
@@ -618,19 +625,19 @@ span{
         width: 100%;
         font-size: 1em;
         margin-top: 0.2em;
-        color: #b9daff;
+        color: #001125;
     }
     
     #group2{
         display: flex;
         flex-direction: column;
         position: absolute;  
-        margin-left: 20em;     
+        margin-left: 23em;     
     }
     
     #group a,
     #group2 a{
-        color: white;
+        color: var(--black);
         width:max-content;
         margin-bottom: 0.2em;
         text-decoration: underline;
@@ -647,7 +654,7 @@ span{
     }
     #group img{
         margin-top: 1em;
-        width: 12em;
+        width: 15em;
         margin-bottom: 0.5em;
         
     }
@@ -655,27 +662,28 @@ span{
     #group2 img{
         margin-top: 1em;
         margin-bottom: 1em;
-        width: 12em;
+        width: 16em;
     }
 
     footer{
         display: flex;
         flex-direction: column; 
         align-items: center;  
-        justify-items: end;
-        background-color:#ffffffaf;
+        justify-items: baseline;
+        background-color:#000000af;
         padding: 2em;
         margin-top: 1em;
+        font-size: 0.7em;
     }
     
     footer a, 
     footer a:visited{
         margin: 0.5em;
         text-decoration: none;
-        color: var(--dark);
+        color: #0077ff;
     }
 
     span{
-        color: var(--black);
+        color: var(--back);
     }
 }
