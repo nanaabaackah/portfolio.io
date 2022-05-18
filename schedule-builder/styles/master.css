@@ -95,7 +95,7 @@ em {
 }
 
 #left, #right {
-    width: 40%;
+    width: 35%;
 }
 
 #right{
@@ -137,6 +137,6 @@ p {
 .second-page{
     background-color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
