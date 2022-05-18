@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root{
+    --dark: #7e14bb;
+    --light: #da6eda;
+    --borders: #ffff4f;
+    --back: #f0f2f8;
+    --other: #ebe9e9;
+    --black: #0a000a;
+
+    color: #0a000a;
+    background-color: #fff;
+    color: var(--black);
+    background-color: var(--back);
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    width: max-content;
+    min-height: 100vh; /*fill page vertically, but still get bigger*/
+    min-width: 100vw; /*fille page horizontally, but still get bigger*/
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    margin: 0;    
+}
+
+em {
+    color: var(--dark);
+    font-style: normal;
+}
+
+#logo i{
+    padding: 1em;
+    color: var(--dark);
+    width: fit-content;
+    font-size: 2em;
+    margin-left: 2em;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5em;
+    background-color: var(--back);
+    border-radius: 0.2em;
+    width:auto;
+    position: static;
+}
+
+.menu button {
+    color: var(--back);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    background-color: var(--dark);
+    padding: 1em 1.4em;
+    border-radius: 2em;
+    border: none;
+    font-weight: bold;
+    display:inline;
+}
+
+
+.menu nav ul{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    float: right;
+    margin-left: 25em;
+}
+
+.menu nav ul li{
+    padding: 1em;
+    list-style-type: none;
+    font-size: 0.9em;
+    margin-right: 2em;
+}
+
+.menu a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.first-page {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--back);
+}
+
+.first-page div{
+    padding: 1em;
+    margin-left: 5em;
+}
+
+#left, #right {
+    width: 40%;
+}
+
+#right{
+    position: relative;
+    float: right;
+}
+
+button {
+    background-color: var(--dark);
+    padding: 16px 20px;
+    border-radius: 2em;
+    border: none;
+    display: block;
+    box-shadow: 2px 4px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 20%);
+    text-align: center;
+    color: var(--back);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.12px;
+}
+
+button:hover{
+    background-color:#ad1eff;
+}
+
+h1{
+    color: var(--black);
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 1.3em;
+    line-height: 40px;
+}
+
+.second-page{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
