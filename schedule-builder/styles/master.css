@@ -6,9 +6,9 @@
     --borders: #ffff4f;
     --back: #f0f2f8;
     --other: #ebe9e9;
-    --black: #0a000a;
+    --black: #312b2b;
 
-    color: #0a000a;
+    color: #312b2b;
     background-color: #fff;
     color: var(--black);
     background-color: var(--back);
@@ -40,7 +40,6 @@ em {
 .menu {
     display: flex;
     flex-direction: row;
-    padding: 0.5em;
     background-color: var(--back);
     border-radius: 0.2em;
     width:100%;
@@ -100,7 +99,6 @@ em {
 }
 
 #right{
-    position: relative;
     float: right;
 }
 
@@ -124,19 +122,14 @@ button:hover{
     background-color:#ad1eff;
 }
 
-h1{
+.first-page h1{
     color: var(--black);
     font-size: 2.6em;
     font-weight: bolder;
 }
 
-h2{
-    text-transform: uppercase;
-    font-size: 1.5em;
-}
-
-p {
-    font-size: 1.3em;
+.first-page p {
+    font-size: 20px;
     line-height: 40px;
 }
 
@@ -144,14 +137,157 @@ p {
     display: flex;
     flex-direction: row;
     background-color: white;
-    padding: 5em 10em;
+    padding: 7em 9em;
+    
 }
 
-#img-grid{
+.second-page h2,
+.third-page h2,
+.fourth-page h2{
+    text-transform: uppercase;
+    font-size: 1.3em;
+    color: var(--dark);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0.8em;
+    
+}
+
+.second-page h1{
+    letter-spacing: 0px;
+    font-size: 2.1em;
+    margin-top: 0em;
+}
+
+.second-page p{
+    width: 90%;
+    font-size: 19.5px;
+    line-height: 1.5;
+}
+
+.second-page button{
+    padding: 0.4em 4em;
+    font-size: 1.2em;
+}
+
+.img-grid{
+    display: flex;
+    flex-direction: row;
+    margin-left: 3em;
+    text-align: center;
+    width: 100%;
+}
+
+#grid1, 
+#grid2,
+#grid3{
+    width: 100%;
+    justify-content: center;
+    padding: 0.5em 0.2em;
+    margin-right: 2em;
+}
+
+#grid1 img,
+#grid2 img,
+#grid3 img{
+    vertical-align: middle;
+    width: 100%;
+    margin-right: 1em;
+}
+
+#grid1 p,
+#grid2 p,
+#grid3 p{
+    font-size: 0.9em;
+}
+
+#grid2 p{
+    margin-top: 1.6em;
+}
+
+#grid3 p{
+    margin-top: 1.5em;
+}
+
+.third-page{
+    display: flex;
+    flex-direction: row;
+    padding: 15em 9em;
+    background-color: white;
+    background-image: url("https://www.picktime.com/webassets/2021/img/mountains.svg");
+    background-repeat: no-repeat;
+}
+
+.third-page h1,
+.fourth-page h1{
+    font-size: 2.3em;
+    margin-top: 0em;
+}
+
+.third-page #right{
+    padding: 0.5em 0em;
+    margin-left: 5em;
+    width: 100%;
+}
+
+.third-page p{
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-left: 0.4em;
+    margin-top: 0em;
+}
+
+.fourth-page{
+    background-image: url("../imgs/Payment-and-invoicing-bg.svg");
+    background-repeat: no-repeat;
+    background-position: -6em;
+    background-size: 40em;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 5em 7em;
+    width: fit-content;
+    
+}
+
+.fourth-page #right{
+    padding: 3em 2.5em;
+    width: 100%;
+}
+
+.fourth-page p{
+    font-size: 1.4em;
+    line-height: 1.4;
+}
+
+.fifth-page{
+    display: flex;
+    flex-direction: row;
+    background-image: url("https://www.picktime.com/webassets/2021/img/mountains.svg");
+    background-color: white;
+    padding: 15em 10em;
+}
+
+.sixth-page{
+    background-image: url("https://www.picktime.com/webassets/2021/img/Multiple-location-managment-bg.svg");
     display: flex;
     flex-direction: row;
 }
 
-#img-grid div{
-    width: 50%;
+.seventh-page{
+    background-image: url("https://www.picktime.com/webassets/2021/img/Reminders-bg-right.svg");
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.eight-page{
+    background-image: url("https://www.picktime.com/webassets/2021/img/yoga.svg");
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+footer{
+    background-image: url("https://www.picktime.com/webassets/2021/img/mountains-color.svg");
+    background-color: white;
 }
