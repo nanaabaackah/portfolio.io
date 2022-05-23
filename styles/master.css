@@ -34,7 +34,7 @@ body{
 
 @media screen and (min-width: 2560px) {
     .home {
-        background-image: url("../imgs/background2.PNG");
+        background-image: url("../imgs/parabolic-pentagon.svg");
         background-size: cover;
         background-repeat: no-repeat;
     }
