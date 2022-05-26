@@ -35,6 +35,13 @@ em {
     width: fit-content;
     font-size: 2em;
     margin-left: 2.5em;
+    padding-bottom: 0em;
+    
+}
+
+#logo a{
+    
+    box-shadow: none;
 }
 
 .menu {
@@ -45,6 +52,7 @@ em {
     width:100%;
     overflow: hidden;
     position: fixed;
+    padding: 1em;
 }
 
 .menu button {
@@ -58,6 +66,12 @@ em {
     border: none;
     font-weight: bold;
     display:inline;
+}
+
+#signup a,
+#feature a{
+    color: var(--back);
+    text-decoration: none;
 }
 
 
@@ -119,6 +133,7 @@ button {
 
 button:hover{
     background-color:#ad1eff;
+    text-decoration: underline;
 }
 
 .first-page h1{
