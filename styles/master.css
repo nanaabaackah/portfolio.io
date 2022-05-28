@@ -181,29 +181,29 @@ body{
         flex-direction: column;
         align-items: left;
     }
-    #group{
+    .group{
         position: relative;
         display: flex;
         flex-direction: column;
         margin-bottom: 1.5em;
     }
-    #group div{
+    .group div{
         margin-bottom: 2em;
     }
-    #group, 
-    #group2{
+    .group, 
+    .group2{
         width: 30%;
     }
     
-    #group h2,
-    #group2 h2{
+    .group h2,
+    .group2 h2{
         width: fit-content;
         font-size: 2.5em;
         margin-top: 1em;
         
     }
     
-    #group2{
+    .group2{
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -212,8 +212,8 @@ body{
         
     }
     
-    #group a,
-    #group2 a{
+    .group a,
+    .group2 a{
         color: white;
         width: fit-content;
         font-size: 2em;
@@ -224,18 +224,18 @@ body{
         font-weight: bolder;
     }
     
-    #group p,
-    #group2 p{
+    .group p,
+    .group2 p{
         margin-bottom: 0.5em;
     }
-    #group img{
+    .group img{
         margin-top: 1em;
         width: 33em;
         margin-bottom: 0.5em;
         
     }
     
-    #group2 img{
+    .group2 img{
         margin-top: 1em;
         margin-bottom: 1em;
         width: 32em;
@@ -331,6 +331,45 @@ body{
         background-repeat: repeat;
     }
     
+    .image{
+        opacity: 1;
+        display: block;
+        width: 100%;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .group:hover .image{
+        opacity: 0.2;
+    }
+
+    
+    #g1-middle{
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 24%;
+        left: 45%;
+        text-align: center;
+        background-color: white;
+    }
+
+    .group:hover #g1-middle{
+        opacity: 1;
+    }
+
+    .text{
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+    }
     /**********************************************/
     /*                Nav Styles                  */
     /**********************************************/
@@ -464,29 +503,29 @@ body{
         flex-direction: column;
         align-items: left;
     }
-    #group{
+    .group{
         position: relative;
         display: flex;
         flex-direction: column;
         margin-bottom: 1.5em;
     }
-    #group div{
+    .group div{
         margin-bottom: 2em;
     }
-    #group, 
-    #group2{
+    .group, 
+    .group2{
         width: 35%;
     }
     
-    #group h2,
-    #group2 h2{
+    .group h2,
+    .group2 h2{
         width: fit-content;
         font-size: 1.5em;
         margin-top: 1em;
         
     }
     
-    #group2{
+    .group2{
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -494,8 +533,8 @@ body{
         
     }
     
-    #group a,
-    #group2 a{
+    .group a,
+    .group2 a{
         color: white;
         width: fit-content;
     }
@@ -505,18 +544,18 @@ body{
         font-weight: bolder;
     }
     
-    #group p,
-    #group2 p{
+    .group p,
+    .group2 p{
         margin-bottom: 0.5em;
     }
-    #group img{
+    .group img{
         margin-top: 1em;
         width: 23em;
         margin-bottom: 0.5em;
         
     }
     
-    #group2 img{
+    .group2 img{
         margin-top: 1em;
         margin-bottom: 1em;
         width: 22em;
@@ -705,38 +744,38 @@ body{
         font-weight: bold;
     }
    
-    #group{
+    .group{
         position: relative;
         display: flex;
         flex-direction: column;
         margin-bottom: 1em;
     }
-    #group div{
+    .group div{
         margin-bottom: 0.5em;
     }
-    #group, 
-    #group2{
+    .group, 
+    .group2{
         width: 90%;
         margin: 0.9em;
     }
     
-    #group h2,
-    #group2 h2{
+    .group h2,
+    .group2 h2{
         width: 100%;
         font-size: 0.8em;
         margin-top: 1em;
         color: #001125;
     }
     
-    #group2{
+    .group2{
         display: flex;
         flex-direction: column;
         position: relative;  
         margin-left: 0.6em;     
     }
     
-    #group a,
-    #group2 a{
+    .group a,
+    .group2 a{
         color: var(--black);
         width:max-content;
         margin-bottom: 0.2em;
@@ -749,18 +788,18 @@ body{
         font-weight: bolder;
     }
     
-    #group p,
-    #group2 p{
+    .group p,
+    .group2 p{
         margin-bottom: 0.5em;
     }
-    #group img{
+    .group img{
         margin-top: 1em;
         width: 10em;
         margin-bottom: 0.5em;
         
     }
     
-    #group2 img{
+    .group2 img{
         margin-top: 1em;
         margin-bottom: 1em;
         width: 10em;
@@ -897,35 +936,35 @@ body{
         font-size: 1.2em;
     }
    
-    #group{
+    .group{
         position: relative;
         display: flex;
         flex-direction: column;
     }
    
-    #group, 
-    #group2{
+    .group, 
+    .group2{
         width: 50%;
         margin-left: 0em;
     }
     
-    #group h2,
-    #group2 h2{
+    .group h2,
+    .group2 h2{
         width: 100%;
         font-size: 1em;
         margin-top: 0.2em;
         color: #001125;
     }
     
-    #group2{
+    .group2{
         display: flex;
         flex-direction: column;
         position: absolute;  
         margin-left: 23em;     
     }
     
-    #group a,
-    #group2 a{
+    .group a,
+    .group2 a{
         color: var(--black);
         width:max-content;
         margin-bottom: 0.2em;
@@ -937,18 +976,18 @@ body{
         font-weight: bolder;
     }
     
-    #group p,
-    #group2 p{
+    .group p,
+    .group2 p{
         margin-bottom: 0.5em;
     }
-    #group img{
+    .group img{
         margin-top: 1em;
         width: 15em;
         margin-bottom: 0.5em;
         
     }
     
-    #group2 img{
+    .group2 img{
         margin-top: 1em;
         margin-bottom: 1em;
         width: 16em;
