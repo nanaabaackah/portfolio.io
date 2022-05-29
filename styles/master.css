@@ -32,15 +32,8 @@ body{
     
 }
 
-@media screen and (min-width: 2560px) {
     .home {
-        background-image: url("../imgs/parabolic-pentagon.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    
-    .grid {
-        background-image: url("../imgs/background3.PNG");
+        background-image: url("../imgs/Cloudy.svg");
         background-size: contain;
         background-repeat: repeat;
     }
@@ -57,12 +50,7 @@ body{
         background-color: transparent;
         justify-content: center;
     }
-    
-    header i{
-        font-size: 5em;
-        color: var(--black);
-    }
-    
+
     button{
         background-color: transparent;
         border: none;
@@ -72,7 +60,7 @@ body{
     header nav ul {
         display: flex;
         flex-direction: row;
-        padding: 2em;
+        padding: 1em;
     }
     
     header nav li{
@@ -80,14 +68,14 @@ body{
         text-align: center;
         margin-left: 6em;
         border-bottom: solid white 0.5px;
-        font-size: 2em;
+        font-size: 1em;
     }
     
     header nav a,
     header nav a:visited {
         text-decoration: none;
         display: block;
-        padding: 2em;
+        padding: 1em;
         color: var(--back);
     }
     
@@ -109,29 +97,22 @@ body{
         margin-bottom: auto;
     }
     
-    .grid main{
-        align-items: flex-start;
-        margin-left: 15em;
-    }
-    
     #description{
         background-color: transparent;
-        margin: 10em;
-        margin-top: 20em;
-        margin-bottom: 1em;
+        padding: 6em;
+        padding-bottom: 1em;
         
     }
     
     #description i{
-        color: white;
+        color: transparent;
         text-shadow: 4px 4px 10px red;
     }
     
     #description h1{
         font-family: 'Bad Script', cursive;
-        font-size: 2.8em;
+        font-size: 2em;
         color: var(--back);
-        margin-left: 15em;
         text-align: center;
         
     }
@@ -145,8 +126,7 @@ body{
     #description h2{
         
         text-align: center;
-        font-size: 2.8em;
-        margin-left: 15em;
+        font-size: 2.5em;
         font-family: 'Bad Script', cursive;
     }
     
@@ -154,15 +134,19 @@ body{
         text-align: center;
         display: flex;
         flex-direction: column;
-        margin-left: 20em;
-        font-size: 2em;
-        margin-top: 3em;
+        font-size: 1.2em;
+        width: fit-content;
+        padding-left: 13em;
     }
     
     #links a{
         margin-top: 0.5em;
         color: var(--back);
-        
+        text-align: center;
+    }
+
+    #links a:hover{
+        color: #0077ff;
     }
     
     /*button {
@@ -176,72 +160,10 @@ body{
         align-items: center;
     }*/
     
-    .grid{
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-    }
-    .group{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 1.5em;
-    }
-    .group div{
-        margin-bottom: 2em;
-    }
-    .group, 
-    .group2{
-        width: 30%;
-    }
-    
-    .group h2,
-    .group2 h2{
-        width: fit-content;
-        font-size: 2.5em;
-        margin-top: 1em;
-        
-    }
-    
-    .group2{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        margin-left: 95em;
-        
-        
-    }
-    
-    .group a,
-    .group2 a{
-        color: white;
-        width: fit-content;
-        font-size: 2em;
-    }
-    
     em {
         text-decoration: var(--border) underline;
         font-weight: bolder;
-    }
-    
-    .group p,
-    .group2 p{
-        margin-bottom: 0.5em;
-    }
-    .group img{
-        margin-top: 1em;
-        width: 33em;
-        margin-bottom: 0.5em;
-        
-    }
-    
-    .group2 img{
-        margin-top: 1em;
-        margin-bottom: 1em;
-        width: 32em;
-    }
-    
-    
+    }    
     
     /**********************************************/
     /*               Dark Mode Styles             */
@@ -315,14 +237,13 @@ body{
     span{
         color: var(--black);
     }
-    
-}
 
-@media screen and (min-width: 1360px) and (max-width: 2559px){
+
+/*@media screen and (min-width: 1360px) and (max-width: 2559px){
     .home {
-        background-image: url("../imgs/background2.PNG");
-        background-size: cover;
-        background-repeat: no-repeat;
+        background-image: url("../imgs/cloudy.svg");
+        background-size: contain;
+        background-repeat: repeat;
     }
     
     .grid {
@@ -372,7 +293,7 @@ body{
     }
     /**********************************************/
     /*                Nav Styles                  */
-    /**********************************************/
+    /*********************************************
     
     header{
         display: flex;
@@ -424,7 +345,7 @@ body{
     
     /**********************************************/
     /*               Main Styles                  */
-    /**********************************************/
+    /*********************************************
     
     main {
         display: flex;
@@ -496,7 +417,7 @@ body{
         font-size: larger;
         flex-direction: column;
         align-items: center;
-    }*/
+    }
     
     .grid{
         display: flex;
@@ -612,7 +533,7 @@ body{
     
     /**********************************************/
     /*               Footer Styles                */
-    /**********************************************/
+    /*********************************************
     
     footer{
         display: flex;
@@ -636,7 +557,7 @@ body{
     }
     
 }
-
+*/
 @media screen and (max-width: 550px) {
     .home {
         background-image: url("../imgs/background9.png");
