@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap');
 
 
 :root{
@@ -13,7 +13,7 @@
     --border: #c99423;
     --other: #968700;
     --light: #f1ebac;
-    --black: #0c0c0c;
+    --black: #242424;
 
     
     color: var(--back);
@@ -32,11 +32,100 @@ body{
     
 }
 
-    .home {
-        background-image: url("../imgs/Cloudy.svg");
-        background-size: contain;
-        background-repeat: repeat;
+svg {
+    font-family: 'Dawning of a New Day', cursive;
+}
+svg text {
+    text-transform: uppercase;
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #365fa0;
+    font-size: 5em;
+}
+@keyframes stroke { 
+    0%   {
+        fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1);
+        stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
     }
+    70%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); }
+    80%  {fill: rgba(72,138,20,0); stroke: #00FFFF; stroke-width: 3; }
+    100% {
+        fill: #0077FF; stroke: #00FFFF; 
+        stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+    }
+}
+
+    .home {
+        background-image: url("../imgs/Animated\ Shape.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+     /* Google chrome */
+     @-webkit-keyframes svg-text-anim {
+        40% {
+           stroke-dashoffset: 0;
+           fill: transparent;
+         }
+         60% {
+           stroke-dashoffset: 0;
+           fill: #0022c1;
+         }
+         100% {
+           stroke-dashoffset: 0;
+           fill: #0022c1;
+         }
+         
+     }
+     /* Most browsers */
+     @keyframes svg-text-anim {
+        40% {
+           stroke-dashoffset: 0;
+           fill: transparent;
+         }
+         60% {
+           stroke-dashoffset: 0;
+           fill: #0022c1;
+         }
+         100% {
+           stroke-dashoffset: 0;
+           fill: #0022c1;
+         }
+         
+     }
+
+     /* Google chrome */
+     @-webkit-keyframes svg-text-anim {
+        40% {
+           stroke-dashoffset: 0;
+           fill: transparent;
+         }
+         60% {
+           stroke-dashoffset: 0;
+           fill: #ffffff;
+         }
+         100% {
+           stroke-dashoffset: 0;
+           fill: #ffffff;
+         }
+         
+     }
+     /* Most browsers */
+     @keyframes svg-text-anim {
+        40% {
+           stroke-dashoffset: 0;
+           fill: transparent;
+         }
+         60% {
+           stroke-dashoffset: 0;
+           fill: #ffffff;
+         }
+         100% {
+           stroke-dashoffset: 0;
+           fill: #ffffff;
+         }
+         
+     }
     
     /**********************************************/
     /*                Nav Styles                  */
@@ -101,7 +190,7 @@ body{
         background-color: transparent;
         padding: 6em;
         padding-bottom: 1em;
-        
+        text-align: center;
     }
     
     #description i{
@@ -136,13 +225,15 @@ body{
         flex-direction: column;
         font-size: 1.2em;
         width: fit-content;
-        padding-left: 13em;
+        margin-left: 22em;
+        align-items: center;
     }
     
     #links a{
         margin-top: 0.5em;
         color: var(--back);
         text-align: center;
+        align-items: center;
     }
 
     #links a:hover{
