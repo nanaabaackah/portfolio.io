@@ -61,71 +61,6 @@ svg text {
         background-repeat: no-repeat;
     }
 
-     /* Google chrome */
-     @-webkit-keyframes svg-text-anim {
-        40% {
-           stroke-dashoffset: 0;
-           fill: transparent;
-         }
-         60% {
-           stroke-dashoffset: 0;
-           fill: #0022c1;
-         }
-         100% {
-           stroke-dashoffset: 0;
-           fill: #0022c1;
-         }
-         
-     }
-     /* Most browsers */
-     @keyframes svg-text-anim {
-        40% {
-           stroke-dashoffset: 0;
-           fill: transparent;
-         }
-         60% {
-           stroke-dashoffset: 0;
-           fill: #0022c1;
-         }
-         100% {
-           stroke-dashoffset: 0;
-           fill: #0022c1;
-         }
-         
-     }
-
-     /* Google chrome */
-     @-webkit-keyframes svg-text-anim {
-        40% {
-           stroke-dashoffset: 0;
-           fill: transparent;
-         }
-         60% {
-           stroke-dashoffset: 0;
-           fill: #ffffff;
-         }
-         100% {
-           stroke-dashoffset: 0;
-           fill: #ffffff;
-         }
-         
-     }
-     /* Most browsers */
-     @keyframes svg-text-anim {
-        40% {
-           stroke-dashoffset: 0;
-           fill: transparent;
-         }
-         60% {
-           stroke-dashoffset: 0;
-           fill: #ffffff;
-         }
-         100% {
-           stroke-dashoffset: 0;
-           fill: #ffffff;
-         }
-         
-     }
     
     /**********************************************/
     /*                Nav Styles                  */
@@ -650,18 +585,9 @@ svg text {
 }
 */
 @media screen and (max-width: 550px) {
-    .home {
-        background-image: url("../imgs/background9.png");
-        background-size:auto;
+    .home{
         background-repeat: repeat;
     }
-    
-    .grid {
-        background-image: url("../imgs/background9.png");
-        background-size:cover;
-        background-repeat: repeat;
-    }
-
     .grid main{
         margin-left: 5em;
     }
@@ -691,7 +617,7 @@ svg text {
         text-decoration: none;
         display: block;
         padding: 0.5em;
-        color: var(--black);
+        color: var(--back);
     }
     
     header nav a:active{
@@ -708,52 +634,55 @@ svg text {
     
     #description{
         background-color: transparent;
-        margin-top: 8em;
         margin-bottom: 1em;
         margin-left: 1em;
     }
     
     #description i{
-        color: red;
+        color: transparent;
     }
     
     #description h1{
         font-family: 'Bad Script', cursive;
         font-size: 1.3em;
-        color: #001125;
+        color: var(--back);
         text-align: center;
         margin-bottom: 0.5em;
         
     }
     
-    #description em{
-        text-decoration: none;
-        font-family: 'Satisfy', cursive;
-        font-size: 1.8em;
-        color: #001125;
-    }
-    
     #description h2{
-        margin-left: 8em;
         text-align: center;
         font-size: 0.9em;
         font-family: 'Bad Script', cursive;
-        color: #001125;
+        color: var(--back);
     }
+
     
-    #links{
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        margin-left:1em;
-        font-size: 0.6em;
-        margin-top: 20em;
+
+    svg {
+        font-family: 'Dawning of a New Day', cursive;
     }
-    
-    #links a{
-        margin-top: 0.5em;
-        color: #001125;
-        font-weight: bold;
+
+    svg text {
+        text-transform: uppercase;
+        animation: stroke 5s infinite alternate;
+        stroke-width: 2;
+        stroke: #365fa0;
+        font-size: 2em;
+    }
+
+    @keyframes stroke { 
+        0%   {
+            fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1);
+            stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+        }
+        70%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); }
+        80%  {fill: rgba(72,138,20,0); stroke: #00FFFF; stroke-width: 3; }
+        100% {
+            fill: #0077FF; stroke: #00FFFF; 
+            stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+        }
     }
    
     .group{
@@ -816,43 +745,10 @@ svg text {
         margin-bottom: 1em;
         width: 10em;
     }
-
-    footer{
-        display: flex;
-        flex-direction: column; 
-        align-items: center;  
-        justify-items: baseline;
-        background-color:#000000af;
-        padding: 2em;
-        margin-top: 1em;
-        font-size: 0.7em;
-    }
-    
-    footer a, 
-    footer a:visited{
-        margin: 0.5em;
-        text-decoration: none;
-        color: #0077ff;
-    }
-
-    span{
-        color: var(--back);
-    }
 }
 
 
 @media screen and (min-width: 551px) and (max-width: 1359px){
-    .home {
-        background-image: url("../imgs/b10.png");
-        background-size:contain;
-        background-repeat: repeat;
-    }
-    
-    .grid {
-        background-image: url("../imgs/background9.png");
-        background-size:cover;
-        background-repeat: repeat;
-    }
 
     
     header{
@@ -873,7 +769,8 @@ svg text {
     header nav li{
         margin-right: 5em;
         text-align: left;
-        margin-left: 1em;
+        margin-left: 0.5em;
+        font-size: 0.7em;
         border-bottom: solid #0077ff 0.5px;
     }
     
@@ -881,14 +778,8 @@ svg text {
     header nav a:visited {
         text-decoration: none;
         display: block;
-        padding: 0.5em;
-        color: #001125;
+        color: var(--back);
         font-weight: bold;
-    }
-    
-    header nav a:hover{
-        background-color: #0077ff;
-        color: var(--light);
     }
 
     main {
@@ -901,35 +792,27 @@ svg text {
     
     #description{
         background-color: transparent;
-        margin-top: 15em;
+        margin-top: 1em;
         margin-bottom: 1em;
         margin-left: 0.5em;
     }
 
     #description i{
-        color:white;
+        color:transparent;
     }
     
     #description h1{
         font-family: 'Bad Script', cursive;
-        font-size: 2.5em;
+        font-size: 2em;
         color: var(--back);
         text-align: center;
         margin-bottom: 0.5em;
         
     }
     
-    #description em{
-        text-decoration: none;
-        font-family: 'Satisfy', cursive;
-        font-size: 2.9em;
-        color: #b9daff;
-    }
-    
     #description h2{
-        margin-left: 6em;
         text-align: center;
-        font-size: 2.5em;
+        font-size: 1.5em;
         font-family: 'Bad Script', cursive;
     }
     
@@ -937,7 +820,6 @@ svg text {
         text-align: center;
         display: flex;
         flex-direction: column;
-        margin-left: 5em;
         margin-top: 5em;
     }
     
@@ -946,6 +828,29 @@ svg text {
         color: #b9daff;
         font-weight: bold;
         font-size: 1.2em;
+    }
+
+    svg {
+        font-family: 'Dawning of a New Day', cursive;
+    }
+    svg text {
+        text-transform: uppercase;
+        animation: stroke 5s infinite alternate;
+        stroke-width: 2;
+        stroke: #365fa0;
+        font-size: 3.5em;
+    }
+    @keyframes stroke { 
+        0%   {
+            fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1);
+            stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+        }
+        70%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); }
+        80%  {fill: rgba(72,138,20,0); stroke: #00FFFF; stroke-width: 3; }
+        100% {
+            fill: #0077FF; stroke: #00FFFF; 
+            stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+        }
     }
    
     .group{
@@ -1003,27 +908,5 @@ svg text {
         margin-top: 1em;
         margin-bottom: 1em;
         width: 16em;
-    }
-
-    footer{
-        display: flex;
-        flex-direction: column; 
-        align-items: center;  
-        justify-items: baseline;
-        background-color:#000000af;
-        padding: 2em;
-        margin-top: 1em;
-        font-size: 0.7em;
-    }
-    
-    footer a, 
-    footer a:visited{
-        margin: 0.5em;
-        text-decoration: none;
-        color: #0077ff;
-    }
-
-    span{
-        color: var(--back);
     }
 }
