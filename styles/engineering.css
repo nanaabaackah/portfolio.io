@@ -375,7 +375,9 @@ footer a{
         padding: 1em 3em;
         border: #0077ff solid 2px;
         background-color:#00ffff;
-        color: var(--black);
+        color: var(--back);
+        display: block;
+        text-decoration: none;
     }
     
     img{
@@ -463,10 +465,12 @@ footer a{
         text-align: center;
     }
     
-    .g1 a{
-        color: var(--black);
+    a,
+    a:visited,
+    a:active{
         text-align: right;
-        width: 100%;
+        width: fit-content;
+        text-decoration: none;
     }
     
     #g2-left{
