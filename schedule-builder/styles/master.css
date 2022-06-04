@@ -380,7 +380,50 @@ button:hover{
     line-height: 1.5;
 }
 
-footer{
-    background-image: url("https://www.picktime.com/webassets/2021/img/mountains-color.svg");
+.price{
+    text-align: center;
+    box-shadow: 0px 2px 20px #0000002b;
+    border-radius: 1em;
+    padding: 7em;
+    margin-right: 10em;
+    margin-left: 13em;
+    margin-bottom: 15em;
     background-color: white;
+}
+
+.price h1{
+    color: var(--dark);
+    font-size: 2.1em;
+}
+
+.price p{
+    font-size: 22.1px;
+    line-height: 1.4;
+}
+
+#bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bottom button{
+    background-color: var(--dark);
+    padding: 16px 109px;
+    border-radius: 2em;
+    border: none;
+    display: block;
+    box-shadow: 2px 4px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 20%);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.12px;
+}
+
+#price {
+    color: var(--black);
+    text-decoration: none;
+    margin-top: 1em;
 }

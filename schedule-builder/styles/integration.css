@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root{
+    --dark: #8b22e2;;
+    --light: #da6eda;
+    --borders: #ffff4f;
+    --back: #f0f2f8;
+    --other: #ebe9e9;
+    --black: #312b2b;
+
+    color: #312b2b;
+    color: var(--black);
+    font-family: "Raleway", sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh; /*fill page vertically, but still get bigger*/
+    min-width: 100vw; /*fille page horizontally, but still get bigger*/
+    display: flex;
+    flex-direction: column;
+    margin: 0; 
+    background-image: url("../imgs/wavesNegative.svg");
+    background-repeat: no-repeat;
+    background-position: 0em 29em;
+    background-color: var(--back);
+}
+
+em {
+    color: var(--dark);
+    font-style: normal;
+}
+
+#logo i{
+    padding: 1em;
+    color: var(--dark);
+    width: fit-content;
+    font-size: 2em;
+    margin-left: 2.5em;
+    padding-bottom: 0em;
+    
+}
+
+#logo a{
+    
+    box-shadow: none;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--back);
+    border-radius: 0.2em;
+    width:100%;
+    overflow: hidden;
+    position: fixed;
+    padding: 1em;
+}
+
+.menu button {
+    color: var(--back);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    background-color: var(--dark);
+    padding: 1em 1.4em;
+    border-radius: 2em;
+    border: none;
+    font-weight: bold;
+    display:inline;
+}
+
+#signup a,
+#feature a{
+    color: white;
+    text-decoration: none;
+}
+
+.menu nav ul{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    float: right;
+    margin-left: 25em;
+}
+
+.menu nav ul li{
+    padding: 1em;
+    list-style-type: none;
+    font-size: 0.9em;
+    margin-right: 2em;
+}
+
+.menu a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--black);
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+}
