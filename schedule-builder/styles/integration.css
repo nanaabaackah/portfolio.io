@@ -31,6 +31,14 @@ em {
     font-style: normal;
 }
 
+h2{
+    color: #8b22e2;
+}
+h3{
+    font-size: 1.3em;
+    margin: 0;
+}
+
 #logo i{
     padding: 1em;
     color: var(--dark);
@@ -97,7 +105,136 @@ em {
     color: var(--black);
 }
 
+.img-grid,
+.img-grid-1,
+.img-grid-2{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.img-grid div,
+.img-grid-1 div,
+.img-grid-2 div{
+    width: 100%;
+}
+
+#three .img-grid-2,
+#five .img-grid-1,
+#seven .img-grid-1{
+    width: 66%;
+}
+
+#six .img-grid-2,
+#eight .img-grid-1{
+    width: 33.3%;
+}
+
+.img-grid img,
+.img-grid-1 img,
+.img-grid-2 img{
+    width: 65px;
+    background-color: var(--back);
+    border-radius: 1em;
+    padding: 0.4em;
+    margin: 0;
+}
+
+.img-grid p,
+.img-grid-1 p,
+.img-grid-2 p{
+    width: 65%;
+    line-height: 1.7;
+    font-size: 1.1em;
+}
 #container{
     display: flex;
     flex-direction: column;
+}
+
+#first-page{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding-bottom: 15.6em;
+    align-items: center;
+    padding-top: 9em;
+    padding-left: 0;
+    text-align: center;
+}
+
+#first-page h1{
+    font-size: 3em;
+}
+
+
+#first-page p{
+    font-size: 1.3em;
+    width: 60%;
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+#second-page{
+    background-color: white;
+    padding: 5em 8em;
+}
+
+#two{
+    display: flex;
+    flex-direction: column;
+}
+
+.price{
+    text-align: center;
+    box-shadow: 0px 2px 20px #0000002b;
+    border-radius: 1em;
+    padding: 7.5em;
+    margin: 2em;
+    margin-top: 3em;
+}
+
+.price h1{
+    color: var(--dark);
+    font-size: 2.1em;
+}
+
+.price p{
+    font-size: 22.1px;
+    line-height: 1.4;
+}
+
+#bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bottom button{
+    background-color: var(--dark);
+    padding: 16px 109px;
+    border-radius: 2em;
+    border: none;
+    display: block;
+    box-shadow: 2px 4px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 20%);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.12px;
+}
+
+#price {
+    color: var(--black);
+    text-decoration: none;
+    margin-top: 1em;
+}
+
+#bottom a:hover{
+    text-decoration: underline;
+}
+#signup {
+    color: white;
+    text-decoration: none;
 }

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root{
+    --dark: #8b22e2;;
+    --light: #da6eda;
+    --borders: #ffff4f;
+    --back: #f0f2f8;
+    --other: #ebe9e9;
+    --black: #312b2b;
+
+    color: #312b2b;
+    color: var(--black);
+    font-family: "Raleway", sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh; /*fill page vertically, but still get bigger*/
+    min-width: 100vw; /*fille page horizontally, but still get bigger*/
+    display: flex;
+    flex-direction: column;
+    margin: 0; 
+}
+
+#logo i{
+    padding: 0.5em;
+    color: var(--dark);
+    width: fit-content;
+    font-size: 2em;
+    margin: 1.5em;
+    border-radius: 0.5em;
+    border: var(--back) solid 2px;
+}
+
+#logo a{
+    
+    box-shadow: none;
+}
+
+.left-container{
+    background-image: url("../imgs/imac_picktime_login_v3.jpg");
+}
