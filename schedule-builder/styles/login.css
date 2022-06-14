@@ -42,6 +42,7 @@ body{
 h1{
     color: white;
     margin-bottom: 0em;
+    font-size: 2.2em;
 }
 
 h2{
@@ -68,7 +69,7 @@ h2{
     list-style: none;
     padding-top: 3em;
     padding-left: 0em;
-    padding-bottom: 0.6em;
+    padding-bottom: 0.2em;
 }
 
 .left-container nav ul li{
@@ -91,24 +92,65 @@ h2{
     padding-left: 3em;
 }
 
+.right-container nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 1.5em;
+    text-align: left;
+    margin-left: 0em;
+    border-bottom: solid 1px lightgray;
+}
+
+.right-container nav ul li{
+    padding-right: 1em;
+    padding-left: 0em;
+    
+}
+
+.right-container nav a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+.right-container nav a{
+    border-bottom: solid 2px#1976d8;
+}
+
 .right-container form{
     display: flex;
     flex-direction: column;
-    margin-top: 10em;
+    margin-top: 0em;
 }
 
 .right-container input{
     border-top: none;
     border-left: none;
     border-right: none;
-    padding: 1em 2em;
+    padding: 1em 0em;
     width: 100%;
     margin-bottom: 1.5em;
     font-size: 1em;
 }
 
 .right-container button{
-    padding: 1em 2.2em;
+    padding: 1.2em 2.2em;
     padding-right: 3em;
-    width: 100%;
+    width: 300px;
+    color: white;
+    background-color: #674cab;
+    border: none;
+    border-radius: 0.3em;
+    display: block;
+    margin-bottom: 1em;
+}
+form a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#forgot a{
+    color: var(--black);
+    font-size: 0.9em;
 }
