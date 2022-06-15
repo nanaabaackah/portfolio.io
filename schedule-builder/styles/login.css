@@ -92,28 +92,36 @@ h2{
     padding-left: 3em;
 }
 
-.right-container nav ul{
+#pin{
+    margin-left: 0em;
+    margin-top: 1em;
+}
+
+#pin nav ul{
     display: flex;
     flex-direction: row;
     list-style: none;
-    padding: 1.5em;
+    padding-top: 2em;
+    padding-bottom: 0.8em;
     text-align: left;
-    margin-left: 0em;
+    padding-left: 0em;
     border-bottom: solid 1px lightgray;
 }
 
-.right-container nav ul li{
+#pin nav ul li{
     padding-right: 1em;
-    padding-left: 0em;
-    
+    padding-left: 0.4em;
 }
 
-.right-container nav a{
+#pin nav a{
     text-decoration: none;
-    color: var(--black);
+    color: #5c5c5c;
+    padding-bottom: 1em;
+    font-size: 0.85em;
+    font-weight: bold;
 }
 
-.right-container nav a{
+#pin nav a{
     border-bottom: solid 2px#1976d8;
 }
 
@@ -131,6 +139,11 @@ h2{
     width: 100%;
     margin-bottom: 1.5em;
     font-size: 1em;
+    color: #5c5c5c;
+}
+
+.right-container input[type="text"]{
+    color: #312b2b;
 }
 
 .right-container button{
@@ -153,4 +166,5 @@ form a{
 #forgot a{
     color: var(--black);
     font-size: 0.9em;
+    text-decoration: none;
 }
