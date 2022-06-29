@@ -151,12 +151,21 @@ h2{
     padding-right: 3em;
     width: 300px;
     color: white;
-    background-color: #674cab;
     border: none;
     border-radius: 0.3em;
     display: block;
     margin-bottom: 1em;
+    font-size: 1em;
 }
+
+.right-container #login{
+    background-color: #674cab;
+}
+
+.right-container #register{
+    background-color: #63b867;
+}
+
 form a{
     color: white;
     text-decoration: none;
