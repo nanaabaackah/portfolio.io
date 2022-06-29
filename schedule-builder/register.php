@@ -7,5 +7,12 @@ session_start();
 
 require "includes/library.php";
 
-$p
+$pdo = connectDB();
+
+$query = "insert into website_users values (NULL, NULL,?,?)";
+$stmt = $pdo->prepare($query);
+$stmt->execute([$fullname, $email, $password]);
+
+header("Location:index.html");
+exit();
 ?>
