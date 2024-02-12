@@ -58,7 +58,7 @@ svg text {
 
     .home {
         background-image: url("../imgs/Portfolio\ Cover.svg");
-        background-size: cover;
+        background-size: 100%;
         background-repeat: no-repeat;
     }
 
@@ -198,14 +198,25 @@ svg text {
         align-items: center;
         position: relative;
         width: 100%;
-        left: 5em;
     }
 
     .match__item--middle{
         position: absolute;
         z-index: -1;
-        left: 7.5em;
-        top: 2em;
+        left: -7.5em;
+        top: 3em;
+    }
+
+    .match a:hover{
+        opacity: 50%;
+        color: var(--light);
+    }
+
+    .match p{
+        color: #ffffff;
+        font-size: 5em;
+        font-family: 'Satisfy', cursive;
+        text-transform: none;
     }
     /**********************************************/
     /*               Dark Mode Styles             */

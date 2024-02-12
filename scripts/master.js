@@ -25,4 +25,9 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     }
 setTextAnimation(0.1,3.2,2,'linear','#ffffff',true);
+
+    function play() {
+        var x = document.getElementsByClassName("match__item--middle").src;
+        document.getElementById("open").innerHTML = x;
+    }
 })
