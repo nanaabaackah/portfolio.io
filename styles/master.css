@@ -5,6 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Zeyada&display=swap');
 
 
 :root{
@@ -194,8 +197,7 @@ svg text {
     }    
     
     .match {
-        top: 12em;
-        align-items: center;
+        top: 7em;
         position: relative;
         width: 100%;
     }
@@ -204,7 +206,7 @@ svg text {
         position: absolute;
         z-index: -1;
         left: -7.5em;
-        top: 3em;
+        top: -2em;
     }
 
     .match a:hover{
@@ -217,6 +219,7 @@ svg text {
         font-size: 5em;
         font-family: 'Satisfy', cursive;
         text-transform: none;
+        text-align: left;
     }
     /**********************************************/
     /*               Dark Mode Styles             */
