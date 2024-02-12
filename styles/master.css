@@ -8,18 +8,19 @@
 
 
 :root{
-    --dark: #201801;
-    --back: #fff;
+    --dark: #263e4a;
+    --back: #ebb77e;
     --border: #c99423;
-    --other: #968700;
-    --light: #f1ebac;
+    --other: #a78254;
+    --light: #616f70;
     --black: #242424;
 
     
     color: var(--back);
-    /*font-family: 'Bree Serif', serif;*/
-    font-family: 'Space Mono', monospace;
-    
+    /*font-family: 'Bree Serif', serif;
+    font-family: 'Space Mono', monospace;*/
+    font-family: 'Lekton', sans-serif;
+    text-transform: uppercase;
 }
 
 body{
@@ -104,8 +105,8 @@ svg text {
     }
     
     header nav a:hover{
-        background-color: #0077ff;
-        color: var(--black);
+        background-color: var(--light);
+        color: #ffffff;
     }
     
     
@@ -172,7 +173,8 @@ svg text {
     }
 
     #links a:hover{
-        color: #0077ff;
+        color: var(--light);
+        
     }
     
     /*button {
@@ -191,6 +193,20 @@ svg text {
         font-weight: bolder;
     }    
     
+    .match {
+        top: 12em;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        left: 5em;
+    }
+
+    .match__item--middle{
+        position: absolute;
+        z-index: -1;
+        left: 7.5em;
+        top: 2em;
+    }
     /**********************************************/
     /*               Dark Mode Styles             */
     /*********************************************
@@ -609,7 +625,7 @@ svg text {
         margin-right: 1em;
         text-align: center;
         margin-left: 0em;
-        border-bottom: solid #0077ff 0.5px;
+        border-bottom: solid var(--light) 0.5px;
     }
     
     header nav a,
@@ -621,7 +637,7 @@ svg text {
     }
     
     header nav a:active{
-        background-color: #0077ff;
+        background-color: var(--light);
         color: var(--light);
     }
 
@@ -771,7 +787,7 @@ svg text {
         text-align: left;
         margin-left: 0.5em;
         font-size: 0.7em;
-        border-bottom: solid #0077ff 0.5px;
+        border-bottom: solid var(--light) 0.5px;
     }
     
     header nav a,
@@ -909,4 +925,6 @@ svg text {
         margin-bottom: 1em;
         width: 16em;
     }
+
+    
 }
