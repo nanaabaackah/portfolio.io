@@ -1,0 +1,552 @@
+@import url("reset.css"); /*import reset*/
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Zeyada&display=swap');
+
+
+:root{
+    --dark: #263e4a;
+    --back: #ebb77e;
+    --border: #c99423;
+    --other: #a78254;
+    --light: #616f70;
+    --black: #242424;
+
+    
+    color: var(--back);
+    /*font-family: 'Bree Serif', serif;
+    font-family: 'Space Mono', monospace;*/
+    font-family: 'Lekton', sans-serif;
+    text-transform: uppercase;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh; /*fill page vertically, but still get bigger*/
+    min-width: 100vw; /*fille page horizontally, but still get bigger*/
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    
+}
+
+    .home {
+        background-image: url("../imgs/bck2.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    
+    /**********************************************/
+    /*                Nav Styles                  */
+    /**********************************************/
+    
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0.5em;
+        background-color: transparent;
+        justify-content: center;
+    }
+
+    button{
+        background-color: transparent;
+        border: none;
+        margin: 2em;
+    }
+    
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        padding: 1em;
+    }
+    
+    header nav li{
+        margin-right: 4em;
+        text-align: center;
+        margin-left: 6em;
+        border-bottom: solid white 0.5px;
+        font-size: 1em;
+    }
+    
+    header nav a,
+    header nav a:visited {
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+        color: var(--back);
+    }
+    
+    header nav a:hover{
+        background-color: var(--light);
+        color: #ffffff;
+    }
+    
+    
+    
+    /**********************************************/
+    /*               Main Styles                  */
+    /**********************************************/
+    
+    main {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        margin-bottom: auto;
+    }
+    
+    #description{
+        background-color: transparent;
+        padding: 6em;
+        padding-bottom: 1em;
+        text-align: center;
+    }
+    
+    #description i{
+        color: transparent;
+        text-shadow: 4px 4px 10px red;
+    }
+    
+    #description h1{
+        font-family: 'Bad Script', cursive;
+        font-size: 2em;
+        color: var(--back);
+        text-align: center;
+        
+    }
+    
+    #description em{
+        text-decoration: none;
+        font-family: 'Satisfy', cursive;
+        font-size: 3em;
+    }
+    
+    #description h2{
+        
+        text-align: center;
+        font-size: 2.5em;
+        font-family: 'Bad Script', cursive;
+    }
+    
+    #links{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2em;
+        width: fit-content;
+        margin-left: 22em;
+        align-items: center;
+    }
+    
+    #links a{
+        margin-top: 0.5em;
+        color: var(--back);
+        text-align: center;
+        align-items: center;
+    }
+
+    #links a:hover{
+        color: var(--light);
+        
+    }
+    
+    /*button {
+        background-color: var(--back);
+        color: var(--dark);
+        border: none;
+        display: block;
+        padding: 1em;
+        font-size: larger;
+        flex-direction: column;
+        align-items: center;
+    }*/
+    
+    em {
+        text-decoration: var(--border) underline;
+        font-weight: bolder;
+    }    
+    
+    
+    /**********************************************/
+    /*               Dark Mode Styles             */
+    /*********************************************
+    
+    .dark-mode {
+        color: #f1ebac;
+        background-color: #000;
+        background-color: var(--black);
+        color: var(--light);
+    }
+    .dark-mode nav a,
+    .dark-mode nav a:visited{
+    
+        color: var(--light);
+    
+        border-bottom: var(--back) solid 3px;
+    
+    }
+    
+    .dark-mode #description h1{
+        color: var(--light);
+        border: var(--light) 3px solid;
+    }
+    
+    .dark-mode button{
+        background-color: var(--black);
+        color: var(--light);
+    }
+    
+    .dark-mode nav a:hover{
+        background-color: var(--light);
+        color: var(--dark);
+    }
+    
+    .dark-mode footer{
+    
+        background-color: var(--dark);
+    
+    }
+    
+    .dark-mode footer a, 
+    .dark-mode footer a:visited{
+    
+        text-decoration: none;
+        color: var(--light);
+    }
+    
+    /**********************************************/
+    /*               Footer Styles                */
+    /**********************************************/
+    
+    footer{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;  
+       
+        background-color:#ffffffaf;
+        padding: 2em;
+        margin-top: 1em;
+    }
+    
+    footer a, 
+    footer a:visited{
+        margin: 0.5em;
+        text-decoration: underline;
+        color: var(--dark);
+        font-size: 1.5em;
+    }
+    
+    span{
+        color: var(--black);
+    }
+
+
+    
+    footer{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;  
+        justify-items: baseline;
+        background-color:#ffffffaf;
+        padding: 2em;
+        margin-top: 1em;
+    }
+    
+    footer a, 
+    footer a:visited{
+        margin: 0.5em;
+        text-decoration: underline;
+        color: var(--dark);
+    }
+    
+    span{
+        color: var(--black);
+    }
+    
+@media screen and (max-width: 550px) {
+    .home{
+        background-image: url("../imgs/bck2.svg");
+        background-repeat: repeat;
+    }
+    .grid main{
+        margin-left: 5em;
+    }
+    
+    header{
+        display: flex;
+        flex-direction: row;
+        margin-top: 1em;
+        justify-content: center;
+    }
+    
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        font-size: 0.7em;
+    }
+    
+    header nav li{
+        margin-right: 1em;
+        text-align: center;
+        margin-left: 0em;
+        border-bottom: solid var(--light) 0.5px;
+    }
+    
+    header nav a,
+    header nav a:visited {
+        text-decoration: none;
+        display: block;
+        padding: 0.5em;
+        color: var(--back);
+    }
+    
+    header nav a:active{
+        background-color: var(--light);
+        color: var(--light);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column; 
+        margin-bottom: auto;
+        justify-items: left;
+    }
+    
+    #description{
+        background-color: transparent;
+        margin-bottom: 1em;
+        margin-left: 1em;
+    }
+    
+    #description i{
+        color: transparent;
+    }
+    
+    #description h1{
+        font-family: 'Bad Script', cursive;
+        font-size: 1.3em;
+        color: var(--back);
+        text-align: center;
+        margin-bottom: 0.5em;
+        
+    }
+    
+    #description h2{
+        text-align: center;
+        font-size: 0.9em;
+        font-family: 'Bad Script', cursive;
+        color: var(--back);
+    }
+
+ 
+    .group{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+    .group div{
+        margin-bottom: 0.5em;
+    }
+    .group, 
+    .group2{
+        width: 90%;
+        margin: 0.9em;
+    }
+    
+    .group h2,
+    .group2 h2{
+        width: 100%;
+        font-size: 0.8em;
+        margin-top: 1em;
+        color: #001125;
+    }
+    
+    .group2{
+        display: flex;
+        flex-direction: column;
+        position: relative;  
+        margin-left: 0.6em;     
+    }
+    
+    .group a,
+    .group2 a{
+        color: var(--black);
+        width:max-content;
+        margin-bottom: 0.2em;
+        text-decoration: underline;
+        font-size: 0.6em;
+    }
+    
+    em {
+        text-decoration: var(--border) underline;
+        font-weight: bolder;
+    }
+    
+    .group p,
+    .group2 p{
+        margin-bottom: 0.5em;
+    }
+    .group img{
+        margin-top: 1em;
+        width: 10em;
+        margin-bottom: 0.5em;
+        
+    }
+    
+    .group2 img{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 10em;
+    }
+}
+
+
+@media screen and (min-width: 551px) and (max-width: 1359px){
+
+    
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0.5em;
+        background-color: transparent;
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+    
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    header nav li{
+        margin-right: 5em;
+        text-align: left;
+        margin-left: 0.5em;
+        font-size: 0.7em;
+        border-bottom: solid var(--light) 0.5px;
+    }
+    
+    header nav a,
+    header nav a:visited {
+        text-decoration: none;
+        display: block;
+        color: var(--back);
+        font-weight: bold;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column; 
+        margin-bottom: auto;
+        justify-items: center;
+        
+    }
+    
+    #description{
+        background-color: transparent;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 0.5em;
+    }
+
+    #description i{
+        color:transparent;
+    }
+    
+    #description h1{
+        font-family: 'Bad Script', cursive;
+        font-size: 2em;
+        color: var(--back);
+        text-align: center;
+        margin-bottom: 0.5em;
+        
+    }
+    
+    #description h2{
+        text-align: center;
+        font-size: 1.5em;
+        font-family: 'Bad Script', cursive;
+    }
+    
+    #links{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5em;
+    }
+    
+    #links a{
+        margin-top: 0.5em;
+        color: #b9daff;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .group{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+   
+    .group, 
+    .group2{
+        width: 50%;
+        margin-left: 0em;
+    }
+    
+    .group h2,
+    .group2 h2{
+        width: 100%;
+        font-size: 1em;
+        margin-top: 0.2em;
+        color: #001125;
+    }
+    
+    .group2{
+        display: flex;
+        flex-direction: column;
+        position: absolute;  
+        margin-left: 23em;     
+    }
+    
+    .group a,
+    .group2 a{
+        color: var(--black);
+        width:max-content;
+        margin-bottom: 0.2em;
+        text-decoration: underline;
+    }
+    
+    em {
+        text-decoration: var(--border) underline;
+        font-weight: bolder;
+    }
+    
+    .group p,
+    .group2 p{
+        margin-bottom: 0.5em;
+    }
+    .group img{
+        margin-top: 1em;
+        width: 15em;
+        margin-bottom: 0.5em;
+        
+    }
+    
+    .group2 img{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 16em;
+    }
+
+    
+}
