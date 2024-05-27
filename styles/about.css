@@ -162,7 +162,7 @@ body{
 
     }
 
-    .who img{
+    .who__item--left{
         width: 20%;
     }
     
