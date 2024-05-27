@@ -160,6 +160,7 @@ body{
     #about {
         background-color: #263e4a;
         opacity: 0.5;
+        margin: 10em;
     }
 
     .who {
