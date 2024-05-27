@@ -157,15 +157,9 @@ body{
         
     }
 
-    .about {
-        background-color: var(--black);
-        opacity: 0.5;
-        margin: 10em;
-    }
-
     .who {
         top:5em;
-        
+        background-color: #242424;
     }
 
     .who__item--left{
