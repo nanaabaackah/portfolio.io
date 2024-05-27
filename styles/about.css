@@ -159,7 +159,11 @@ body{
 
     .match {
         top:2em;
-        
+
+    }
+
+    .match img{
+        width: 20%;
     }
     
     /*button {
