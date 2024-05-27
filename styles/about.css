@@ -157,13 +157,20 @@ body{
         
     }
 
+    #about {
+        background-color: #263e4a;
+        opacity: 0.5;
+    }
+
     .who {
         top:5em;
-        left: 5em;
+        
     }
 
     .who__item--left{
         width:fit-content;
+        left: 5em;
+        
     }
     
     /*button {
