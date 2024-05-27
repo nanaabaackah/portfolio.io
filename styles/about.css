@@ -158,8 +158,8 @@ body{
     }
 
     .who {
-        top:2em;
-
+        top:5em;
+        left: 5em;
     }
 
     .who__item--left{
