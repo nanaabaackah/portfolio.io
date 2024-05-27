@@ -159,13 +159,12 @@ body{
 
     .who {
         top:5em;
-        background-color: #242424;
+        
     }
 
     .who__item--left{
         width:fit-content;
         left: 5em;
-        
     }
     
     /*button {
