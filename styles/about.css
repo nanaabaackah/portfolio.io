@@ -158,9 +158,9 @@ body{
     }
 
     #about {
-        background-color: #263e4a;
+        background-color: var(--black);
         opacity: 0.5;
-        margin: var(--black);
+        margin: 10em;
     }
 
     .who {
