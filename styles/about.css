@@ -163,7 +163,7 @@ body{
     }
 
     .who__item--left {
-        width:fit-content;
+        width: 10%;
         left: 5em;
     }
     
