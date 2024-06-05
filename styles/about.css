@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Zeyada&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Honk&family=Zeyada&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
 
 :root{
     --dark: #263e4a;
@@ -51,7 +51,6 @@ body{
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-top: 0.5em;
         background-color: transparent;
         justify-content: center;
     }
@@ -71,9 +70,9 @@ body{
     header nav li{
         margin-right: 4em;
         text-align: center;
-        margin-left: 6em;
-        border-bottom: solid white 0.5px;
+        margin-left: 4em;
         font-size: 1em;
+        font-weight: bolder;
     }
     
     header nav a,
@@ -82,11 +81,20 @@ body{
         display: block;
         padding: 1em;
         color: var(--back);
+        margin-top: 4em;
+        position: relative;
+        border-bottom: solid white 0.5px;
     }
     
     header nav a:hover{
         background-color: var(--light);
         color: #ffffff;
+    }
+
+    header nav img{
+        width: 50%;
+        position: relative;
+        margin-top: 2em;
     }
     
     
@@ -157,16 +165,53 @@ body{
         
     }
 
+    #sec_back {
+        background: rgba(0, 0, 0, 0.43);
+        margin-left: 15em;
+        margin-right: 6em;
+        margin-top: 5em;
+        filter: alpha(opacity=0.6);
+        display: flex;
+        position: relative;
+    }
+
     .who {
-        top:5em;
-        
+        margin:7em;
+
     }
 
     .who__item--left {
-        width: 10%;
-        left: 5em;
+        width: 15%;
+        border-radius: 20%;
+        position: absolute;
+        float: left;
     }
-    
+
+    .write-up {
+        flex: 50%;
+        text-transform: none;
+        margin-left: 20em;
+    }
+
+    .kristi-regular {
+        font-family: "Kristi", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--back);
+        text-transform: none;
+        font-size: 5em;
+        line-height: 2em;
+      }
+
+      .bolden {
+        font-family: "Kristi", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--back);
+        text-transform: none;
+        font-size: 2.5em;
+      }
+      
     /*button {
         background-color: var(--back);
         color: var(--dark);
