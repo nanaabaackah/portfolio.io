@@ -9,6 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Honk&family=Zeyada&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
 :root{
     --dark: #263e4a;
@@ -173,34 +174,35 @@ body{
         filter: alpha(opacity=0.6);
         display: flex;
         position: relative;
+        font-family: "Reenie Beanie", cursive;
+        font-weight: 400;
+        font-style: normal;
     }
 
     .who {
         margin:7em;
-
     }
 
     .who__item--left {
         width: 15%;
         border-radius: 20%;
         position: absolute;
-        float: left;
     }
 
     .write-up {
-        flex: 50%;
         text-transform: none;
-        margin-left: 20em;
+        margin-left: 10em;
+        font-size: 2.5em;
     }
-
+    
     .kristi-regular {
         font-family: "Kristi", cursive;
         font-weight: 400;
         font-style: normal;
         color: var(--back);
         text-transform: none;
-        font-size: 5em;
-        line-height: 2em;
+        font-size: 2.5em;
+        line-height: 1.5em;
       }
 
       .bolden {
@@ -208,8 +210,8 @@ body{
         font-weight: 400;
         font-style: normal;
         color: var(--back);
-        text-transform: none;
-        font-size: 2.5em;
+        text-transform: capitalize;
+        font-size: 1.5em;
       }
       
     /*button {
