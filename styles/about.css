@@ -190,7 +190,7 @@ body{
     }
 
     .write-up {
-        text-transform: none;
+        text-transform: lowercase;
         margin-left: 10em;
         font-size: 2.5em;
     }
