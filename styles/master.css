@@ -197,7 +197,7 @@ svg text {
     }    
     
     .match {
-        top: 5em;
+        top: 1em;
         position: relative;
         width: 100%;
     }
@@ -211,7 +211,7 @@ svg text {
 
     .match a:hover{
         opacity: 50%;
-        color: var(--light);
+        color: var(--back);
     }
 
     .match p{
@@ -220,6 +220,22 @@ svg text {
         font-family: 'Satisfy', cursive;
         text-transform: none;
         text-align: left;
+    }
+
+    .social{
+        margin-top: 2em;
+        position: relative;
+        text-align: center;
+    }
+
+    .social i{
+        color: #ffffff;
+        margin-right: 1em;
+        font-size: 1.5em;
+    }
+
+    .social i:hover{
+        color: var(--back);
     }
     /**********************************************/
     /*               Dark Mode Styles             */
