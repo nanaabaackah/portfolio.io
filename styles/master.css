@@ -200,13 +200,16 @@ svg text {
         top: 1em;
         position: relative;
         width: 100%;
+        
     }
 
+    
     .match__item--middle{
         position: absolute;
         z-index: -1;
         left: -7.5em;
         top: -2em;
+        
     }
 
     .match a:hover{
@@ -216,10 +219,18 @@ svg text {
 
     .match p{
         color: #ffffff;
-        font-size: 5em;
+        font-size: 2em;
         font-family: 'Satisfy', cursive;
         text-transform: none;
-        text-align: left;
+        
+    }
+
+    .match h1{
+        font-family: 'Satisfy', cursive;
+        font-size: 4em;
+        color: #ffffff;
+        text-transform: none;
+        align-content: center;
     }
 
     .social{

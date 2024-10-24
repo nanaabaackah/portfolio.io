@@ -18,6 +18,7 @@
     --other: #a78254;
     --light: #616f70;
     --black: #242424;
+    --text: #223e4a;
 
     
     color: var(--back);
@@ -38,7 +39,8 @@ body{
 }
 
     .home {
-        background-image: url("../imgs/bck2.svg");
+        /*background-image: url("../imgs/bck2.svg");*/
+        background-color: #473c38;
         background-size: 100%;
         background-repeat: no-repeat;
     }
@@ -69,20 +71,27 @@ body{
     }
     
     header nav li{
-        margin-right: 4em;
+        margin-right: 5em;
         text-align: center;
-        margin-left: 4em;
+        margin-left: 5em;
         font-size: 1em;
         font-weight: bolder;
     }
-    
+    header nav li:first-child a{
+        background-color: transparent;
+        border-bottom: none;
+        margin-top: -1.5em;
+        font-size: 4em;
+        margin-right: 2em;
+        margin-left: -2.3em;
+    }
     header nav a,
     header nav a:visited {
         text-decoration: none;
         display: block;
         padding: 1em;
         color: var(--back);
-        margin-top: 4em;
+        
         position: relative;
         border-bottom: solid white 0.5px;
     }
@@ -93,9 +102,8 @@ body{
     }
 
     header nav img{
-        width: 50%;
-        position: relative;
-        margin-top: 2em;
+        width: 210%;
+        position: absolute;
     }
     
     
@@ -111,7 +119,7 @@ body{
         margin-bottom: auto;
     }
     
-    #description{
+    /*#description{
         background-color: transparent;
         padding: 6em;
         padding-bottom: 1em;
@@ -164,11 +172,11 @@ body{
     #links a:hover{
         color: var(--light);
         
-    }
+    }*/
 
     #sec_back {
         background: rgba(0, 0, 0, 0.43);
-        margin-left: 15em;
+        margin-left: 10em;
         margin-right: 6em;
         margin-top: 5em;
         filter: alpha(opacity=0.6);
@@ -180,7 +188,7 @@ body{
     }
 
     .who {
-        margin:7em;
+        margin:3em;
     }
 
     .who__item--left {
@@ -191,7 +199,7 @@ body{
 
     .write-up {
         text-transform: lowercase;
-        margin-left: 10em;
+        margin-left: 2em;
         font-size: 2.5em;
     }
     
