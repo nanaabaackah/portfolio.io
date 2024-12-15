@@ -187,8 +187,86 @@ body{
         font-style: normal;
     }
 
+    .wrapper {
+        display: flex;
+        margin: auto;
+        align-items: center;
+        float: left;
+        margin-top: 13em;
+    }
+    
+    .profile {
+        position: absolute;
+        width: 300px;
+        height: 350px;
+        background:url("/imgs/IMG_5131.JPG");
+        background-size: cover;
+        
+        border: 12px;
+        border-top-left-radius: 35px !important;
+        border-radius: 6px
+    }
+    
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background:rgba(0,0,0,0.8);
+        border-radius: 12px;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 1s;
+        border-top-left-radius: 35px !important;
+        border-radius: 6px
+    }
+    
+    .profile:hover 
+    
+    .overlay {
+        opacity: 1
+    }
+    
+    .social-icons {
+        display: flex;
+        list-style: none;
+        bottom: 10px;
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        left: 22px
+    }
+    
+    .social-icons li {
+        width: 25px;
+        height: 25px;
+        border: 1px solid #eee;
+        padding: 15px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        border-radius: 5px;
+        transition: all 1s
+    }
+    
+    .social-icons li:hover { 
+        background:#fff;
+        color: #000
+    }
+    
+    .overlay .about { 
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        top:40%;
+        color: #fff;
+        flex: column
+    }
+
     .who {
         margin:3em;
+        
     }
 
     .who__item--left {
@@ -199,8 +277,14 @@ body{
 
     .write-up {
         text-transform: lowercase;
-        margin-left: 2em;
+        margin-left: 8em;
         font-size: 2.5em;
+        position: relative;
+        float: right;
+        display: block;
+        word-wrap: break-word;
+        text-align: justify;
+        
     }
     
     .kristi-regular {
