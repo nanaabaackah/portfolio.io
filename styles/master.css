@@ -28,8 +28,7 @@
 
 body{
     width: 100%;
-    min-height: 100vh; /*fill page vertically, but still get bigger*/
-    min-width: 100vw; /*fille page horizontally, but still get bigger*/
+    
     display: flex;
     flex-direction: column;
     margin-bottom: auto;
@@ -38,8 +37,9 @@ body{
 
     .home {
         background-image: url("../imgs/Portfolio\ Cover.svg");
-        background-size: 100%;
+        background-size:cover;
         background-repeat: no-repeat;
+        width: 100%;
     }
 
     
