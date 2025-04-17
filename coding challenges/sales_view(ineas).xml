@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="inherit_view_sales_order_form2" model="ir.ui.view">
+        <field name="name">sales.order.view.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                <field name="stage"/>
+                <field name="expiry_reason"/>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="after">
+                <widget name="web_ribbon" title="Completed" attrs="{'invisible': [('stage', '!=', 'completed')]}"/>
+            </xpath>
+ 			
+        </field>
+    </record>
+</odoo>

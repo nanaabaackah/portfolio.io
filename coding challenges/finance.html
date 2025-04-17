@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cbec4152c6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">             
+  </head>
+  <style>
+
+.container {    
+    padding-top: 6em;
+    font-family: 'Montserrat';
+    margin: auto;
+    height: auto;
+    display: grid;
+    padding-left: 2em;
+}
+
+.step{
+    width: auto;
+    text-align: left;
+    height: auto;
+    margin-bottom: 22em;
+}
+
+.step:last-child{
+        margin-bottom: 5em;
+    }
+.step-a{
+    width: auto;
+    text-align: left;
+    height: auto;
+    margin-bottom: 30em;
+}
+
+.step-b{
+    width: auto;
+    text-align: left;
+    height: auto;
+    margin-bottom: 12em;
+}
+
+.l-box {
+    background-color: #1a1925dd;
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center ;
+    width: 350px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.l-box2 {
+    background-color: #1a1925dd;
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center ;
+    width: 350px;
+    border-radius: 20px;
+    margin-left: 22em;
+    margin-top: -8em;
+}
+
+.r-box{
+    font-size: 16px;
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center ;
+    width: auto;
+    margin-left: 12em;
+    margin-top: -7em;
+}
+
+.r-box2{
+    font-size: 16px;
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center ;
+    width: 400px;
+    position: relative;
+}
+
+.image{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    width: 350px;
+    height: 250px; 
+    border-radius: 20px;  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+  
+.image-b{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    width: 350px;
+    height: 250px; 
+    border-radius: 20px;  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.image-small{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    width: 350px;
+    height: 200px; 
+    border-radius: 20px;  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.l-text {
+    width: 70%;
+    position: absolute;
+    font-size: 22px;
+    color: white;
+    align-items:center;
+    justify-content: center ;
+    display: flex;
+    font-weight: 800;
+
+}
+
+.l-text2 {
+    width: 50%;
+    position: absolute;
+    font-size: 22px;
+    color: white;
+    align-items: center;
+    justify-content: center ;
+    display: flex;
+    font-weight: 800;
+}
+
+.r-text{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    padding: 2em;
+    width: 40%;
+}
+
+.r-text2{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    padding: 2em;
+    width: 70%;
+}
+
+.r-text h1, 
+.r-text2 h1{
+    font-size: 16px;
+}
+
+#num{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-color: #2ea2f0;
+    border-radius: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    font-weight: 900;
+    font-size: 21px;
+    color: white;
+    margin-left: 10em;
+    margin-top: -11em;
+    z-index: 2;
+}
+
+#num-b{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-color: #d1a32d;
+    border-radius: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    font-weight: 900;
+    font-size: 21px;
+    color: white;
+    margin-top: .1em;
+    margin-left: 12em;
+}
+
+</style>
+  <body>
+   <div class="container">
+       <div class="step-a">
+            <div class="l-box">
+                <img class="image" src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="l-text">
+                    <p>Accounts Receivable (AR)</p>
+                    
+                </div>
+            </div>
+            <div class="r-box">
+                    <div class="r-text">
+                        <h1>Issuing Invoices</h1>
+                        <ul>
+                            <li>Quotes Team sends deposit invoices.</li>
+                            <li>PMs handle follow-up invoices.</li>
+                            <li>Finance matches invoices to unnoticed payments.</li>
+                        </ul>
+                        <h1>Sending Invoices</h1>
+                        <ul>
+                            <li>Invoices sent daily via Azimuth.</li>
+                            <li>Monthly AR Statements emailed.</li>
+                            <li>Finance manages complex invoice changes.</li>
+                        </ul>
+                        <h1>Collections</h1>
+                        <ul>
+                            <li>Follow-ups: emails/calls start within 60 days.</li>
+                            <li>Escalations after 60 days.</li>
+                            <li>AR spreadsheet updated daily.</li>
+                        </ul>
+                        
+                    </div>        
+            </div>
+       </div>
+       <div class="step-b">
+            <div class="r-box2">
+                <div class="r-text2">
+                    <h1>Processing Invoices</h1>
+                    <ul>
+                        <li>Vendor invoices saved by Finance.</li>
+                        <li>Approval sought weekly; CEO co-approves over $10,000.</li>
+                        <li>Approved invoices entered for payment.</li>
+                    </ul>
+                    <h1>Credit Card Expenses</h1>
+                    <ul>
+                        <li>Employees submit receipts to Finance.</li>
+                        <li>Balances paid monthly.</li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="l-box2">
+
+                <img class="image-b" src="https://images.pexels.com/photos/53621/calculator-calculation-insurance-finance-53621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                
+                <div class="l-text2">
+                    <p>Accounts Payable (AP)</p>
+                </div>
+                
+            </div>
+       </div>
+       <div class="step-a">
+            <div class="l-box">
+                <img class="image-small" src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="l-text">
+                    <p>Expenses</p>
+                </div>
+            </div>
+            <div class="r-box">
+                    <div class="r-text">
+                        <h1>Employee Reimbursable Expenses</h1>
+                        <ul>
+                            <li>Entered/approved by Project Managers.</li>
+                            <li>Reimbursed bi-weekly, opposite of payroll cycle.</li>
+                        </ul>
+                        <h1>Project-Related Expenses</h1>
+                        <ul>
+                            <li>Vendor/subcontractor invoices sent to PM for approval.</li>
+                            <li>Payments handled per AP process.</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+        <div class="step-b">
+            <div class="r-box2">
+                <div class="r-text2">
+                    <h1>Bi-Weekly Payroll</h1>
+                    <ul>
+                        <li>Includes regular, overtime, PTO, and vacation hours.</li>
+                        <li>Payroll taxes remitted weekly.</li>
+                    </ul>
+                    <h1>T4s and WSIB</h1>
+                    <ul>
+                        <li>T4s emailed before February 28 annually.</li>
+                        <li>WSIB remittance due monthly before the last day.</li>
+                    </ul>
+                    <h1>Payroll Changes</h1>
+                    <ul>
+                        <li>New hires, promotions, and terminations processed through HR and Finance collaboration.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="l-box2">
+                <img class="image-b" src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="l-text2">
+                    <p>Payroll</p>
+                </div> 
+            </div>
+        </div>
+        <div class="step">
+            <div class="l-box">
+                <img class="image-small" src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="l-text">
+                    <p>Financial Reporting</p>
+                </div>
+            </div>
+            <div class="r-box">
+                <div class="r-text">
+                    <h1>Monthly Reporting</h1>
+                    <ul>
+                        <li>For internal use, shared in Financial Reports Chat Group.</li>
+                    </ul>
+                    <h1>Year-End Reporting</h1>
+                    <ul>
+                        <li>Prepared for external parties (RBC, CRA).</li>
+                        <li>Financial statements required within 90 days of fiscal year end.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+        <div class="step">
+            <div class="r-box2">
+                <div class="r-text2">
+                    <h1>HST</h1>
+                    <ul>
+                        <li>Filed/paid monthly via QuickBooks and RBC.</li>
+                    </ul>
+                    <h1>Corporate Income Taxes</h1>
+                    <ul>
+                        <li>Filed annually by Baker Tilly KDN LLP.</li>
+                        <li>Payments due within 2 months post fiscal year end.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="l-box2">
+                <img class="image-b" src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="l-text2">
+                    <p>Tax and Compliance</p>
+                </div> 
+            </div>
+        </div>
+    </div>      
+  </body>
+  </html>

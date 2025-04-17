@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cbec4152c6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+</head>
+<style>
+
+    body{
+        
+        font-family: 'Montserrat';
+        width: auto; 
+    }
+
+    .main{
+        margin-top: 5em;
+        margin-left: 5em;
+    }
+
+    .column {
+        float: left;
+        width: 30%;
+        padding: 10px;
+    }
+
+    h2{ 
+        font-size: 30px;
+        color: #262626;
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+        width: 100%;
+        height: 750px;
+        object-fit: cover;
+        background-image: url("https://images.unsplash.com/photo-1590930180621-fc7027a21559?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    }
+
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+        background-color: #262626ab;;
+        padding: 16.8em;
+
+    }
+    .content h1{
+        font-size: 60px;
+        font-weight: 900;
+        text-align: center;
+        padding-bottom: 4em;
+        color: white;
+        position: absolute;
+        padding-top: 0em;
+        
+    }
+
+    .content p{
+        text-align: center;
+        width: 70%;
+        color: white;
+        font-weight: 600;
+        margin-top: 5em;
+        font-size: 20px;
+    }
+    
+    /* Search bar styles */
+    #searchBar {
+        width: 70%;
+        padding: 12px 15px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        border-radius: 9px; 
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        font-family: 'Montserrat'; 
+        border: none;
+        display:flex;
+        flex-direction:row;
+    }
+
+    .hidden {
+    display: none;
+    }
+
+.accordion {
+    cursor: pointer;
+    padding: 5px;
+    width: 50%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-weight: bold;
+    border-radius: 6px;
+    background-color: transparent;
+    font-size: 16px;
+    margin-left: 1em;
+}
+
+.accordion-main {
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    background-color: transparent;
+    font-weight: 900;
+    margin-bottom: 5px;
+    font-size: 20px;
+    margin-left: 1em;
+    
+}
+
+.accordion:hover {
+    
+    text-decoration: underline;
+    border-radius: 0;
+}
+
+.accordion-main:hover {
+    
+    text-decoration: underline;
+    border-radius: 0;
+}
+
+.accordion.active{
+    border-left: #262626 1px solid;
+    text-decoration: underline;
+    border-radius: 0;
+}
+
+.accordion-main.active {
+    border-left: #262626 1px solid;
+    text-decoration: underline;
+    border-radius: 0;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #262626;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    }
+
+    .active:after {
+    content: "\2212";
+    }
+
+    .accordion-main:after {
+    content: '\002B';
+    color: #262626;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    }
+
+    .active:after {
+    content: "\2212";
+    }
+
+.panel {
+    display: none;
+    padding: 5px 2px;
+    background-color: transparent;
+    padding-left: 4em;
+    width: 100%;
+    
+}
+
+.panel.show {
+    display: block;
+    
+}
+
+a{
+    color: #d1a32d;
+    text-decoration: none;
+
+}
+
+a:hover{
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#form{
+    border-radius: 9px; 
+    padding: .5em;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    display:flex;
+    flex-direction:row;
+    width: 80%;
+}
+#form input{
+    all: unset;
+    width: 100%;
+    padding: 6px 15px;
+    font-family: 'Montserrat'; 
+}
+
+#form button{
+    position: absolute;
+    
+    all: unset;
+    margin-right: 1em;
+}
+
+li{
+    list-style:none
+}
+
+.fa-solid{
+    margin-right: .5em;
+}
+
+</style>
+</head>
+<body>
+    <section>
+        <div class="header">
+            
+            <div class="content">
+                <h1>RO Quick Links</h1>
+                <p>
+                    Essential Registry Office links and information, including details on property records, land titles, and official documents. Whether you need to access historical records or 
+                    verify property ownership, these resources will help guide you through the process efficiently. 
+                </p>
+            </div>
+        </div>
+        
+    </section>
+    <section class="main">
+        <form id="form">
+            <input type="text" id="searchBar" placeholder="Search Registry Offices or content...">
+            <button type="submit" onclick="submitSearch()"><i class="fas fa-search"></i></button>
+            
+        </form>
+       
+        <div class="column">
+            
+            <h2>D-L</h2>
+            <button class="accordion-main">Dundas (LRO 08)</button>
+            
+                <div class="panel">
+                    <div class="section">
+                        <button class="accordion">RMJ Record Indexes</button>
+                        <div class="panel">
+                            <ul>
+                                <a href="https://drive.google.com/file/d/1VEZqfKxVrAlbQvzkto2xNlfamy5NY4lp/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Village of Morrisburg</li></a>
+                                <a href="https://www.southdundas.com/resident-services/building-planning-services/planning-zoning"><li><i class="fa-solid fa-angles-right"></i>Zoning - South Dundas</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <button class="accordion">Research Checklist</button>
+                        <ul>
+                            <a href="https://docs.google.com/document/d/1aMx54PrhWktFAHmDNbqoOSnuhl4pJX_x3tPcuvUFwTo/edit"><li><i class="fa-solid fa-angles-right"></i>RO 08</li></a>
+                        </ul>
+                    </div>
+                </div>
+            
+            <button class="accordion-main">Durham (LRO 19)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Historic Plans</button>
+            <div class="panel">    
+                <ul>
+                    <li><i class="fa-solid fa-angles-right"></i>Oshawa</li>
+                        <ul>
+                            <a href="https://drive.google.com/file/d/1zEV1dHfVaCPM-cWoeA1eQIM__PmFsrFV/view"><li><i class="fa-solid fa-angles-right"></i>PL335 - All Sheets</li></a>
+                            <a href="https://drive.google.com/file/d/1NI7i3Q7Cd-Zf9EVSNi3Rf9BRNmlC23Qa/view"><li><i class="fa-solid fa-angles-right"></i>PL357 - All Sheets</li></a>
+                            <a href="https://drive.google.com/file/d/0B0HhCu6WI_u1SkVZVHFzNE1LYWMzRVJCYk5mX2JpbHdmR1pn/view"><li><i class="fa-solid fa-angles-right"></i>Durham Historic Plan Renaming List</li></a>
+                        </ul>
+                    <li><i class="fa-solid fa-angles-right"></i>Newcastle</li>
+                        <ul>
+                            <a href="https://drive.google.com/a/ibwsurveyors.com/file/d/0B_tJEFIUmZ57N05NWnBLYU1iSFk/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Hannings Plan</li></a>
+                        </ul>
+                    <li><i class="fa-solid fa-angles-right"></i>Bowmanville</li>
+                        <ul>
+                            <a href="https://drive.google.com/open?id=0B6ExgnhOpbLeSDM5RHMwaExzaGs"><li><i class="fa-solid fa-angles-right"></i>Grants Plan</li></a>
+                            <a href="https://drive.google.com/open?id=0B6ExgnhOpbLeVG5JRlM4WDZlMGM"><li><i class="fa-solid fa-angles-right"></i>Hannings Plan</li></a>
+                        </ul>
+                    <li><i class="fa-solid fa-angles-right"></i>Orono</li>
+                        <ul>
+                            <a href="https://drive.google.com/drive/folders/11PetePICHlcthUZYCTv9ox7CEcqZUwz4"><li><i class="fa-solid fa-angles-right"></i>Hannings Plan & notes</li></a>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Township Surveys</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://drive.google.com/drive/folders/0B_tJEFIUmZ57S2dVYlFLNHNVSlE"><li><i class="fa-solid fa-angles-right"></i>Pickering</li></a>
+                    <a href="https://drive.google.com/drive/folders/0B_tJEFIUmZ57S2dVYlFLNHNVSlE"><li><i class="fa-solid fa-angles-right"></i>John Shier Pickering Survey</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">By-Laws</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://drive.google.com/open?id=0B_tJEFIUmZ57anRVT25tc2s5OHM"><li><i class="fa-solid fa-angles-right"></i>Oshawa Street Naming By-Law</li></a>
+                    <a href="https://drive.google.com/file/d/1aBKccI7uhfmuNx1HN--7UcBE7qmIPcNg/view"><li><i class="fa-solid fa-angles-right"></i>Bond Street Naming By-Law</li></a>
+                    <a href="https://www.clarington.net/en/business-and-development/current-zoning-by-laws.aspx"><li><i class="fa-solid fa-angles-right"></i>Clarington Zoning By-Law</li></a>
+                    <a href="https://www.pickering.ca/en/city-hall/zoning-by-laws.aspx"><li><i class="fa-solid fa-angles-right"></i>Pickering Zoning By-Law</li></a>
+                    <a href="https://www.oshawa.ca/Modules/document/document.aspx?param=PaFP0co3ENYbvU9wH4mHOAeQuAleQuAl"><li><i class="fa-solid fa-angles-right"></i>Oshawa Zoning By-Law</li></a>
+                    <a href="https://oshawa.maps.arcgis.com/apps/Viewer/index.html?appid=3f417ae549bd42d1a1b21708c405f3f6"><li><i class="fa-solid fa-angles-right"></i>Oshawa Maps</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Published Control</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://drive.google.com/open?id=0B_tJEFIUmZ57cUVCaGJnb1NieHM"><li><i class="fa-solid fa-angles-right"></i>Oshawa Horizontal & Vertical</li></a>
+                    <a href="https://drive.google.com/drive/folders/0AJHMR8klboddUk9PVA"><li><i class="fa-solid fa-angles-right"></i>Oshawa Historic Plan Re-numbering</li></a>
+                    <a href="https://drive.google.com/drive/folders/0B_tJEFIUmZ57U2RfTmhHUDc1S2M"><li><i class="fa-solid fa-angles-right"></i>Pickering Benchmarks</li></a>
+                    <a href="https://drive.google.com/drive/folders/17jpzAc2NvdHq32nOfOYZScIUPPtu6P4w"><li><i class="fa-solid fa-angles-right"></i>Ajax Benchmarks</li></a>
+                    <a href="https://www.google.com/maps/d/edit?mid=1uAvh7izgzWcZn7QgOpTZmc6eNSI&ll=44.40063496931517%2C-78.07514599999996&z=9"><li><i class="fa-solid fa-angles-right"></i>Durham Region Benchmark Map</li></a>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Contact</button>
+            <div class="panel">
+                <ul>
+                    <li><i class="fa-solid fa-angles-right"></i>Steven Gill, Instrument person | City of Oshawa</li>
+                    <li><i class="fa-solid fa-angles-right"></i>905-436-3311 ext. 2280 | 1-800-667-4292</li>
+                    <li><i class="fa-solid fa-angles-right"></i>SGill@oshawa.ca | www.oshawa.ca</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Zoning</button>
+            <div class="panel">
+                <ul>
+                    <a href="http://www.clarington.net/en/do-business/Zoning-By-Law-84-63.asp"><li><i class="fa-solid fa-angles-right"></i>Clarington</li></a>
+                    <a href="https://www.oshawa.ca/residents/zoning.asp"><li><i class="fa-solid fa-angles-right"></i>Oshawa</li></a>
+                    <a href="https://www.whitby.ca/Modules/Bylaws/Bylaw/Details/7f2cdeb6-da20-4bc7-b463-30d78a5c2373"><li><i class="fa-solid fa-angles-right"></i>Whitby Bylaw 2585</li></a>
+                    <a href="https://www.whitby.ca/Modules/Bylaws/Bylaw/Download/63e2acdb-30c7-47be-99a0-20a99a511ff3"><li><i class="fa-solid fa-angles-right"></i>Oak Ridges Moraine Zoning By-law # 5581-05</li></a>
+                    <a href="https://www.whitby.ca/Modules/Bylaws/Bylaw/Details/ad226302-5869-4490-a464-c8d83da0a33b"><li><i class="fa-solid fa-angles-right"></i>Whitby Bylaw 1784</li></a>
+                    <li><i class="fa-solid fa-angles-right"></i>Pickering - Contact Paula Viola pviola@pickering.ca</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/116jDDVmlRRcU4Xaf-26WdB6KwDSe9rGEZSTSM8xkO2c/edit"><li><i class="fa-solid fa-angles-right"></i>RO 40</li></a>
+            </ul>
+        </div>
+        
+        
+    </div>  
+    <button class="accordion-main">Essex (LRO 12)</button>
+        <div class="panel">
+            <div class="section">
+                
+                <ul>
+                <a href="https://www.citywindsor.ca/visitors/Maps/PublishingImages/City%20of%20Windsor%20Bench%20Mark%20current%20List.pdf"><li><i class="fa-solid fa-angles-right"></i>Windsor Benchmark Information</li></a>
+                <a href="https://www.citywindsor.ca/visitors/Maps/PublishingImages/M-1413%20Bench%20Marks.pdf"><li><i class="fa-solid fa-angles-right"></i>Benchmark Map</li></a>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <button class="accordion">Research Checklist</button>
+                <ul>
+                    <a href="https://docs.google.com/document/d/1XJdEBrHRmLx4jkaEqEKtjyEolmD7_UIJtQosUMmF6CY/edit"><li><i class="fa-solid fa-angles-right"></i>RO 12</li></a>
+                </ul>
+            </div>
+            
+        </div>  
+    <button class="accordion-main">Frontenac (LRO 13)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Historic Plans</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://drive.google.com/drive/folders/1vo6_cw7UpyLlqSXsBB0QZLfgg5MBY_oi"><li><i class="fa-solid fa-angles-right"></i>Richmond Township</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Published Control</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://drive.google.com/file/d/1bwSltuvjfddQUbA0nYAUR6fa3aWTZwbX/view"><li><i class="fa-solid fa-angles-right"></i>Kingston Vertical Control</li></a>
+                    <ul>
+                        <li><i class="fa-solid fa-angles-right"></i>lfollwell@cityofkingston.ca - Luke Follwell Engineering Services Director</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Records Index</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://drive.google.com/drive/folders/1iNnUUc7MIy7NA1_umlZtjDD78pvzsvPp"><li><i class="fa-solid fa-angles-right"></i>Kingston Index Maps</li></a>
+                    <a href="https://drive.google.com/file/d/1CzXZvgfPg-793iPxJbRnTsMC8ZeiN6DS/view"><li><i class="fa-solid fa-angles-right"></i>Kingston Road Naming Bylaw</li></a>
+                    <a href="https://www.cityofkingston.ca/business/planning-and-development/zoning"><li><i class="fa-solid fa-angles-right"></i>Kingston Zoning By-Law</li></a>
+                    <a href="https://www.centralfrontenac.com/en/business/planning-documents-zoning-and-plans.aspx?msclkid=8f418670a6de11ecbef5a586ba705e80#"><li><i class="fa-solid fa-angles-right"></i>Central Frontenac Zoning By-Law</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1KQfZUojTFYZSKP5fGXSTSS7EVIu81nyEH3PSe7LWe0g/edit"><li><i class="fa-solid fa-angles-right"></i>RO 13</li></a>
+            </ul>
+        </div>
+    </div>
+    <button class="accordion-main">Glengarry (LRO 14)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">RMJ Record Indexes</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://drive.google.com/file/d/1aqiuWGprTSU89O6ddm8msA51BKKzfuhs/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Town of Alexandria</li></a>
+                    <a href="https://drive.google.com/file/d/10_hFInUoDwOWDRFO18XmH9IcaDgKawPx/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>County of Glengarry</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Zoning</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://www.southglengarry.com/en/doing-business/zoning.aspx"><li><i class="fa-solid fa-angles-right"></i>South Glengarry</li></a>
+                    <a href="https://www.northglengarry.ca/en/town-hall/Zoning-Bylaw.aspx#"><li><i class="fa-solid fa-angles-right"></i>North Glengarry</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/12qdJOEMp2bamXnVtSF3uwiFsMi9fw2paSgpOgH9yNr4/edit"><li><i class="fa-solid fa-angles-right"></i>RO 14</li></a>
+            </ul>
+        </div>
+    </div>
+    <button class="accordion-main">Grenville (LRO 15)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">RMJ Record Indexes</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://drive.google.com/file/d/1c_QGSv85MryLck_OiL_4Dzwh9DtlQiVB/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Village of Cardinal</li></a>
+                    <a href="https://drive.google.com/file/d/1J4ZIhrUwW0EehpPi2-wBWVXjMPlDxNMO/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Village of Spencerville</li></a>
+                    <a href="https://drive.google.com/file/d/11v6tGm4-7rJz9a0h5OEwR7pD3u2Yyp9Q/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Town of Prescott</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1x_CCUQNdzwYuwoubFH8rgmBlJlHxuALUbohOpD-qXDc/edit"><li><i class="fa-solid fa-angles-right"></i>RO 15</li></a>
+            </ul>
+        </div>
+    </div>
+    <button class="accordion-main">Halton (LRO 20)</button>
+    <div class="panel">
+        <div class="section">
+            <ul>
+                <a href="https://burlington.maps.arcgis.com/apps/webappviewer/index.html?appid=298c171be328461283d6f074b79e70f1"><li><i class="fa-solid fa-angles-right"></i>Burlington Benchmarks</li></a>
+            </ul>
+            
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/12Lwbqrc-rmC2sd2e3xtnFzAvQjbDaNtoNJLHxMHd_gk/edit"><li><i class="fa-solid fa-angles-right"></i>RO 20</li></a>
+            </ul>
+        </div>
+        
+    </div>  
+    <button class="accordion-main">Hastings (LRO 21)</button>
+    <div class="panel">
+        <div class="section">
+            
+                <ul>
+                    <a href="https://drive.google.com/file/d/1btHafboc8jyGRC6ICanrWOYPpkhnLAQs/view"><li><i class="fa-solid fa-angles-right"></i>Madoc Vertical Control</li></a>
+                    <a href="https://drive.google.com/open?id=1_opUjfRfoGo3mE0nzyV2eNadfFRK3uAZ"><li><i class="fa-solid fa-angles-right"></i>Elzevir Township Map</li></a>
+                    <a href="https://www.flickr.com/photos/cabhc/sets/72157673542160685/"><li><i class="fa-solid fa-angles-right"></i>Hastings township maps, etc.</li></a>
+                    <a href="https://quintewest.ca/planning-development-business/zoning-bylaw/"><li><i class="fa-solid fa-angles-right"></i>Quinte West Zoning By-Law</li></a>
+                    <a href="https://quintewest.ca/quinte-west-maps/"><li><i class="fa-solid fa-angles-right"></i>Quinte West Maps</li></a>
+                </ul>
+
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1lNt6FiJ_JgK-N4MsmTmI3RgD9xXdwQrz5J-oxs6dWsg/edit"><li><i class="fa-solid fa-angles-right"></i>RO 21</li></a>
+            </ul>
+        </div>
+    </div>
+        <button class="accordion-main">Leeds (LRO 28)</button>
+        <div class="panel">
+            <div class="section">
+                <button class="accordion">Zoning Information</button>
+                <div class="panel">
+                    <ul>
+                        <a href="https://brockville.com/zoning-bylaw"><li><i class="fa-solid fa-angles-right"></i>Brockville Zoning By-Law</li></a>
+                        <a href="https://www.gananoque.ca/town-hall/planning-documents/community-planning-permit-by-law-zoning"><li><i class="fa-solid fa-angles-right"></i>Gananoque Zoning By-Law</li></a>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <button class="accordion">Research Checklist</button>
+                <ul>
+                    <a href="https://docs.google.com/document/d/1v7z83ki6jdlBYDQaM7wVkQkXXxoh_0nuasgGp6980_g/edit"><li><i class="fa-solid fa-angles-right"></i>RO 28</li></a>
+                </ul>
+            </div>
+        </div>
+        <button class="accordion-main">Lennox (LRO 29)</button>
+        <div class="panel">
+            <div class="section">
+                <button class="accordion">Zoning Information</button>
+                <div class="panel">
+                    <ul>
+                        <a href="https://www.loyalist.ca/en/business-and-development/zoning.aspx#Zoning-By-Law-Table-of-Contents"><li><i class="fa-solid fa-angles-right"></i>Loyalist Zoning By-Law</li></a>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <button class="accordion">Research Checklist</button>
+                <ul>
+                    <a href="https://docs.google.com/document/d/1yDVHcoogPmvLoTKTG8jC78o3kJM-cPFDYZHKRyNdT2I/edit"><li><i class="fa-solid fa-angles-right"></i>RO 29</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>  
+        
+    
+
+    
+    <div class="column">
+        <h2>M-P</h2>
+    <button class="accordion-main">Muskoka (LRO 35)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Zoning</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://www.gbtownship.ca/en/business-and-development/planning-and-zoning.aspx"><li><i class="fa-solid fa-angles-right"></i>Georgian Bay Zoning By-Law</li></a>
+                    <a href="https://www.muskokalakes.ca/en/business/property-development.aspx#Maps"><li><i class="fa-solid fa-angles-right"></i>Muskoka Lakes Zoning by-Law</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Water Control</button>
+            <div class="panel">
+                <ul>
+                    <a href="http://www.muskokawaterweb.ca/lake-data/mnr-data/lake-fact-sheet"><li><i class="fa-solid fa-angles-right"></i>Muskoka Water Web</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">GIS</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://map.muskoka.on.ca/"><li><i class="fa-solid fa-angles-right"></i>Muskoka GeoHub</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/18ziKANOW4y44ghD6x11LXAyNdh03QptUxXDK9EjofBI/edit"><li><i class="fa-solid fa-angles-right"></i>RO 35</li></a>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Niagara North -->
+    <button class="accordion-main">Niagara North (LRO 59)</button>
+    <div class="panel">
+        <div class="section">
+            <ul>
+                <a href="https://niagaraopendata.ca/dataset/st-catharines-benchmarks-vertical-control/resource/edaf9de2-958e-45cb-986a-6a921869df51"><li><i class="fa-solid fa-angles-right"></i>St. Catharines Benchmarks</li></a>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1cGirjS85BLrINyoan_I6rlhIjKsZmvq31GgRPbIq-Uw/edit"><li><i class="fa-solid fa-angles-right"></i>RO 59</li></a>
+            </ul>
+        </div>
+    </div>  <!-- Niagara South -->
+    <button class="accordion-main">Niagara South (LRO 30)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Zoning Information</button>
+            <div class="panel">
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Fort Erie Zoning By-Law</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Niagara Falls Zoning By-Law</li></a>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1cGirjS85BLrINyoan_I6rlhIjKsZmvq31GgRPbIq-Uw/edit"><li><i class="fa-solid fa-angles-right"></i>RO 30</li></a>
+            </ul>
+        </div>
+    </div>  <button class="accordion-main">Northumberland (LRO 39)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Historic Plans</button>
+            <div class="panel">
+                <ul>
+                <a href="https://drive.google.com/a/ibwsurveyors.com/file/d/0B_tJEFIUmZ57aFZTY2hpaFZBRlk/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Caddy Plan</li></a>
+                <li><i class="fa-solid fa-angles-right"></i>Northumberland County Archives</li>
+                <li><i class="fa-solid fa-angles-right"></i>Email: <a href="mailto:archives@northumberlandcounty.ca">archives@northumberlandcounty.ca</a></li>
+                <a href="https://drive.google.com/open?id=1qcQE6ngS9RNRwh8w0B1J5LYuy621Zt5T"><li><i class="fa-solid fa-angles-right"></i>Village of Hastings - RP 13</li></a>
+                <a href="https://drive.google.com/open?id=1qej5jzdEhivXcTvMPpLW6-CwJ08Wx2Mf"><li><i class="fa-solid fa-angles-right"></i>Village of Hastings - RP 33</li></a>
+                <a href="https://drive.google.com/open?id=1qiNBflzaqa1V6IN1R-RxHRULthfybK1d"><li><i class="fa-solid fa-angles-right"></i>Village of Hastings - RP 51</li></a>
+                <a href="https://drive.google.com/open?id=1qnEGxzYvEw8eGUqCdy3rQJX335e4RfeT"><li><i class="fa-solid fa-angles-right"></i>Village of Hastings - RP 69</li></a>
+                <a href="https://drive.google.com/open?id=1qoOusxTRu94LdIi9GQ078IctxB8fs55G"><li><i class="fa-solid fa-angles-right"></i>Village of Hastings - RP 95</li></a>
+                <a href="https://drive.google.com/open?id=1qSEsYet7htYxqczm1tRgDR-nhURA2KO8"><li><i class="fa-solid fa-angles-right"></i>Village of Hastings - RP 113</li></a>
+                <a href="https://drive.google.com/open?id=1qVcQI7pZIrD8nseUEsi-uJkhlVDh5BUH"><li><i class="fa-solid fa-angles-right"></i>Village of Hastings - RP 114</li></a>
+                <a href="https://drive.google.com/open?id=1qab_Ft_eYt0fTQgxbt8nyKUTBHbW6sOs"><li><i class="fa-solid fa-angles-right"></i>Village of Hastings - RP 115</li></a>
+                <a href="https://drive.google.com/open?id=1qd6pmn_KG8_RAc-RektpyRE0VIGiHqzG"><li><i class="fa-solid fa-angles-right"></i>Village of Warkworth - RP 29</li></a>
+                <a href="https://drive.google.com/file/d/1C2klq4lozHxuHMaI5Rf2CGWPSsTUgzNF/view"><li><i class="fa-solid fa-angles-right"></i>Port Hope Historic Railway Plan</li></a>
+                </ul>
+            </div>
+        
+            <button class="accordion">Published Control</button>
+            <div class="panel">
+                <ul>
+                <a href="https://drive.google.com/open?id=1RnvDBHWTOQENwgPmxayy_5M8JtlUq2Lk"><li><i class="fa-solid fa-angles-right"></i>Cobourg Vertical Control</li></a>
+                <a href="https://drive.google.com/open?id=1o6ui-bN_H2_su7IhqVaqeNtjs1_v1Hg4"><li><i class="fa-solid fa-angles-right"></i>Cobourg Vertical Control Map</li></a>
+                </ul>
+            </div>
+        
+            <button class="accordion">Zoning</button>
+            <div class="panel">
+                <ul>
+                <a href="https://www.cobourg.ca/en/business-and-development/Zoning.aspx?_mid_=108306"><li><i class="fa-solid fa-angles-right"></i>Cobourg</li></a>
+                <a href="https://www.trenthills.ca/en/building-and-development/zoning.aspx#"><li><i class="fa-solid fa-angles-right"></i>Trent Hills Zoning By-Law</li></a>
+                <a href="https://www.brighton.ca/en/municipal-services/official-plan.aspx#"><li><i class="fa-solid fa-angles-right"></i>Brighton Zoning By-Law</li></a>
+                <a href="https://www.cramahe.ca/en/business-and-development/zoning.aspx"><li><i class="fa-solid fa-angles-right"></i>Cramahe Zoning By-Law</li></a>
+                <a href="https://www.cobourg.ca/en/business-and-development/Zoning.aspx?msclkid=f2193ee8c18711ecbb150037ee3bae5d"><li><i class="fa-solid fa-angles-right"></i>Cobourg Zoning By-Law</li></a>
+                <a href="https://www.hamiltontownship.ca/en/business-and-development/zoning.aspx"><li><i class="fa-solid fa-angles-right"></i>Hamilton Zoning By-Law Maps</li></a>
+                <a href="https://www.hamiltontownship.ca/en/business-and-development/official-plan.aspx"><li><i class="fa-solid fa-angles-right"></i>Hamilton Official Plan</li></a>
+                <a href="https://www.ahtwp.ca/en/business-and-development/zoning.aspx"><li><i class="fa-solid fa-angles-right"></i>Alnwick Haldimand Zoning By-Law</li></a>
+                </ul>
+            </div>
+        
+            <button class="accordion">Lot Grading Certificates</button>
+            <div class="panel">
+                <ul>
+                <a href="https://drive.google.com/a/ibwsurveyors.com/file/d/0B7H3FVXm5AVBU1h5ZDJ2TFp3aTg/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Operations Department - Town Of Cobourg - Lot Grading Certificate</li></a>
+                <a href="https://docs.google.com/a/ibwsurveyors.com/document/d/1URM_XGVL225ZXxNsDTjie68P7B5B-OzCZKTO7BX6jVQ/edit?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Addendum Report - Cobourg Lot Grading Certificate</li></a>
+                </ul>
+            </div>
+        
+            <button class="accordion">Miscellaneous</button>
+            <div class="panel">
+                <ul>
+                <a href="https://drive.google.com/file/d/1nqVf94IwRq5ZBXYdiqUzj8MJap0i-dli/view"><li><i class="fa-solid fa-angles-right"></i>Note for surveys fronting on Rice Lake</li></a>
+                </ul>
+            </div>
+        
+            <button class="accordion">Records Indexes</button>
+            <div class="panel">
+                <ul>
+                <a href="https://drive.google.com/a/ibwsurveyors.com/file/d/0B_tJEFIUmZ57bnIzRWdBcnRMejA/edit?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Cobourg Address Plan</li></a>
+                <a href="https://drive.google.com/a/ibwsurveyors.com/file/d/0B_tJEFIUmZ57SWlicnBqS0lRQzg/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Donevan Records</li></a>
+                <a href="https://drive.google.com/open?id=0B_tJEFIUmZ57QzNoMjFNM1FpZms"><li><i class="fa-solid fa-angles-right"></i>KFL Index</li></a>
+                <a href="https://drive.google.com/file/d/12hV6j-t3cYmatT2zGtrRD8CzZ695aYKw/view"><li><i class="fa-solid fa-angles-right"></i>Brighton Sector Map</li></a>
+                <a href="https://www.google.com/maps/d/edit?mid=1Dz-W8ggnufUQ3abVe3fL0-eDybs&ll=43.95576404926189%2C-78.30688275788884&z=13"><li><i class="fa-solid fa-angles-right"></i>4-4546 Google map</li></a>
+                <a href="https://www.google.com/maps/d/edit?mid=1Z0jhbnnuNpLhFdaFh9nOqK-uMqQ&ll=43.94363525773183%2C-78.357689&z=13"><li><i class="fa-solid fa-angles-right"></i>4-4692, 4-4775, 4-4846 Google Map</li></a>
+                </ul>
+            </div>
+        
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1OeTLdk8CDDPG-vJV64NswA_4CcmCj-Ch18SJrB0YnAU/edit"><li><i class="fa-solid fa-angles-right"></i>RO 39</li></a>
+            </ul>
+        </div>
+    </div>  <!-- Ottawa -->
+    <button class="accordion-main">Ottawa-Carleton (04)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1F2AO7LgfvCmqSkzQysBgBTEYSpMiJCvrFOw6Ri4Ch-s/edit?tab=t.0"><li><i class="fa-solid fa-angles-right"></i>RO 04</li></a>
+            </ul>
+        </div>
+    </div>   <!-- Parry Sound -->
+    <button class="accordion-main">Parry Sound (LRO 42)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Zoning Information</button>
+            <div class="panel">
+                <ul>
+                    <a href="http://www.wpsgn.ca/"><li><i class="fa-solid fa-angles-right"></i>West Parry Sound Zoning By-Law</li></a>
+                    <a href="https://www.mckellar.ca/en/township-services/by-laws.aspx#PlanningZoning-and-Official-Plan"><li><i class="fa-solid fa-angles-right"></i>McKellar Zoning By-Law</li></a>
+                    <a href="https://www.seguin.ca/en/explore-play/zoning.aspx"><li><i class="fa-solid fa-angles-right"></i>Seguin Zoning By-Law</li></a>
+                    <a href="https://www.mcdougall.ca/p/planning-and-zoning"><li><i class="fa-solid fa-angles-right"></i>McDougall Zoning By-Law</li></a>
+                    <a href="https://www.whitestone.ca/p/official-plan"><li><i class="fa-solid fa-angles-right"></i>Whitestone Zoning By-Law</li></a>
+                    <a href="https://carling.ca/business-in-carling/planning-and-zoning/"><li><i class="fa-solid fa-angles-right"></i>Carling Zoning By-Law</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1v1hkRoF-DXNHLX5NUQhVUVyXO3Ym5Gzi63oPM41ek3M/edit"><li><i class="fa-solid fa-angles-right"></i>RO 42</li></a>
+            </ul>
+        </div>
+    </div>
+    <!-- Peel -->
+    <button class="accordion-main">Peel Land Registry Office (LRO 43)</button>
+    <div class="panel">
+        <div class="section">
+        
+            <ul>
+            <a href="http://www6.mississauga.ca/missmaps/maps.aspx#map=12/-8869324.77/5405229.4/0"><li><i class="fa-solid fa-angles-right"></i>Mississauga Control</li></a>
+            <a href="http://mississauga.maps.arcgis.com/apps/Viewer/index.html?appid=eed5d7f2a921496baaaacb231b040fe7"><li><i class="fa-solid fa-angles-right"></i>Interactive Zoning By-Law Map</li></a>
+            <a href="http://maps1.brampton.ca/acris/"><li><i class="fa-solid fa-angles-right"></i>Brampton</li></a>
+            <a href="https://www.mississauga.ca/services-and-programs/building-and-renovating/zoning-information/zoning-by-law/"><li><i class="fa-solid fa-angles-right"></i>Mississauga Zoning By-Law</li></a>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1J0TgIz3yMWOM1owDIaALmOuRWFmE0LRX3YDEPsIvLH8/edit"><li><i class="fa-solid fa-angles-right"></i>RO 43</li></a>
+            </ul>
+        </div>
+    </div>  <button class="accordion-main">Peterborough (LRO 45)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Zoning</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://www.peterborough.ca/en/doing-business/zoning.aspx"><li><i class="fa-solid fa-angles-right"></i>Peterborough Zoning By-Law</li></a>
+                    <a href="https://www.osmtownship.ca/en/doing-business/Zoning.aspx"><li><i class="fa-solid fa-angles-right"></i>Otonabee- South Monaghan Zoning By-Law</li></a>
+                    <a href="https://www.trentlakes.ca/en/build/zoning.aspx"><li><i class="fa-solid fa-angles-right"></i>Galway-Cavendish Harvey Zoning By-Law</li></a>
+                    <a href="https://www.antownship.ca/en/township-services/pre-consultation.aspx"><li><i class="fa-solid fa-angles-right"></i>Asphodel-Norwood Zoning By-Law</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Published Control</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://drive.google.com/a/ibwsurveyors.com/file/d/0B_tJEFIUmZ57QTdXbUx3NVhqOUE/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Horizontal</li></a>
+                    <a href="https://drive.google.com/a/ibwsurveyors.com/file/d/0B_tJEFIUmZ57SUtMVEl3c183M0k/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Vertical</li></a>
+                    <a href="https://drive.google.com/open?id=0B_tJEFIUmZ57RUo0MU1XS0pjYUU"><li><i class="fa-solid fa-angles-right"></i>Trent Severn Expropriation</li></a>
+                    <a href="https://drive.google.com/drive/folders/1bM835xLHh_H978CJYhRieRF42ISSyQf2"><li><i class="fa-solid fa-angles-right"></i>Properties annexed to City of Peterborough from County</li></a>
+                    <a href="https://drive.google.com/drive/folders/11PetePICHlcthUZYCTv9ox7CEcqZUwz4"><li><i class="fa-solid fa-angles-right"></i>Village of Millbrook Plan</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/14I7E4FpGu775kE-zoExnhisEbzEZSYRQisKWNFTO-F8/edit?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>RO 45</li></a>
+            </ul>
+        </div>
+        
+        </div>  <button class="accordion-main">Prescott (LRO 46)</button>
+        <div class="panel">
+            <div class="section">
+                <button class="accordion">Research Checklist</button>
+                <ul>
+                    <a href="https://docs.google.com/document/d/1VXlZiexvLpvtwPKa33lw6FC9RTuoxAPFa66j3-YOnK0/edit"><li><i class="fa-solid fa-angles-right"></i>RO 46</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="column">
+        <h2>R-Y</h2>
+        <button class="accordion-main">Renfrew (LRO 49)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Zoning Contact</button>
+            <div class="panel">
+                <a href="malito:Planning@madawaskavalley.ca">Planning@madawaskavalley.ca</a>
+            </div>
+            
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Search Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1QhVht3buGYuHpA3z8Nf4z-K48i2ssqPAOOubwMSSFpA/edit?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>RO 49</li></a>
+            </ul>
+        </div>
+    </div>
+    <button class="accordion-main">Simcoe (LRO 51)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Zoning Information</button>
+            <div class="panel">
+                <ul>
+                    <a href=https://www.wasagabeach.com/en/index.aspx"><li><i class="fa-solid fa-angles-right"></i>Wasaga Beach Zoning By-Law</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1GD_p7lZPYDqK_gUuom_krcLHYpqVm6-hViip-XortC8/edit"><li><i class="fa-solid fa-angles-right"></i>RO 51</li></a>
+            </ul>
+        </div>
+        
+    </div>  <button class="accordion-main">Stormont (LRO 52)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Zoning</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://www.cornwall.ca/en/play-here/maps.aspx"><li><i class="fa-solid fa-angles-right"></i>Cornwall Interactive Maps</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1ANph_YHbHI3lLLlXPNNSMrb6UTuqTCVNNy5U9VoT6Z8/edit"><li><i class="fa-solid fa-angles-right"></i>RO 52</li></a>
+            </ul>
+        </div>
+        
+    </div>  <button class="accordion-main">Toronto (LRO 80)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Zoning Information</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://www.toronto.ca/city-government/planning-development/zoning-by-law-preliminary-zoning-reviews/zoning-by-law-569-2013-2/"><li><i class="fa-solid fa-angles-right"></i>Toronto By-Law</li>
+                </ul>
+                <a href="https://trca.ca/conservation/stormwater-management/understand/">TRCA Stormwater Management Guide</a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1nuPLA8mMKHvqNdZO2hY-R-u70yZs9ATvSnJWg_dWvyc/edit"><li><i class="fa-solid fa-angles-right"></i>RO 80</li></a>
+            </ul>
+        </div>
+        
+    </div>  <button class="accordion-main">Victoria (LRO 57)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Zoning</button>
+        <div class="panel">
+            <ul>
+                <a href="https://drive.google.com/open?id=0B6ExgnhOpbLeem5VcjdmbmowUEk"><li><i class="fa-solid fa-angles-right"></i>Kawartha Lakes Road Naming By-Laws</li></a>
+                <a href="https://drive.google.com/drive/u/0/folders/1bM835xLHh_H978CJYhRieRF42ISSyQf2"><li><i class="fa-solid fa-angles-right"></i>Kawartha Lakes Conservation Authority - Five Major Lake Elevations</li></a>
+                <a href="https://www.kawarthalakes.ca/en/business-growth/planning-and-development.aspx"><li><i class="fa-solid fa-angles-right"></i>Kawartha Lakes Zoning By-Law</li></a>
+                <a href="https://www.northkawartha.ca/en/our-services/planning-services.aspx#Zoning-Maps"><li><i class="fa-solid fa-angles-right"></i>TWP of North Kawartha Zoning By-Law</li></a>
+            </ul>
+        </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Published Control</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://drive.google.com/file/d/1btFx6rR6hAADFnPrsEF3-3ubPswcL2bR/view"><li><i class="fa-solid fa-angles-right"></i>Lindsay Vertical Control</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Historic Plans</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://drive.google.com/file/d/14ciWD315ieNytlWd1yfqrb_o2CdNLaTK/view"><li><i class="fa-solid fa-angles-right"></i>Town Plot</li></a>
+                    <a href="https://drive.google.com/file/d/1-id9efn3bm7bnV3ZlPbLCLYYkmx5VwW2/view"><li><i class="fa-solid fa-angles-right"></i>PL 1</li></a>
+                    <a href="https://drive.google.com/file/d/1MivhVTJLAYJCH6iBKyu5Tv-1lDcy8hTV/view"><li><i class="fa-solid fa-angles-right"></i>PL 10</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1x0VdbB7gw4QahrjHhX7sNdoDvwq6nKvpw0Smu39hvfI/edit"><li><i class="fa-solid fa-angles-right"></i>RO 57</li></a>
+            </ul>
+        </div>
+        
+    </div>  <button class="accordion-main">Waterloo (LRO 58)</button>
+    <div class="panel">
+        <div class="section">
+            <ul>
+                <a href="https://open-kitchenergis.opendata.arcgis.com/datasets/3fb6eec581ff41a59cd5c099093789b9_0"><li><i class="fa-solid fa-angles-right"></i>Kitchener Benchmarks</li></a>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1m9Ru-yavLPXlL9RjX8jO8KPXuNHKrDgBM1h7i3RZRw8/edit"><li><i class="fa-solid fa-angles-right"></i>RO 58</li></a>
+            </ul>
+        </div>
+        
+    </div>  <button class="accordion-main">Wellington (LRO 61)</button>
+    <div class="panel">
+        <div class="section">
+            <ul>
+                <a href="https://drive.google.com/open?id=0B0HhCu6WI_u1TURfNHF4Y05qeFFCZjAxVnItZl9RalVab2tz"><li><i class="fa-solid fa-angles-right"></i>Guelph Benchmarks</li></a>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1htIEjlNTc2j-yOmo2zg0bwP6Jovia9-Z_LwT49fn_cw/edit"><li><i class="fa-solid fa-angles-right"></i>RO 61</li></a>
+            </ul>
+        </div>
+        
+    </div>  
+    <button class="accordion-main">York (LRO 65)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Published Control</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://drive.google.com/open?id=1BVrweEEygSBkMm3ZsrlEHP7e_5gncwSN"><li><i class="fa-solid fa-angles-right"></i>York Vertical BM</li></a>
+                    <a href="https://insights-york.opendata.arcgis.com/datasets/e602259bf2d24ee69d21ab3f111ca371_1/explore?location=43.773339%2C-79.241665%2C9.91"><li><i class="fa-solid fa-angles-right"></i>York Benchmarks</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Vaughan</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://drive.google.com/a/ibwsurveyors.com/file/d/0B7H3FVXm5AVBZUxZUHo4djlFZXM/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>Survey Monuments</li></a>
+                    <a href="https://drive.google.com/a/ibwsurveyors.com/file/d/0B7H3FVXm5AVBYWZvSHpMNUtvRkU/view?usp=sharing"><li><i class="fa-solid fa-angles-right"></i>GCSM ID</li></a>
+                    <li><i class="fa-solid fa-angles-right"></i>Contact: <a href="mailto:edgar.lagdamen@vaughan.ca">edgar.lagdamen@vaughan.ca</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Richmond Hill</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://www.richmondhill.ca/en/shared-content/resources/documents/TRH-Control-Manual-Map.pdf"><li><i class="fa-solid fa-angles-right"></i>TRH Control Monument Map</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Markham</button>
+            <div class="panel">
+                <ul>
+                    <li><i class="fa-solid fa-angles-right"></i>Contact Rahulan directly: <a href="mailto:rrasiah@markham.ca">rrasiah@markham.ca</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Zoning Information</button>
+            <div class="panel">
+                <ul>
+                    <a href="https://www.king.ca/development-growth/planning-land-use/zoning-bylaws"><li><i class="fa-solid fa-angles-right"></i>King Zoning By-Law</li></a>
+                    <a href="https://www.richmondhill.ca/en/register-apply-or-pay/Zoning-By-Law-Amendment.aspx"><li><i class="fa-solid fa-angles-right"></i>Richmond Hill Zoning By-Law</li></a>
+                    <li><i class="fa-solid fa-angles-right"></i>Contact Zoning Department: <a href="mailto:zoninginfo@richmondhill.ca">zoninginfo@richmondhill.ca</a></li>
+                    <a href="https://www.georgina.ca/living-here/planning-and-development/zoning/zoning-bylaw-500"><li><i class="fa-solid fa-angles-right"></i>Georgina Zoning By-Law</li></a>
+                    <a href="https://www.vaughan.ca/services/business/zoning_by_law_and_opas/Pages/default.aspx"><li><i class="fa-solid fa-angles-right"></i>Vaughan Zoning By-Law</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href="https://docs.google.com/document/d/1_ijYIqpre_rTsVPmuUixqdGiFF0KKSzEZiualPjVzVk/edit"><li><i class="fa-solid fa-angles-right"></i>RO 65</li></a>
+            </ul>
+        </div> 
+    </section>    
+<script>
+    const searchInput = document.getElementById('searchBar');
+    const accordions = document.querySelectorAll('.accordion');
+    const accordions2 = document.querySelectorAll('.accordion-main');
+    const panels = document.querySelectorAll('.panel');
+
+    accordions.forEach((acc) => {
+    acc.addEventListener('click', function () {
+        this.classList.toggle('active');
+        const panel = this.nextElementSibling;
+        panel.classList.toggle('show');
+    });
+    });
+
+    searchInput.addEventListener('keyup', function () {
+    const filter = searchInput.value.trim().toLowerCase();
+    panels.forEach((panel, index) => {
+        const text = panel.textContent.toLowerCase();
+        const match = text.includes(filter);
+        panel.classList.toggle('show', match);
+        accordions[index].classList.toggle('active', match);
+    });
+    });
+
+    accordions2.forEach((acc) => {
+    acc.addEventListener('click', function () {
+        this.classList.toggle('active');
+        const panel = this.nextElementSibling;
+        panel.classList.toggle('show');
+    });
+    });
+
+    searchInput.addEventListener('keyup', function () {
+    const filter = searchInput.value.trim().toLowerCase();
+    panels.forEach((panel, index) => {
+        const text = panel.textContent.toLowerCase();
+        const match = text.includes(filter);
+        panel.classList.toggle('show', match);
+        accordions2[index].classList.toggle('active', match);
+    });
+    });
+
+    function searchKeypress(e){
+    e = e || window.event;
+    if (e.keyCode === 13) {
+        document.getElementsByClassName('fas fa-search').click();
+        return false;
+    }
+    return true;
+    };
+
+    function expandAll() {
+    const detailsElements = document.querySelectorAll('panel');
+    detailsElements.forEach(detail => {
+        detail.open = true;
+    });
+    }
+
+</script>
+</body>
+
+</html>
