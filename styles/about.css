@@ -588,7 +588,7 @@ body{
     }
 
     .sec_one{
-        font-size: 16px;
+        font-size: 1.2em;
     }
     .who {
         margin:1.5em;
@@ -641,19 +641,19 @@ body{
         animation: slideInGradient 1.2s ease forwards;
         font-family: "Corinthia", cursive;
         text-transform: capitalize;
-        font-size: 16px;
+        font-size: 1.6em;
         transition: color 0.3s ease;
         margin-top: 1em;
     }
 
     .content h3{
-        font-size: 14px;
+        font-size: 1.5em;
         font-weight: 900;
         margin-bottom: .5em;
     }
 
     .content h4{
-        font-size: 14px;
+        font-size: 1.5em;
         margin-bottom: .5em;
         font-style: italic;
     }
@@ -668,10 +668,10 @@ body{
     }
 
     .skills, .exp, .certi, .edu{
-        font-size: 12px;
+        font-size: 1.3em;
       }
     .write-up p,.write-up li {
-        line-height: 1.8;
+        line-height: 1;
         animation: fadeInZoom 1s ease forwards;
         transition: transform 0.3s ease;
       }
