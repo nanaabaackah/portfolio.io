@@ -276,7 +276,7 @@ body{
         display: flex;
         flex-direction: column;
         margin-bottom: auto;
-        height: auto;
+        height: 100%;
     }
     
     main {
@@ -309,7 +309,7 @@ body{
         font-family: 'Satisfy', cursive;
         color: #ffffff;
         text-transform: none;
-        float: left;
+        bottom: 0px;
     }
 
     .match-mobile a{
@@ -319,7 +319,7 @@ body{
         text-align: center;
         width: fit-content;
         color: #ffffff;
-        margin-left: 2em;
+        margin-left: 1.5em;
     }
 
     .match-mobile p{
@@ -340,7 +340,7 @@ body{
     
     .match-mobile img{
         position: absolute;
-        width: 450px;
+        width: fit-content;
         bottom: 0px;
         padding-left: 0.5em;
     }
