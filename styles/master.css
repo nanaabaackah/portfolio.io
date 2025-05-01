@@ -263,10 +263,14 @@ body{
     
     .home {
         background-color: var(--dark);
-        background-image:url("https://github.com/nanaabaackah/portfolio.io/blob/main/imgs/0101.png?raw=true");
+        background-image:url(/imgs/0101.png);
         background-repeat: repeat;
-        background-size: cover;
-        width: auto;
+        width: 450px;
+    }
+ 
+
+    body{
+        width: 450px;
         min-height: 100vh; /*fill page vertically, but still get bigger*/
         min-width: 100vw; /*fille page horizontally, but still get bigger*/
         display: flex;
@@ -289,7 +293,6 @@ body{
     .social{
         margin-top: 2em;
         position: relative;
-        text-align: center;
     }
 
     .social i{
@@ -298,42 +301,53 @@ body{
         font-size: 1.5em;
     }
 
-    .match-mobile p{
-        font-size: 1em;
+    .match-mobile{
+        width: auto;
+        bottom: 0px;
+        position: absolute;
+        display: flex;
+        font-family: 'Satisfy', cursive;
+        color: #ffffff;
+        text-transform: none;
+        float: left;
+    }
+
+    .match-mobile a{
+        margin-top: -2.5em;
+        font-size: 3em;
         position: absolute;
         text-align: center;
+        width: fit-content;
+        color: #ffffff;
+        margin-left: 2em;
+    }
+
+    .match-mobile p{
+        width: auto;
+        font-size: 12px;
+        position: relative;
+        text-align: center;
+        margin-top: -15em;
     }
 
     .match-mobile h1{
-        font-size: 2em;
+        width: 100%;
+        font-size: 25px;
         position: absolute;
         text-align: center;
+        margin-top: -9em;
+    }
+    
+    .match-mobile img{
+        position: absolute;
+        width: auto;
+        padding-left: .5em;
     }
     
     .match-desktop {
         display: none;
     }
 
-    .match-mobile{
-        bottom: 0px;
-        width: 100%;
-        position: absolute;
-        display: flex;
-        font-family: 'Satisfy', cursive;
-        color: #ffffff;
-        text-transform: none;
-    }
-
-    .match-mobile img{
-        position: absolute;
-
-    }
-
-    
-    .match__item--middle{
-        position: absolute;
-        display: flex;
-    }
 }
 
 
