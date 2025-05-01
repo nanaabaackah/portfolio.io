@@ -173,11 +173,15 @@ body{
         font-weight: bolder;
     }    
     
-    .match {
+    .match-desktop {
         top: 1em;
         position: relative;
         width: 100%;
-        
+        display: inline;
+    }
+
+    .match-mobile{
+        display: none;
     }
 
     
@@ -189,12 +193,12 @@ body{
         
     }
 
-    .match a:hover{
+    .match-desktop a:hover{
         opacity: 50%;
         color: var(--back);
     }
 
-    .match p{
+    .match-desktop p{
         color: #ffffff;
         font-size: 2em;
         font-family: 'Satisfy', cursive;
@@ -202,7 +206,7 @@ body{
         
     }
 
-    .match h1{
+    .match-desktop h1{
         font-family: 'Satisfy', cursive;
         font-size: 4em;
         color: #ffffff;
@@ -258,9 +262,9 @@ body{
 @media screen and (max-width: 550px) {
     
     .home {
-        background-color: #001125;
-       background-image: none;
-        
+        background-color: var(--dark);
+        background-image:url(/imgs/0101.png);
+        background-repeat: repeat;
     }
     .grid main{
         margin-left: 5em;
@@ -273,143 +277,66 @@ body{
         display: flex;
         flex-direction: column;
         margin-bottom: auto;
-        height: 900px;
+        height: 700px;
     }
     
-    header{
-        display: flex;
-        flex-direction: row;
-        margin-top: 1em;
-        justify-content: center;
-    }
-    
-    header nav ul {
-        display: flex;
-        flex-direction: row;
-        font-size: 0.7em;
-    }
-    
-    header nav li{
-        margin-right: 1em;
-        text-align: center;
-        margin-left: 0em;
-        border-bottom: solid var(--light) 0.5px;
-    }
-    
-    header nav a,
-    header nav a:visited {
-        text-decoration: none;
-        display: block;
-        padding: 0.5em;
-        color: var(--back);
-    }
-    
-    header nav a:active{
-        background-color: var(--light);
-        color: var(--light);
-    }
-
     main {
         display: flex;
         flex-direction: column; 
         margin-bottom: auto;
         justify-items: left;
     }
-    
-    #description{
-        background-color: transparent;
-        margin-bottom: 1em;
-        margin-left: 1em;
-    }
-    
-    #description i{
-        color: transparent;
-    }
-    
-    #description h1{
-        font-family: 'Bad Script', cursive;
-        font-size: 1.3em;
-        color: var(--back);
-        text-align: center;
-        margin-bottom: 0.5em;
-        
-    }
-    
-    #description h2{
-        text-align: center;
-        font-size: 0.9em;
-        font-family: 'Bad Script', cursive;
-        color: var(--back);
-    }
 
-    
-
-    svg {
-        font-family: 'Dawning of a New Day', cursive;
-    }
-
-    svg text {
-        text-transform: uppercase;
-        animation: stroke 5s infinite alternate;
-        stroke-width: 2;
-        stroke: #365fa0;
-        font-size: 2em;
-    }
-
-    @keyframes stroke { 
-        0%   {
-            fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1);
-            stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
-        }
-        70%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); }
-        80%  {fill: rgba(72,138,20,0); stroke: #00FFFF; stroke-width: 3; }
-        100% {
-            fill: #0077FF; stroke: #00FFFF; 
-            stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
-        }
-    }
-    
     em {
         text-decoration: var(--border) underline;
         font-weight: bolder;
     }
-    
-    .match {
-        top: 1em;
+    .social{
+        margin-top: 2em;
         position: relative;
+        text-align: center;
+    }
+
+    .social i{
+        color: #ffffff;
+        margin-right: 1em;
+        font-size: 1.5em;
+    }
+
+    .match-mobile p{
+        font-size: 1em;
+        position: absolute;
+        text-align: center;
+    }
+
+    .match-mobile h1{
+        font-size: 2em;
+        position: absolute;
+        text-align: center;
+    }
+    
+    .match-desktop {
+        display: none;
+    }
+
+    .match-mobile{
+        bottom: 0px;
         width: 100%;
-        height: fit-content;
-        
+        position: absolute;
+        display: flex;
+        font-family: 'Satisfy', cursive;
+        color: #ffffff;
+        text-transform: none;
+    }
+
+    .match-mobile img{
+        position: absolute;
     }
 
     
     .match__item--middle{
         position: absolute;
-        z-index: -1;
-        left: -7.5em;
-        top: -2em;
-        
-    }
-
-    .match a:hover{
-        opacity: 50%;
-        color: var(--back);
-    }
-
-    .match p{
-        color: #ffffff;
-        font-size: 1em;
-        font-family: 'Satisfy', cursive;
-        text-transform: none;
-        
-    }
-
-    .match h1{
-        font-family: 'Satisfy', cursive;
-        font-size: 1.5em;
-        color: #ffffff;
-        text-transform: none;
-        align-content: center;
+        display: flex;
     }
 }
 
