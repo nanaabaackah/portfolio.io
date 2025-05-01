@@ -303,7 +303,6 @@ body{
 
     .match-mobile{
         width: auto;
-        bottom: 0px;
         position: absolute;
         display: flex;
         font-family: 'Satisfy', cursive;
