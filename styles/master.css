@@ -265,19 +265,14 @@ body{
         background-color: var(--dark);
         background-image:url(/imgs/0101.png);
         background-repeat: repeat;
-    }
-    .grid main{
-        margin-left: 5em;
-    }
-
-    body{
+        background-size: cover;
         width: auto;
         min-height: 100vh; /*fill page vertically, but still get bigger*/
         min-width: 100vw; /*fille page horizontally, but still get bigger*/
         display: flex;
         flex-direction: column;
         margin-bottom: auto;
-        height: 700px;
+        height: auto;
     }
     
     main {
@@ -331,6 +326,7 @@ body{
 
     .match-mobile img{
         position: absolute;
+
     }
 
     

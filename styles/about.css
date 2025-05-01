@@ -33,9 +33,9 @@ body{
     .home {
         /*background-image: url("../imgs/bck2.svg");*/
         background-color: #3a4738;
-        background-size: 100%;
-        background-repeat: no-repeat;
+        background-repeat:repeat;
         width: 100%;
+        background-image:url(/imgs/0101.png);
     }
 
     
