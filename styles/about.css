@@ -604,14 +604,14 @@ body{
 
     .write-up {
         margin-left: 0em;
-        font-size: 12px;
+        font-size: 20px;
         position: relative;
         float: right;
         display: block;
         word-wrap: break-word;
         text-align: justify;
         text-transform:none;
-        margin-top: 15em;
+        margin-top: 9em;
     }
 
     .write-up h1,.write-up h2 {

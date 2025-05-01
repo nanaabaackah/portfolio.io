@@ -265,12 +265,12 @@ body{
         background-color: #3a4738;
         background-image:url("https://github.com/nanaabaackah/portfolio.io/blob/main/imgs/0101.png?raw=true");
         background-repeat: repeat;
-        width: auto;
+        width: 100%;
     }
  
 
     body{
-        width: auto;
+        width: 100%;
         min-height: 100vh; /*fill page vertically, but still get bigger*/
         min-width: 100vw; /*fille page horizontally, but still get bigger*/
         display: flex;
@@ -281,6 +281,9 @@ body{
     
     main {
         display: flex;
+        flex-direction: column; 
+        align-items: center;
+        margin-bottom: auto;
     }
 
     em {
@@ -337,8 +340,9 @@ body{
     
     .match-mobile img{
         position: absolute;
-        width: auto;
-        top: 0px;
+        width: 450px;
+        bottom: 0px;
+        padding-left: 0.5em;
     }
     
     .match-desktop {
