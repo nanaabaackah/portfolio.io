@@ -9,7 +9,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
         <link rel="manifest" href="imgs/site.webmanifest">
-        <!--<link rel="stylesheet" href="styles/about.css" />-->
+        <link rel="stylesheet" href="styles/about.css" />
         <script src="https://kit.fontawesome.com/cd912461da.js" crossorigin="anonymous"></script>
         <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
         
@@ -18,8 +18,7 @@
         
         <header>
             <nav>
-                <!--<button id="menu"><a href="#"><i class="fa-solid fa-bars"></i></a></button>-->
-                <ul id="dropdown">
+                <ul id="dropdown-desktop">
                     <li class="logo"><a href="index.html"><img src="imgs/logo2.svg"></a></li>
                     <!--<li><a href="index.html">Home</a></li>-->
                     <li><a href="about.html">About</a></li>
@@ -30,11 +29,22 @@
                     <li><a href="business.html">Business Projects</a></li>
                     <button id="dark-mode"><i class="fas fa-moon"></i></button>-->
                 </ul>
+                <ul id="dropdown-mobile">
+                    <li class="logo"><a href="index.html"><img src="imgs/logo2.svg"></a></li>
+                    <!--<li><a href="index.html">Home</a></li>-->
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-id-card-clip"></i></a></li>
+                    <!--<li><a href="engineering.html">Software Engineering</a></li>
+                    <li><a href="business.html">Business Projects</a></li>
+                    <button id="dark-mode"><i class="fas fa-moon"></i></button>-->
+                </ul>
             </nav>
             
         </header>
         <main> 
-            <section id="sec_back">
+            <section id="sec_back-desktop">
                 <div class="container">
                     <div class="row animate-box">
                         <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
@@ -77,8 +87,48 @@
                     </div>
                 </div>
             </section>
-            <section>
-                
+            <section id="sec_back-mobile">
+                <div class="container">
+                    <div class="row animate-box">
+                        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                            <h2>Portfolio</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 text-center col-padding animate-box">
+                            <a href="https://github.com/nanaabaackah/portfolio.io/tree/main/schedule-builder" target="_onblank" class="work" style="background-image: url(schedule-builder/imgs/picktime-hero-new.svg);">
+                                <div class="desc">
+                                    <h3>Schedule Builder</h3>
+                                    <span>View Git</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 text-center col-padding animate-box">
+                            <a href="https://github.com/nanaabaackah/portfolio.io/tree/main/schedule-builder" target="_onblank" class="work" style="background-image: url(images/portfolio-2.jpg);">
+                                <div class="desc">
+                                    <h3>Hatchways Assesment</h3>
+                                    <span>View Git</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 text-center col-padding animate-box">
+                            <a href="documents/COIS 3400 Group Project.pdf" class="work" style="background-image: url(images/portfolio-3.jpg);">
+                                <div class="desc">
+                                    <h3>Database Design</h3>
+                                    <span>Illustration</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 text-center col-padding animate-box">
+                            <a href="https://github.com/nanaabaackah/portfolio.io/blob/main/coding%20challenges/Roman%20Converter.cs" class="work" style="background-image: url(images/portfolio-4.jpg);">
+                                <div class="desc">
+                                    <h3>Roman to Integer Converter</h3>
+                                    <span>View Git</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <!--<footer>

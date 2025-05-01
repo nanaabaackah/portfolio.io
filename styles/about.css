@@ -52,6 +52,7 @@ body{
         background-color: transparent;
         justify-content: center;
         width: 100%;
+        margin-top: 2em;
     }
 
     button{
@@ -63,13 +64,14 @@ body{
     #dropdown-desktop ul {
         display: flex;
         flex-direction: row;
-        padding: .5em;
+        padding: 1em;
     }
     
     #dropdown-desktop li{
-        margin: auto;
+        margin-right: 5em;
         text-align: center;
-        font-size: 12px;
+        margin-left: 5em;
+        font-size: 1em;
         font-weight: bolder;
     }
     #dropdown-desktop li:first-child a{
@@ -107,9 +109,8 @@ body{
     }
 
     #dropdown-desktop img{
-        width: auto;
+        width: 250px;
         position: absolute;
-
     }
     
     
@@ -126,7 +127,7 @@ body{
         
     }
     
-    #sec_back {
+    #sec_back-desktop {
         background: rgba(0, 0, 0, 0.43);
         margin-left: 10em;
         margin-right: 6em;
@@ -138,8 +139,12 @@ body{
         font-weight: 400;
         font-style: normal;
         border-radius: 20px;
-        margin-bottom: 15em;
+        margin-bottom: 8em;
         
+    }
+
+    #sec_back-mobile{
+        display: none;
     }
 
     .sec_one{
@@ -432,7 +437,301 @@ body{
     }
     
 @media screen and (max-width: 550px) {
+    /**********************************************/
+    /*                Nav Styles                  */
+    /**********************************************/
+    #dropdown-desktop{
+        display: none;
+
+    }
+    #dropdown-mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: transparent;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1em;
+        padding-bottom: 1em;
+        border-bottom: var(--back) solid 1px;
+    }
+
+    button{
+        background-color: transparent;
+        border: none;
+        margin: 2em;
+    }
     
+    #dropdown-mobile ul {
+        display: flex;
+        flex-direction: row;
+        padding: .5em;
+        margin-left: 0em;
+    }
+    
+    #dropdown-mobile li{
+        margin: auto;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bolder;
+    }
+    #dropdown-mobile li:first-child a{
+        background-color: transparent;
+        border-bottom: none;
+        margin-top: -1.5em;
+        font-size: 4em;
+    }
+    #dropdown-mobile li a,
+    #dropdown-mobile li a:visited {
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+        color: var(--back);
+        position: relative;
+    }
+    
+    #dropdown-mobile li a:hover{
+        background-color: var(--light);
+        color: #0a0000;
+    }
+
+    #dropdown-mobile li:first-child a:hover{
+        background-color: transparent;
+        border-bottom: none;
+       
+    }
+
+    #dropdown-mobile img{
+        width: 100px;
+        position: absolute;
+        margin-left: -1em;
+        margin-top: 0.3em;
+    }
+
+    
+    /**********************************************/
+    /*               Main Styles                  */
+    /**********************************************/
+    
+    main {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        margin-bottom: auto;
+        
+    }
+    
+    #sec_back-mobile {
+        background: rgba(0, 0, 0, 0.43);
+        margin-top: 3em;
+        filter: alpha(opacity=0.6);
+        display: flex;
+        position: relative;
+        font-family: "Reenie Beanie", cursive;
+        font-weight: 400;
+        font-style: normal;
+        border-radius: 20px;
+        margin-bottom: 5em;
+        width: 80%;
+    }
+
+    #sec_back-desktop{
+        display: none;
+    }
+
+    strong{
+        font-weight: 900;
+    }
+    
+    .profile {
+        position: absolute;
+        width: 130px;
+        height: 150px;
+        background:url("https://github.com/nanaabaackah/portfolio.io/blob/main/imgs/IMG_5131.JPG?raw=true");
+        background-size: cover;
+        border: 12px;
+        border-top-left-radius: 35px !important;
+        border-radius: 6px
+    }
+
+    .social-icons {
+        display: flex;
+        list-style: none;
+        bottom: 0px;
+        position: relative;
+        text-align: center;
+        justify-content: center;
+        left: 0px;
+        margin: 4em 13em;
+        
+    }
+    
+    .social-icons li {
+        width: 8px;
+        height: 8px;
+        border: 1px solid #eee;
+        padding: 8px;
+        margin-right: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        border-radius: 5px;
+        transition: all 1s;
+        position: relative;
+        margin-left: 0em;
+
+    }
+
+    .social-icons a{
+        text-decoration: none;
+    }
+
+    .sec_one{
+        font-size: 16px;
+    }
+    .who {
+        margin:1.5em;
+        width: 100%;
+        
+    }
+
+    .who__item--left {
+        width: 15%;
+        border-radius: 20%;
+        position: absolute;
+    }
+
+    .write-up {
+        margin-left: 0em;
+        font-size: 12px;
+        position: relative;
+        float: right;
+        display: block;
+        word-wrap: break-word;
+        text-align: justify;
+        text-transform:none;
+        margin-top: 15em;
+    }
+
+    .write-up h1,.write-up h2 {
+        color: #ffe5d9;
+        margin-bottom: 8px;
+        animation: slideInGradient 1.2s ease forwards;
+        font-family: "Corinthia", cursive;
+        font-size: 30px;
+        transition: color 0.3s ease;
+      }
+      .write-up h1:hover,.write-up h2:hover {
+        color: var(--accent);
+      }
+
+      .content {
+        height: fit-content;
+        background: #fff0;
+        color: var(--back);
+        font-family: "Alumni Sans Pinstripe", sans-serif;
+        position: relative;
+        width: fit-content;
+    }
+
+    .content h2{
+        color: #ffe5d9;
+        margin-bottom: .5em;
+        animation: slideInGradient 1.2s ease forwards;
+        font-family: "Corinthia", cursive;
+        text-transform: capitalize;
+        font-size: 16px;
+        transition: color 0.3s ease;
+        margin-top: 1em;
+    }
+
+    .content h3{
+        font-size: 14px;
+        font-weight: 900;
+        margin-bottom: .5em;
+    }
+
+    .content h4{
+        font-size: 14px;
+        margin-bottom: .5em;
+        font-style: italic;
+    }
+
+    .content ul{
+        margin-bottom: 1em;
+    }
+
+    .content li{
+        margin-bottom: .2em;
+        letter-spacing: 2px;
+    }
+
+    .skills, .exp, .certi, .edu{
+        font-size: 12px;
+      }
+    .write-up p,.write-up li {
+        line-height: 1.8;
+        animation: fadeInZoom 1s ease forwards;
+        transition: transform 0.3s ease;
+      }
+      .write-up p:hover,.write-up li:hover {
+        transform: translateX(5px);
+      }
+      .write-up ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      .write-up li::before {
+        content: '🌟';
+        margin-right: 10px;
+        color: #f39c12;
+      }
+      .contact {
+        margin-top: 0em;
+      }
+      .write-up a {
+        color: #aba2fb;
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+      .write-up a:hover {
+        color: var(--light);
+        transform: scale(1.05);
+      }
+
+      .box{
+        height: 400px;
+        width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+      }
+      
+    
+      @keyframes floatUp {
+        from { transform: translateY(60px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+      @keyframes slideInGradient {
+        0% {
+          background: linear-gradient(to right, #8e44ad, #3498db);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transform: translateX(-50px);
+          opacity: 0;
+        }
+        100% {
+          background: none;
+          color: #ffe5d9;
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes fadeInZoom {
+        from { transform: scale(0.95); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
 }
 
 
