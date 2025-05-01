@@ -276,7 +276,8 @@ body{
         display: flex;
         flex-direction: column;
         margin-bottom: auto;
-        height: 100%;
+        height: auto;
+        overflow: hidden;
     }
     
     main {
@@ -309,11 +310,10 @@ body{
         font-family: 'Satisfy', cursive;
         color: #ffffff;
         text-transform: none;
-        bottom: 0px;
     }
 
     .match-mobile a{
-        margin-top: -2.5em;
+        margin-top: -1.5em;
         font-size: 3em;
         position: absolute;
         text-align: center;
@@ -323,26 +323,26 @@ body{
     }
 
     .match-mobile p{
-        width: auto;
-        font-size: 12px;
+        width: 100%;
+        font-size: 20px;
         position: relative;
         text-align: center;
-        margin-top: -15em;
+        margin-top: -8em;
     }
 
     .match-mobile h1{
         width: 100%;
-        font-size: 25px;
+        font-size: 35px;
         position: absolute;
         text-align: center;
-        margin-top: -9em;
+        margin-top: -6em;
     }
     
     .match-mobile img{
         position: absolute;
-        width: fit-content;
-        bottom: 0px;
-        padding-left: 0.5em;
+        width: 195%;
+        top: 0px;
+        padding-left: 1em;
     }
     
     .match-desktop {
