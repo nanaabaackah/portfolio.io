@@ -262,7 +262,7 @@ body{
 @media screen and (max-width: 550px) {
     
     .home {
-        background-color: var(--dark);
+        background-color: #3a4738;
         background-image:url(/imgs/0101.png);
         background-repeat: repeat;
         width: 450px;
