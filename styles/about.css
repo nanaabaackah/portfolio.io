@@ -42,8 +42,10 @@ body{
     /**********************************************/
     /*                Nav Styles                  */
     /**********************************************/
-    
-    header{
+    #dropdown-mobile{
+        display: none;
+    }
+    #dropdown-desktop {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -58,20 +60,19 @@ body{
         margin: 2em;
     }
     
-    header nav ul {
+    #dropdown-desktop ul {
         display: flex;
         flex-direction: row;
-        padding: 1em;
+        padding: .5em;
     }
     
-    header nav li{
-        margin-right: 5em;
+    #dropdown-desktop li{
+        margin: auto;
         text-align: center;
-        margin-left: 5em;
-        font-size: 1em;
+        font-size: 12px;
         font-weight: bolder;
     }
-    header nav li:first-child a{
+    #dropdown-desktop li:first-child a{
         background-color: transparent;
         border-bottom: none;
         margin-top: -1.5em;
@@ -79,8 +80,8 @@ body{
         margin-right: 2em;
         margin-left: -2.5em;
     }
-    header nav li a,
-    header nav li a:visited {
+    #dropdown-desktop li a,
+    #dropdown-desktop li a:visited {
         text-decoration: none;
         display: block;
         padding: 1em;
@@ -90,24 +91,25 @@ body{
         border-bottom: solid white 0.5px;
     }
     
-    header nav li a:hover{
+    #dropdown-desktop li a:hover{
         background-color: var(--light);
         color: #0a0000;
     }
 
-    header nav li:first-child a:hover{
+    #dropdown-desktop li:first-child a:hover{
         background-color: transparent;
         border-bottom: none;
        
     }
 
-    header nav li a:focus{
+    #dropdown-desktop li a:focus{
         color: rgb(49, 0, 128);
     }
 
-    header nav img{
-        width: 210%;
+    #dropdown-desktop img{
+        width: auto;
         position: absolute;
+
     }
     
     
