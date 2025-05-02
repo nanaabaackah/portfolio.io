@@ -184,7 +184,6 @@ body{
         display: none;
     }
 
-    
     .match__item--middle{
         position: absolute;
         z-index: -1;
@@ -265,26 +264,22 @@ body{
         background-color: #3a4738;
         background-image:url("https://github.com/nanaabaackah/portfolio.io/blob/main/imgs/0101.png?raw=true");
         background-repeat: repeat;
-        width: 100%;
+        width: auto;
     }
  
 
     body{
-        width: 100%;
+        width: auto;
         min-height: 100vh; /*fill page vertically, but still get bigger*/
         min-width: 100vw; /*fille page horizontally, but still get bigger*/
-        display: flex;
-        flex-direction: column;
         margin-bottom: auto;
-        height: auto;
         overflow: hidden;
     }
     
     main {
         display: flex;
-        flex-direction: column; 
         align-items: center;
-        margin-bottom: auto;
+        justify-content: center ;
     }
 
     em {
@@ -295,6 +290,7 @@ body{
         margin-top: 2em;
         position: relative;
         margin-left: 2em;
+        margin-bottom: 1em;
     }
 
     .social i{
@@ -304,51 +300,53 @@ body{
     }
 
     .match-mobile{
-        width: auto;
-        position: absolute;
         display: flex;
+        width: auto;
+        position: relative;
+        flex-direction: column;
         font-family: 'Satisfy', cursive;
         color: #ffffff;
         text-transform: none;
     }
 
     .match-mobile a{
-        margin-top: -1.5em;
         font-size: 3em;
-        position: absolute;
         text-align: center;
         width: fit-content;
         color: #ffffff;
-        margin-left: 1.5em;
     }
 
     .match-mobile p{
         width: 100%;
         font-size: 20px;
-        position: relative;
         text-align: center;
-        margin-top: -8em;
+        margin-bottom: 1em;
     }
 
     .match-mobile h1{
         width: 100%;
         font-size: 35px;
-        position: absolute;
         text-align: center;
-        margin-top: -6em;
-    }
-    
-    .match-mobile img{
-        position: absolute;
-        width: 195%;
-        top: 0px;
-        padding-left: 1em;
+        margin-bottom: 1em;
     }
     
     .match-desktop {
         display: none;
     }
 
+    .match__item--top{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        justify-content: center ;
+    }
+
+    .match__item--mob{
+        width: 100%;
+        bottom: 0em;
+        margin-top: 3em;
+    }
 }
 
 
