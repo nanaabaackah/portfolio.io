@@ -787,11 +787,23 @@ body{
       .progress-bar.progress-bar-6 {
         background-color: #2c362b !important;
       }
+
+      .progress-bar.progress-bar-7 {
+        background-color: #212920 !important;
+      }
+
+      .progress-bar.progress-bar-8 {
+        background-color: #171d17 !important;
+      }
+
+      .progress-bar.progress-bar-9 {
+        background-color: #0e110e !important;
+      }
       
       .chart {
         width: 160px;
         height: 160px;
-        margin: 0 auto 40px auto;
+        margin: 0 auto 10px auto;
         position: relative;
         text-align: center;
       }
