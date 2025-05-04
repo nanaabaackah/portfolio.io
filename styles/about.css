@@ -1089,6 +1089,7 @@ body{
         padding: 5em;
         position: relative;
         justify-content: center;
+        width: 100%;
     }
     
     .f-dropdown{
@@ -1278,10 +1279,16 @@ body{
         flex-direction: column; 
         align-items: center;
         margin-bottom: auto;
-        
+        justify-content: center;
+        margin-bottom: 3em;
     }
     
     #sec_back-mobile {
+        
+        display: none;
+    }
+
+    #sec_back-desktop{
         background: rgba(0, 0, 0, 0.43);
         margin-top: 3em;
         filter: alpha(opacity=0.6);
@@ -1291,12 +1298,8 @@ body{
         font-weight: 400;
         font-style: normal;
         border-radius: 20px;
-        margin-bottom: 5em;
-        width: 80%;
-    }
-
-    #sec_back-desktop{
-        display: none;
+        margin: 2em;
+        width: 90%;
     }
 
     strong{
@@ -1322,15 +1325,15 @@ body{
         text-align: center;
         justify-content: center;
         left: 0px;
-        margin: 4em 13em;
+        margin: 4em 20em;
         
     }
     
     .social-icons li {
-        width: 8px;
-        height: 8px;
+        width: 16px;
+        height: 16px;
         border: 1px solid #eee;
-        padding: 8px;
+        padding: 20px;
         margin-right: 5px;
         display: flex;
         justify-content: center;
@@ -1404,12 +1407,14 @@ body{
         font-size: 1.6em;
         transition: color 0.3s ease;
         margin-top: 1em;
+        margin-left: 1em;
     }
 
     .content h3{
         font-size: 1.5em;
         font-weight: 900;
         margin-bottom: .5em;
+        margin-left: 1em;
     }
 
     .content h4{
@@ -1492,6 +1497,120 @@ body{
         from { transform: scale(0.95); opacity: 0; }
         to { transform: scale(1); opacity: 1; }
       }
+
+      /**********************************************/
+    /*               Footer Styles                */
+    /**********************************************/
+    
+    footer{
+        display: flex;
+        flex-direction: row; 
+        background-color:#000000;
+        padding: 3em;
+        position: relative;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .f-dropdown{
+        border-bottom: var(--light) 2px solid;
+    }
+
+    .f-logo img{
+        width: 100px;
+        position: relative;
+    }
+
+    #f-menu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: transparent;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        height: fit-content;
+
+    }
+    
+    #f-menu ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #f-menu li{
+        margin-right: 1em;
+        text-align: center;
+        margin-left: 2em;
+        font-size: .8em;
+        font-weight: bolder;
+    }
+
+    #f-menu li:first-child a:hover{
+        background:none;
+    }
+    #f-menu li a,
+    #f-menu li a:visited {
+        text-decoration: none;
+        display: block;
+        color: var(--back);
+        position: relative;
+    }
+    
+    #f-menu li a:hover{
+        color: #ffff;
+    }
+
+    #f-menu li a:focus{
+        color: var(--light);
+        background-color: var(--black);
+    }
+
+    .f-social-icons {
+        align-items: center;
+        margin-top: 3em;
+        list-style: none;
+        position: relative;
+        justify-content: center;
+        display: flex;
+    }
+    
+    .f-social-icons a{
+        text-decoration: none;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        color: var(--other);
+        border-radius: 5px;
+        position: relative;
+        margin-right: 1em;
+        text-align: center;
+        
+    }
+    
+    .f-social-icons a:hover { 
+        background:#fff;
+        color: #000
+    }
+
+    
+
+    footer span{
+        display: inline;
+        position: absolute;
+        bottom: 3px;
+        font-size: 10px;
+        color: white;
+        margin-top: 2em;
+        right: 0;
+        text-transform: none;
+        padding-right: 1em;
+    }
+
+    footer span a{
+        color: orange;
+        font-weight: 700;
+    }
 }
 
 
