@@ -982,7 +982,7 @@ body{
         width: 100%;
         height: 100%;
         z-index: 9999;
-        background: url(/imgs/loader2.gif) center no-repeat #fff;
+        background: url("https://github.com/nanaabaackah/portfolio.io/blob/main/imgs/loader2.gif?raw=true") center no-repeat #fff;
       }
       
       .js .animate-box {
