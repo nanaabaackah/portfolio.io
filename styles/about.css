@@ -1317,6 +1317,14 @@ body{
         border-radius: 6px
     }
 
+    .wrapper {
+        display: flex;
+        margin: auto;
+        align-items: center;
+        float: left;
+        margin-top: 6em;
+    }
+
     .social-icons {
         display: flex;
         list-style: none;
@@ -1506,7 +1514,7 @@ body{
         display: flex;
         flex-direction: row; 
         background-color:#000000;
-        padding: 3em;
+        padding: 2em;
         position: relative;
         justify-content: center;
         width: 100%;
@@ -1539,10 +1547,10 @@ body{
     }
     
     #f-menu li{
-        margin-right: 1em;
+        margin-right: 0em;
         text-align: center;
-        margin-left: 2em;
-        font-size: .8em;
+        margin-left: 1.2em;
+        font-size: .7em;
         font-weight: bolder;
     }
 
@@ -1568,7 +1576,7 @@ body{
 
     .f-social-icons {
         align-items: center;
-        margin-top: 3em;
+        margin-top: 1em;
         list-style: none;
         position: relative;
         justify-content: center;
@@ -1599,7 +1607,7 @@ body{
         display: inline;
         position: absolute;
         bottom: 3px;
-        font-size: 10px;
+        font-size: 8px;
         color: white;
         margin-top: 2em;
         right: 0;

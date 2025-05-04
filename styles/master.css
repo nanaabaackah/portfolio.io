@@ -28,11 +28,11 @@
 
 body{
     width: 100%;
-    
     display: flex;
     flex-direction: column;
     margin-bottom: auto;
-    
+    align-items: center;
+    justify-content: center;
 }
 
     .home {
@@ -100,84 +100,19 @@ body{
         flex-direction: column; 
         align-items: center;
         margin: auto;
+        justify-content: center;
     }
     
-    #description{
-        background-color: transparent;
-        padding: 6em;
-        padding-bottom: 1em;
-        text-align: center;
-    }
-    
-    #description i{
-        color: transparent;
-        text-shadow: 4px 4px 10px red;
-    }
-    
-    #description h1{
-        font-family: 'Bad Script', cursive;
-        font-size: 2em;
-        color: var(--back);
-        text-align: center;
-        
-    }
-    
-    #description em{
-        text-decoration: none;
-        font-family: 'Satisfy', cursive;
-        font-size: 3em;
-    }
-    
-    #description h2{
-        
-        text-align: center;
-        font-size: 2.5em;
-        font-family: 'Bad Script', cursive;
-    }
-    
-    #links{
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        font-size: 1.2em;
-        width: fit-content;
-        margin-left: 22em;
-        align-items: center;
-    }
-    
-    #links a{
-        margin-top: 0.5em;
-        color: var(--back);
-        text-align: center;
-        align-items: center;
-    }
 
-    #links a:hover{
-        color: var(--light);
-        
-    }
-    
-    /*button {
-        background-color: var(--back);
-        color: var(--dark);
-        border: none;
-        display: block;
-        padding: 1em;
-        font-size: larger;
-        flex-direction: column;
-        align-items: center;
-    }*/
-    
     em {
         text-decoration: var(--border) underline;
         font-weight: bolder;
     }    
     
     .match-desktop {
-        top: 1em;
         position: relative;
         width: 100%;
-        display: inline;
+        display: flex;
     }
 
     .match-mobile{
@@ -185,11 +120,20 @@ body{
     }
 
     .match__item--middle{
-        position: absolute;
+        position: relative;
         z-index: -1;
-        left: -7.5em;
-        top: -2em;
-        
+        left: 0;    
+        display: block;  
+    }
+
+    .match__item--middle img{
+
+        position: relative;
+    }
+
+    .match-desktop a{
+        position: absolute;
+        margin: 2em 7.5em;
     }
 
     .match-desktop a:hover{
@@ -199,10 +143,11 @@ body{
 
     .match-desktop p{
         color: #ffffff;
-        font-size: 2em;
+        font-size: 1.5em;
         font-family: 'Satisfy', cursive;
         text-transform: none;
-        
+        justify-content: center;
+        left: 0;
     }
 
     .match-desktop h1{
@@ -210,7 +155,8 @@ body{
         font-size: 4em;
         color: #ffffff;
         text-transform: none;
-        align-content: center;
+        justify-content: center;
+        margin-left: 1.5em;
     }
 
     .social{
@@ -222,11 +168,11 @@ body{
     .social i{
         color: #ffffff;
         margin-right: 1em;
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     .social i:hover{
-        color: var(--back);
+        color: var(--light);
     }
     
     
