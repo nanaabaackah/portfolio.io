@@ -123,11 +123,12 @@ body{
         position: relative;
         z-index: -1;
         left: 0;    
-        display: block;  
+        display: block; 
+         
     }
 
     .match__item--middle img{
-
+        
         position: relative;
     }
 

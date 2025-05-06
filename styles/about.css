@@ -6,10 +6,10 @@
 
 :root{
     --dark: #263e4a;
-    --back: #ebb77e;
+    --back: #ffffff;
     --border: #c99423;
     --other: #a78254;
-    --light: #616f70;
+    --light: #4a3931;
     --black: #242424;
     --text: #223e4a;
 
@@ -23,7 +23,7 @@
 
 body{
     width: 100%;
-    
+    color: var(--back);
     display: flex;
     flex-direction: column;
     margin-bottom: auto;
@@ -32,7 +32,8 @@ body{
 
     .home {
         /*background-image: url("../imgs/bck2.svg");*/
-        background-color: #3a4738;
+        background-color: white;
+        color: var(--back);
         background-repeat:repeat;
         width: 100%;
         background-image:url("https://github.com/nanaabaackah/portfolio.io/blob/main/imgs/0101-b.png?raw=true");
@@ -86,16 +87,13 @@ body{
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-color: transparent;
+        background-color: var(--back);
         justify-content: center;
         width: 100%;
-        margin-top: 2em;
-    }
-
-    button{
-        background-color: transparent;
-        border: none;
-        margin: 2em;
+        position: fixed;
+        padding: 2em;
+        z-index: 2;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
     }
     
     #dropdown-desktop ul {
@@ -110,21 +108,23 @@ body{
         margin-left: 5em;
         font-size: 1em;
         font-weight: bolder;
+        margin-top: 2em;
+        
     }
     #dropdown-desktop li:first-child a{
         background-color: transparent;
         border-bottom: none;
-        margin-top: -1.5em;
+        margin-top: -2.4em;
         font-size: 4em;
-        margin-right: 2em;
-        margin-left: -2.5em;
+        margin-right: 5em;
+        margin-left: -3em;
     }
     #dropdown-desktop li a,
     #dropdown-desktop li a:visited {
         text-decoration: none;
         display: block;
         padding: 1em;
-        color: var(--back);
+        color: var(--light);
         
         position: relative;
         border-bottom: solid white 0.5px;
@@ -132,7 +132,7 @@ body{
     
     #dropdown-desktop li a:hover{
         background-color: var(--light);
-        color: #0a0000;
+        color: white;
     }
 
     #dropdown-desktop li:first-child a:hover{
@@ -142,13 +142,17 @@ body{
     }
 
     #dropdown-desktop li a:focus{
-        color: var(--light);
+        color: var(--border);
         background-color: var(--black);
     }
 
     #dropdown-desktop img{
         width: 250px;
         position: absolute;
+        -moz-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        -o-transform: rotate(-5deg);
+        transform: rotate(-7deg);
     }
     
     
@@ -162,15 +166,13 @@ body{
         flex-direction: column; 
         align-items: center;
         margin-bottom: auto;
-        
+        color: var(--back);
     }
     
     #sec_back-desktop {
-        background: rgba(0, 0, 0, 0.43);
-        margin-left: 10em;
-        margin-right: 6em;
-        margin-top: 5em;
-        filter: alpha(opacity=0.6);
+        /*background: rgba(0, 0, 0, 0.43);*/
+        
+        margin-top: 0em;
         display: flex;
         position: relative;
         font-family: "Reenie Beanie", cursive;
@@ -178,7 +180,7 @@ body{
         font-style: normal;
         border-radius: 20px;
         margin-bottom: 8em;
-        
+        color: var(--back);
     }
 
     #sec_back-mobile{
@@ -212,6 +214,8 @@ body{
         border: 12px;
         border-top-left-radius: 35px !important;
         border-radius: 6px;
+        margin-left: 20em;
+        margin-top: 35em;
     }
     
     .overlay {
@@ -223,13 +227,13 @@ body{
         opacity: 0;
         transition: all 1s;
         border-top-left-radius: 35px !important;
-        border-radius: 6px
+        border-radius: 6px;
     }
     
     .profile:hover 
     
     .overlay {
-        opacity: 1
+        opacity: 1;
     }
     
     .social-icons {
@@ -273,13 +277,9 @@ body{
         display: flex;
         top:40%;
         color: #fff;
-        flex: column
+        flex: column;
     }
 
-    .who {
-        margin:3em;
-        
-    }
 
     .who__item--left {
         width: 15%;
@@ -289,7 +289,7 @@ body{
 
     .write-up {
         text-transform: lowercase;
-        margin-left: 13em;
+        margin-left: 20em;
         font-size: 25px;
         position: relative;
         float: right;
@@ -297,34 +297,58 @@ body{
         word-wrap: break-word;
         text-align: justify;
         text-transform:none;
-        color: var(--other);
+        color: var(--light);
+        width: 70%;
+        padding: 5em;
+        margin-top: 4em;
     }
 
     .write-up h1,.write-up h2 {
-        color: #ffe5d9;
+        color: var(--back);
         margin-bottom: 15px;
         animation: slideInGradient 1.2s ease forwards;
         font-family: "Corinthia", cursive;
-        
         font-size: 60px;
-        transition: color 0.3s ease;
       }
-      .write-up h1:hover,.write-up h2:hover {
-        color: var(--accent);
-      }
+
+      /* DEMO-SPECIFIC STYLES */
+.typing-demo h1 {
+    color: var(--light);
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid var(--light); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--light)}
+  }
 
       .content {
         width: auto;
         height: fit-content;
         background: #fff0;
-        color: var(--back);
+        color: var(--black);
+        font-weight: 600;
         font-family: "Alumni Sans Pinstripe", sans-serif;
+        margin-top: 7em;
     }
 
     .content h2{
-        color: #ffe5d9;
+        color: var(--black);
         margin-bottom: .5em;
-        animation: slideInGradient 1.2s ease forwards;
         font-family: "Corinthia", cursive;
         text-transform: capitalize;
         font-size: 3em;
@@ -335,7 +359,7 @@ body{
     .content h3{
         font-size: 2em;
         font-weight: 900;
-        margin-bottom: 3em;
+        margin-bottom: .5em;
     }
 
     .content h4{
@@ -381,15 +405,6 @@ body{
       .contact {
         margin-top: 30px;
       }
-      .write-up a {
-        color: #aba2fb;
-        text-decoration: none;
-        transition: color 0.3s ease, transform 0.3s ease;
-      }
-      .write-up a:hover {
-        color: var(--light);
-        transform: scale(1.05);
-      }
 
       .box{
         height: 400px;
@@ -398,37 +413,12 @@ body{
         align-items: center;
         justify-content: center ;
       }    
-
-      .typewriter-container {
-        white-space: pre-wrap;
-        background: #111;
-        color: #0f0;
-        padding: 1.5em;
-        max-width: 800px;
-        margin: 0 auto;
-        border-radius: 10px;
-        box-shadow: 0 0 10px #0f0;
-        position: relative;
-      }
-  
-      #typewriter-text::after {
-        content: "|";
-        position: absolute;
-        color: #0f0;
-        right: 1.5em;
-        animation: blink 0.7s step-end infinite;
-      }
-  
-      @keyframes blink {
-        0%, 100% { opacity: 0; }
-        50% { opacity: 1; }
-      }
       
     #fh5co-features {
     background: var(--light);
     }
     #fh5co-features h2 {
-    color: #fff;
+    color: var(--back);
     }
     #fh5co-features .services-padding {
     padding: 7em 0;
@@ -489,7 +479,7 @@ body{
     #fh5co-blog,
     #fh5co-pricing,
     #fh5co-contact {
-    padding: 2em 0;
+    padding: 8em;
     clear: both;
     }
     @media screen and (max-width: 768px) {
@@ -507,6 +497,16 @@ body{
 
     #fh5co-started {
     border-bottom: none;
+    }
+
+    .fh5co-bg-color{
+      background-color: var(--light);
+      width: 100%;
+      color: var(--back);
+    }
+
+    .fh5co-bg-color h2{
+      color: var(--back);
     }
 
     .fh5co-bg-dark {
@@ -539,12 +539,12 @@ body{
     font-size: 40px;
     margin-bottom: 15px;
     line-height: 1.5;
-    color: #000;
+    color: var(--light);
     }
     .fh5co-heading p {
     font-size: 18px;
     line-height: 1.5;
-    color: #828282;
+    color: var(--light);
     }
     .fh5co-heading span {
     display: block;
@@ -596,6 +596,8 @@ body{
         -moz-border-radius: 4px;
         -ms-border-radius: 4px;
         border-radius: 4px;
+        color: var(--back);
+        margin-bottom: 3em;
       }
       @media screen and (max-width: 768px) {
         .timeline .timeline-heading > div h3 {
@@ -646,7 +648,7 @@ body{
         }
       }
       .timeline > li > .timeline-badge {
-        color: #3a4738;
+        color: var(--back);
         width: 44px;
         height: 44px;
         line-height: 50px;
@@ -656,7 +658,7 @@ body{
         top: 40px;
         left: 50%;
         margin-left: -21px;
-        background-color: var(--other);
+        background-color: var(--light);
         z-index: 100;
         display: table;
         -webkit-border-radius: 50%;
@@ -713,8 +715,9 @@ body{
         display: block;
         margin-bottom: 10px;
         font-size: 20px;
-        font-weight: normal;
-        color: #ffff;
+        font-weight: bold;
+        color: var(--light);
+        font-style: italic;
       }
       
       .timeline-body > p,
@@ -761,10 +764,11 @@ body{
           right: auto;
         }
       }
+
       .progress-wrap {
         width: 100%;
         float: left;
-        margin-bottom: 10px;
+        margin-bottom: .5em;
         
       }
       .progress-wrap h3 {
@@ -777,82 +781,124 @@ body{
       }
       .progress-wrap h3 .name-left {
         float: left;
-        color: var(--back);
+        color: var(--light);
       }
       .progress-wrap h3 .value-right {
         float: right;
-        color: var(--other);
+        color: var(--light);
       }
       
-      .progress {
+      .progress-a {
         width: 100%;
         float: left;
-        height: 5px;
-        box-shadow: none;
-        
+        height: 7px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-right: solid 2px var(--light);
       }
       
       .progress-bar {
-        background-color: #2F3C4F;
-        height: 1px;
+        background-color: #2e3949;
+        height: 7px;
         display: block;
         box-shadow: none;
+        
       }
       .progress-bar.progress-bar-1 {
-        background-color: #789473 !important;
+        background-color: #644e45b2 !important;
       }
       .progress-bar.progress-bar-2 {
-        background-color: #60755d !important;
+        background-color: #e2480077 !important;
       }
       .progress-bar.progress-bar-3 {
-        background-color: #51634e !important;
+        background-color: #644e45b2 !important;
       }
       .progress-bar.progress-bar-4 {
-        background-color: #41503f !important;
+        background-color: #e2480077 !important;
       }
       .progress-bar.progress-bar-5 {
-        background-color: #354133 !important;
+        background-color: #644e45b2 !important;
       }
 
       .progress-bar.progress-bar-6 {
-        background-color: #2c362b !important;
+        background-color: #e2480077 !important;
       }
 
       .progress-bar.progress-bar-7 {
-        background-color: #212920 !important;
+        background-color: #644e45b2 !important;
       }
 
       .progress-bar.progress-bar-8 {
-        background-color: #171d17 !important;
+        background-color: #e2480077 !important;
       }
 
       .progress-bar.progress-bar-9 {
-        background-color: #0e110e !important;
+        background-color: #644e45b2 !important;
+      }
+
+      .progress-wrap-b {
+        width: 50%;
+        float: left;
+        margin-bottom: .5em;
+        
+      }
+      .progress-wrap-b h3 {
+        font-size: 20px;
+        display: block;
+        margin-bottom: 10px;
+        float: left;
+        width: 70%;
+        
+      }
+      .progress-wrap-b h3 .name-left {
+        float: left;
+        color: var(--back);
+      }
+      .progress-wrap-b h3 .value-right {
+        float: right;
+        color: var(--back);
       }
       
-      .chart {
-        width: 160px;
-        height: 160px;
-        margin: 0 auto 10px auto;
-        position: relative;
-        text-align: center;
+      .progress-b {
+        width: 70%;
+        float: left;
+        height: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-right: solid 2px white;
       }
-      .chart span {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        margin-top: -30px;
-        width: 100%;
-        color: #fff;
-        font-size: 20px;
+      
+
+      .progress-bar.progress-bar-1-b {
+        background-color: #a471f579 !important;
       }
-      .chart span strong {
-        display: block;
+      .progress-bar.progress-bar-2-b {
+        background-color: #e2480077 !important;
       }
-      .chart canvas {
-        position: absolute;
-        left: 0;
-        top: 0;
+      .progress-bar.progress-bar-3-b {
+        background-color: #a471f579 !important;
+      }
+      .progress-bar.progress-bar-4-b {
+        background-color: #e2480077 !important;
+      }
+      .progress-bar.progress-bar-5-b {
+        background-color: #a471f579 !important;
+      }
+
+      .progress-bar.progress-bar-6-b {
+        background-color: #e2480077 !important;
+      }
+
+      .progress-bar.progress-bar-7-b {
+        background-color: #a471f579 !important;
+      }
+
+      .progress-bar.progress-bar-8-b {
+        background-color: #e2480077 !important;
+      }
+
+      .progress-bar.progress-bar-9-b {
+        background-color: #a471f579 !important;
       }
       
       .work {
@@ -939,7 +985,7 @@ body{
         margin-bottom: 0;
       }
       #fh5co-started .fh5co-heading h2 {
-        color: #fff;
+        color: var(--light);
         margin-bottom: 20px !important;
       }
       #fh5co-started .fh5co-heading p {
@@ -1009,7 +1055,7 @@ body{
         height: 50px;
         display: table;
         background: rgba(0, 0, 0, 0.8);
-        color: #fff;
+        color: var(--back);
         text-align: center;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
@@ -1066,7 +1112,7 @@ body{
         }
         100% {
           background: none;
-          color: #ffe5d9;
+          color: var(--dark);
           transform: translateX(0);
           opacity: 1;
         }
@@ -1090,6 +1136,7 @@ body{
         position: relative;
         justify-content: center;
         width: 100%;
+        bottom: 0;
     }
     
     .f-dropdown{
@@ -1438,6 +1485,10 @@ body{
     .content li{
         margin-bottom: .2em;
         letter-spacing: 2px;
+    }
+    #fh5co-skills{
+      background-color: var(--light);
+
     }
 
     .skills, .exp, .certi, .edu{
