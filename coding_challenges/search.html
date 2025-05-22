@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/cbec4152c6.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+
+  .container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 2em; 
+    padding: 2em;
+    font-family: 'Montserrat';
+    margin: auto;
+    margin-right: 0;
+    margin-left: 0;
+    width: 90%;
+  }
+
+  .grid {
+    background-color: #ffffff; 
+    -khtml-border-radius: 15px; 
+    -moz-border-radius: 15px; 
+    -webkit-border-radius: 15px; border: 2px solid #610202; 
+    padding: 4px; 
+    width: fit-content; 
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  }
+
+  .grid img{
+    
+    position: relative; 
+    width: 250px; 
+    border-radius: 9px 9px 0px 0px; 
+    border: 2px solid #610202;
+    height: 150px;
+  }
+
+  .icon{
+    margin-top: 0.8em;
+  }
+
+  .icon p{
+    color: #000; 
+    margin-left: 3em; 
+    margin-top: -0.2em; 
+    font-family: 'Montserrat'; 
+    font-size: 10px;
+  }
+
+  #left{
+    color: #ffffff; 
+    position: absolute; 
+    padding: 0.3em 0.2em; 
+    background-color: #c26700; 
+    border-radius: 50px; 
+    margin-top: -0.5em;
+  }
+
+  #c-left {
+    color: #ffd500; 
+    position: absolute;  
+    padding: 0.12em 0.05em; 
+    background-color: #c20067; 
+    border-radius: 50px; 
+    margin-top: 0em;
+  }
+
+  #bottom {
+    font-size: 7px;
+    width: 50%;
+  }
+
+  .heading-content {
+    font-family: 'Montserrat';
+    color: #000;
+  }
+
+  .heading-content a{
+    font-weight: 700;
+    color: #000;
+  }
+
+  .heading-content a:hover{
+    color: #00638a;
+  }
+
+  
+  .heading-content p{
+    font-size: 10px;
+    margin-top: 0em;
+  }
+
+  .heading-content center {
+    color: #000; 
+    margin-top: 3em; 
+    font-family: 'Montserrat'; 
+    font-size: 7px;
+
+  }
+
+  #short {
+    margin-top: 5em;
+  }
+
+  #form{
+    border-radius: 9px; 
+    padding: 3px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    display:flex;
+    flex-direction:row;
+  }
+  #form input{
+    all: unset;
+    width: 100%;
+    padding: 6px 15px;
+    font-family: 'Montserrat'; 
+  }
+
+  #form button{
+    position: absolute;
+    
+    all: unset;
+    margin-right: 1em;
+  }
+</style>
+
+<body>
+  <script type="text/javascript">
+    function submitSearch(){
+      var siteSearchUrl = ''
+      var query = document.getElementById('query').value;
+      var end = ''
+      var url = siteSearchUrl + query + end
+
+      window.open(url, '_blank');
+    }
+
+    function searchKeypress(e){
+      e = e || window.event;
+      if (e.keyCode === 13) {
+        document.getElementsByClassName('fas fa-search').click();
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+  <form id="form">
+    <input type="search" id="query" placeholder="Search...">
+    <button type="submit" onclick="submitSearch()"><i class="fas fa-search"></i></button>
+  </form>
+</body>
+</html>
+  

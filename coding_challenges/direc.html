@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cbec4152c6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+</head>
+<style>
+
+    body{
+        
+        font-family: 'Montserrat';
+        width: auto; 
+    }
+
+    .main{
+        margin-top: 5em;
+        margin-left: 5em;
+    }
+
+    .column {
+        float: left;
+        width: 30%;
+        padding: 10px;
+    }
+
+    h2{ 
+        font-size: 30px;
+        color: #262626;
+    }
+
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+        background-color: #262626ab;;
+        padding: 16.8em;
+        width:100%;
+        height: 28.5%;
+    }
+    .content h1{
+        font-size: 60px;
+        font-weight: 900;
+        text-align: center;
+        padding-bottom: 4em;
+        color: white;
+        position: absolute;
+        padding-top: 4em;
+        
+    }
+
+    .content p{
+        text-align: center;
+        width: 70%;
+        color: white;
+        font-weight: 600;
+        margin-top: 5em;
+        font-size: 20px;
+    }
+    
+    /* Search bar styles */
+    #searchBar {
+        width: 70%;
+        padding: 12px 15px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        border-radius: 9px; 
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        font-family: 'Montserrat'; 
+        border: none;
+        display:flex;
+        flex-direction:row;
+    }
+
+    .hidden {
+    display: none;
+    }
+
+.accordion {
+    cursor: pointer;
+    padding: 5px;
+    width: 50%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-weight: bold;
+    border-radius: 6px;
+    background-color: transparent;
+    font-size: 16px;
+    margin-left: 1em;
+}
+
+.accordion-main {
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    background-color: transparent;
+    font-weight: 900;
+    margin-bottom: 5px;
+    font-size: 20px;
+    margin-left: 1em;
+    
+}
+
+.accordion:hover {
+    
+    text-decoration: underline;
+    border-radius: 0;
+}
+
+.accordion-main:hover {
+    
+    text-decoration: underline;
+    border-radius: 0;
+}
+
+.accordion.active{
+    border-left: #262626 1px solid;
+    text-decoration: underline;
+    border-radius: 0;
+}
+
+.accordion-main.active {
+    border-left: #262626 1px solid;
+    text-decoration: underline;
+    border-radius: 0;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #262626;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    }
+
+    .active:after {
+    content: "\2212";
+    }
+
+    .accordion-main:after {
+    content: '\002B';
+    color: #262626;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    }
+
+    .active:after {
+    content: "\2212";
+    }
+
+.panel {
+    display: none;
+    padding: 5px 2px;
+    background-color: transparent;
+    padding-left: 4em;
+    width: 100%;
+    
+}
+
+.panel.show {
+    display: block;
+    
+}
+
+a{
+    color: #d1a32d;
+    text-decoration: none;
+
+}
+
+a:hover{
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#form{
+    border-radius: 9px; 
+    padding: .5em;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    display:flex;
+    flex-direction:row;
+    width: 80%;
+}
+#form input{
+    all: unset;
+    width: 100%;
+    padding: 6px 15px;
+    font-family: 'Montserrat'; 
+}
+
+#form button{
+    position: absolute;
+    
+    all: unset;
+    margin-right: 1em;
+}
+
+li{
+    list-style:none
+}
+
+.fa-solid{
+    margin-right: .5em;
+}
+
+</style>
+</head>
+<body>
+    
+    <section class="main">
+        <form id="form" onsubmit="event.preventDefault(); submitSearch();">
+            <input type="search" id="searchBar" placeholder="Search..." name="q" />
+            <button type="submit">Search</button>
+            <button type="button" onclick="document.getElementById('searchBar').value=''; submitSearch();">Reset</button>
+        </form>
+       
+        <div class="column">
+            
+            <h2>D-L</h2>
+            <button class="accordion-main">Dundas (LRO 08)</button>
+            
+                <div class="panel">
+                    <div class="section">
+                        <button class="accordion">RMJ Record Indexes</button>
+                        <div class="panel">
+                            <ul>
+                                <a href=""><li><i class="fa-solid fa-angles-right"></i>Village of Morrisburg</li></a>
+                                <a href=""><li><i class="fa-solid fa-angles-right"></i>Zoning - South Dundas</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <button class="accordion">Research Checklist</button>
+                        <ul>
+                            <a href=""><li><i class="fa-solid fa-angles-right"></i>RO 08</li></a>
+                        </ul>
+                    </div>
+                </div>
+            
+            <button class="accordion-main">Durham (LRO 19)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Historic Plans</button>
+            <div class="panel">    
+                <ul>
+                    <li><i class="fa-solid fa-angles-right"></i>Oshawa</li>
+                        <ul>
+                            <a href=""><li><i class="fa-solid fa-angles-right"></i>PL335 - All Sheets</li></a>
+                            <a href=""><li><i class="fa-solid fa-angles-right"></i>PL357 - All Sheets</li></a>
+                            <a href=""><li><i class="fa-solid fa-angles-right"></i>Durham Historic Plan Renaming List</li></a>
+                        </ul>
+                    <li><i class="fa-solid fa-angles-right"></i>Newcastle</li>
+                        <ul>
+                            <a href=""><li><i class="fa-solid fa-angles-right"></i>Hannings Plan</li></a>
+                        </ul>
+                    <li><i class="fa-solid fa-angles-right"></i>Bowmanville</li>
+                        <ul>
+                            <a href=""><li><i class="fa-solid fa-angles-right"></i>Grants Plan</li></a>
+                            <a href=""><li><i class="fa-solid fa-angles-right"></i>Hannings Plan</li></a>
+                        </ul>
+                    <li><i class="fa-solid fa-angles-right"></i>Orono</li>
+                        <ul>
+                            <a href=""><li><i class="fa-solid fa-angles-right"></i>Hannings Plan & notes</li></a>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Township Surveys</button>
+            <div class="panel">
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Pickering</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>John Shier Pickering Survey</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">By-Laws</button>
+            <div class="panel">
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Oshawa Street Naming By-Law</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Bond Street Naming By-Law</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Clarington Zoning By-Law</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Pickering Zoning By-Law</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Oshawa Zoning By-Law</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Oshawa Maps</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Published Control</button>
+            <div class="panel">
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Oshawa Horizontal & Vertical</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Oshawa Historic Plan Re-numbering</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Pickering Benchmarks</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Ajax Benchmarks</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Durham Region Benchmark Map</li></a>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Contact</button>
+            
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Zoning</button>
+            <div class="panel">
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Clarington</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Oshawa</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Whitby Bylaw 2585</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Oak Ridges Moraine Zoning By-law # 5581-05</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Whitby Bylaw 1784</li></a>
+                    <li><i class="fa-solid fa-angles-right"></i></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href=""><li><i class="fa-solid fa-angles-right"></i>RO 40</li></a>
+            </ul>
+        </div>
+        
+        
+    </div>  
+    <button class="accordion-main">Essex (LRO 12)</button>
+        <div class="panel">
+            <div class="section">
+                
+                <ul>
+                <a href=""><li><i class="fa-solid fa-angles-right"></i>Windsor Benchmark Information</li></a>
+                <a href=""><li><i class="fa-solid fa-angles-right"></i>Benchmark Map</li></a>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <button class="accordion">Research Checklist</button>
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>RO 12</li></a>
+                </ul>
+            </div>
+            
+        </div>  
+    <button class="accordion-main">Frontenac (LRO 13)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">Historic Plans</button>
+            <div class="panel">
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Richmond Township</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Published Control</button>
+            <div class="panel">
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Kingston Vertical Control</li></a>
+                    <ul>
+                        <li><i class="fa-solid fa-angles-right"></i></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Records Index</button>
+            <div class="panel">
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Kingston Index Maps</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Kingston Road Naming Bylaw</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Kingston Zoning By-Law</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Central Frontenac Zoning By-Law</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href=""><li><i class="fa-solid fa-angles-right"></i>RO 13</li></a>
+            </ul>
+        </div>
+    </div>
+    <button class="accordion-main">Glengarry (LRO 14)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">RMJ Record Indexes</button>
+            <div class="panel">
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Town of Alexandria</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>County of Glengarry</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Zoning</button>
+            <div class="panel">
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>South Glengarry</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>North Glengarry</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href=""><li><i class="fa-solid fa-angles-right"></i>RO 14</li></a>
+            </ul>
+        </div>
+    </div>
+    <button class="accordion-main">Grenville (LRO 15)</button>
+    <div class="panel">
+        <div class="section">
+            <button class="accordion">RMJ Record Indexes</button>
+            <div class="panel">
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Village of Cardinal</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Village of Spencerville</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Town of Prescott</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href=""><li><i class="fa-solid fa-angles-right"></i>RO 15</li></a>
+            </ul>
+        </div>
+    </div>
+    <button class="accordion-main">Halton (LRO 20)</button>
+    <div class="panel">
+        <div class="section">
+            <ul>
+                <a href=""><li><i class="fa-solid fa-angles-right"></i>Burlington Benchmarks</li></a>
+            </ul>
+            
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href=""><li><i class="fa-solid fa-angles-right"></i>RO 20</li></a>
+            </ul>
+        </div>
+        
+    </div>  
+    <button class="accordion-main">Hastings (LRO 21)</button>
+    <div class="panel">
+        <div class="section">
+            
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Madoc Vertical Control</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Elzevir Township Map</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Hastings township maps, etc.</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Quinte West Zoning By-Law</li></a>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>Quinte West Maps</li></a>
+                </ul>
+
+        </div>
+        
+        <div class="section">
+            <button class="accordion">Research Checklist</button>
+            <ul>
+                <a href=""><li><i class="fa-solid fa-angles-right"></i>RO 21</li></a>
+            </ul>
+        </div>
+    </div>
+        <button class="accordion-main">Leeds (LRO 28)</button>
+        <div class="panel">
+            <div class="section">
+                <button class="accordion">Zoning Information</button>
+                <div class="panel">
+                    <ul>
+                        <a href=""><li><i class="fa-solid fa-angles-right"></i>Brockville Zoning By-Law</li></a>
+                        <a href=""><li><i class="fa-solid fa-angles-right"></i>Gananoque Zoning By-Law</li></a>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <button class="accordion">Research Checklist</button>
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>RO 28</li></a>
+                </ul>
+            </div>
+        </div>
+        <button class="accordion-main">Lennox (LRO 29)</button>
+        <div class="panel">
+            <div class="section">
+                <button class="accordion">Zoning Information</button>
+                <div class="panel">
+                    <ul>
+                        <a href=""><li><i class="fa-solid fa-angles-right"></i>Loyalist Zoning By-Law</li></a>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <button class="accordion">Research Checklist</button>
+                <ul>
+                    <a href=""><li><i class="fa-solid fa-angles-right"></i>RO 29</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>  
+        
+    
+    </section>    
+<script>
+
+    // Toggle main accordions (e.g., "Durham")
+  document.querySelectorAll(".accordion-main").forEach(button => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+      const panel = button.nextElementSibling;
+      panel.classList.toggle("show");
+    });
+  });
+
+  // Toggle sub-accordions inside each main section
+  document.querySelectorAll(".accordion").forEach(button => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+      const panel = button.nextElementSibling;
+      panel.classList.toggle("show");
+    });
+  });
+
+  function submitSearch() {
+    const input = document.getElementById("searchBar").value.toLowerCase();
+    const allMainAccordions = document.querySelectorAll(".accordion-main");
+
+    allMainAccordions.forEach(mainBtn => {
+      const panel = mainBtn.nextElementSibling;
+      let matchFound = false;
+
+      // Search within sub-accordion links
+      const links = panel.querySelectorAll("a");
+      links.forEach(link => {
+        const text = link.textContent.toLowerCase();
+        if (text.includes(input)) {
+          link.parentElement.style.display = "";
+          matchFound = true;
+        } else {
+          link.parentElement.style.display = "none";
+        }
+      });
+
+      // Show/hide the whole main section based on whether any match was found
+      if (matchFound) {
+        mainBtn.style.display = "";
+        panel.style.display = "block";
+        mainBtn.classList.add("active");
+        panel.classList.add("show");
+      } else {
+        mainBtn.style.display = "none";
+        panel.style.display = "none";
+        mainBtn.classList.remove("active");
+        panel.classList.remove("show");
+      }
+    });
+  }
+
+</script>
+</body>
+
+</html>

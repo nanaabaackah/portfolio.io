@@ -128,6 +128,27 @@
 
 	};
 
+	var setupAccordions = function() {
+		const accordions = Array.from(document.getElementsByClassName("accordion"));
+		const accordions2 = Array.from(document.getElementsByClassName("accordion-main"));
+	
+		accordions.forEach((acc) => {
+			acc.addEventListener('click', function () {
+				this.classList.toggle('active');
+				const panel = this.nextElementSibling;
+				panel.classList.toggle('show');
+			});
+		});
+	
+		accordions2.forEach((acc) => {
+			acc.addEventListener('click', function () {
+				this.classList.toggle('active');
+				const panel = this.nextElementSibling;
+				panel.classList.toggle('show');
+			});
+		});
+	};
+	
 
 	// Loading page
 	var loaderPage = function() {
@@ -143,7 +164,19 @@
 		parallax();
 		// pieChart();
 		skillsWayPoint();
+		setupAccordions();
 	});
 
 
+	document.getElementById('figmaPlaceholder').addEventListener('click', function () {
+    this.innerHTML = '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1); position: relative;" width="480" height="360" src="https://embed.figma.com/design/ChqS2fTMUBsrs9jbTP3mew/Intranet?node-id=215-86&embed-host=share" allowfullscreen></iframe>';
+	});
+
+	document.getElementById('figmaPlaceholder-2').addEventListener('click', function () {
+    this.innerHTML = '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1); position: relative;" width="480" height="360" src="https://embed.figma.com/design/ChqS2fTMUBsrs9jbTP3mew/Intranet?node-id=215-88&embed-host=share" allowfullscreen></iframe>';
+	});
+
+	document.getElementById('figmaPlaceholder-3').addEventListener('click', function () {
+    this.innerHTML = '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1); position: relative;" width="480" height="360" src="https://embed.figma.com/design/ChqS2fTMUBsrs9jbTP3mew/Intranet?node-id=249-3&embed-host=share" allowfullscreen></iframe>';
+	});
 }());

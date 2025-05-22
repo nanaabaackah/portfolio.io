@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Corinthia:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
 
 :root{
     --dark: #263e4a;
@@ -16,8 +19,9 @@
     
     color: var(--back);
     /*font-family: 'Bree Serif', serif;
-    font-family: 'Space Mono', monospace;*/
-    font-family: 'Lekton', sans-serif;
+    font-family: 'Space Mono', monospace;
+    font-family: 'Lekton', sans-serif;*/
+    font-family: "Darker Grotesque", sans-serif;
     text-transform: uppercase;
 }
 
@@ -175,7 +179,7 @@ body{
         margin-top: 0em;
         display: flex;
         position: relative;
-        font-family: "Reenie Beanie", cursive;
+        font-family: "Indie Flower", cursive;
         font-weight: 400;
         font-style: normal;
         border-radius: 20px;
@@ -204,7 +208,6 @@ body{
     .sec_one{
         text-transform: none;
         font-size: 30px;
-        font-family: "Encode Sans SC", sans-serif;
     }
 
     strong{
@@ -355,29 +358,32 @@ body{
         height: fit-content;
         background: #fff0;
         color: var(--black);
-        font-weight: 600;
-        font-family: "Alumni Sans Pinstripe", sans-serif;
+        font-weight: normal;
+        font-family: "Darker Grotesque", sans-serif;
+        font-size: 20px;
+        font-weight: 900;
         margin-top: 7em;
     }
 
     .content h2{
         color: var(--black);
         margin-bottom: .5em;
-        font-family: "Corinthia", cursive;
+        font-family: "Indie Flower", cursive;
         text-transform: capitalize;
-        font-size: 3em;
+        font-size: 2em;
         transition: color 0.3s ease;
         margin-top: 1em;
     }
 
     .content h3{
-        font-size: 2em;
-        font-weight: 900;
+        font-size: 1em;
+        font-weight: 500;
         margin-bottom: .5em;
+        text-decoration: underline;
     }
 
     .content h4{
-        font-size: 1.7em;
+        font-size:1em;
         margin-bottom: .5em;
         font-weight: 900;
     }
@@ -389,10 +395,11 @@ body{
     .content li{
         margin-bottom: .2em;
         letter-spacing: 2px;
+        font-weight: normal;
     }
 
     .skills, .exp, .certi, .edu{
-        font-size: 1.5em;
+        font-size: 1em;
       }
 
     .fa-code-commit{
@@ -401,7 +408,6 @@ body{
     .write-up p,.write-up li {
         line-height: 1.8;
         animation: fadeInZoom 1s ease forwards;
-       
         transition: transform 0.3s ease;
       }
       .write-up p:hover,.write-up li:hover {
@@ -437,7 +443,7 @@ body{
     }
     #fh5co-features .services-padding {
     padding: 7em 0;
-    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-family: "Darker Grotesque", sans-serif;
     }
     #fh5co-features .feature-left {
     margin-bottom: 40px;
@@ -462,7 +468,7 @@ body{
     border-radius: 50%;
     }
     #fh5co-features .feature-left .icon i {
-    font-size: 50px;
+    font-size: 20px;
     display: table-cell;
     vertical-align: middle;
     height: 100px;
@@ -472,8 +478,8 @@ body{
     width: 100%;
     }
     #fh5co-features .feature-left h3 {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: normal;
     color: #fff;
     }
     #fh5co-features .feature-left p {
@@ -497,6 +503,7 @@ body{
     #fh5co-contact {
     padding: 8em;
     clear: both;
+    width: 100%;
     }
     @media screen and (max-width: 768px) {
     #fh5co-about,
@@ -527,7 +534,8 @@ body{
 
     .fh5co-bg-dark {
     background: #2F3C4F;
-    background: var(--other);
+    background: var(--light);
+    color: var(--back);
     }
     .fh5co-bg-dark .fh5co-heading h2 {
     color: #fff !important;
@@ -603,10 +611,10 @@ body{
       .timeline .timeline-heading > div h3 {
         display: inline-block;
         padding: 7px 30px;
-        font-size: 30px;
+        font-size: 25px;
         text-transform: uppercase;
         letter-spacing: 5px;
-        font-weight: bold;
+        font-weight: 900;
         background: var(--light);
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
@@ -614,6 +622,8 @@ body{
         border-radius: 4px;
         color: var(--back);
         margin-bottom: 3em;
+        text-decoration: none;
+        font-family: "Indie Flower", cursive;
       }
       @media screen and (max-width: 768px) {
         .timeline .timeline-heading > div h3 {
@@ -724,16 +734,17 @@ body{
       
       .timeline-title {
         margin-top: 0;
-        
+        font-family: "Indie Flower", cursive;
       }
       
       .company {
         display: block;
         margin-bottom: 10px;
-        font-size: 20px;
+        font-size: 14px;
         font-weight: bold;
         color: var(--light);
         font-style: italic;
+        font-family: "Indie Flower", cursive;
       }
       
       .timeline-body > p,
@@ -781,6 +792,12 @@ body{
         }
       }
 
+      .col-md-6 h3{
+        margin-top: 2em;
+        font-size: 24px;
+        text-decoration: none;
+      }
+
       .progress-wrap {
         width: 100%;
         float: left;
@@ -793,15 +810,20 @@ body{
         margin-bottom: 10px;
         float: left;
         width: 100%;
-        
+        letter-spacing: 2px;
+        font-weight: 900;
       }
       .progress-wrap h3 .name-left {
         float: left;
         color: var(--light);
+        font-size: 15px;
+        letter-spacing: 2px;
       }
       .progress-wrap h3 .value-right {
         float: right;
         color: var(--light);
+        font-size: 15px;
+        letter-spacing: 2px;
       }
       
       .progress-a {
@@ -859,29 +881,36 @@ body{
         
       }
       .progress-wrap-b h3 {
-        font-size: 20px;
+        font-size: 25px;
         display: block;
         margin-bottom: 10px;
         float: left;
-        width: 70%;
-        
+        width: 90%;
+        text-decoration: none;
+        margin-top: 1em;
+        letter-spacing: 2px;
       }
       .progress-wrap-b h3 .name-left {
         float: left;
         color: var(--back);
+        font-size: 12px;
+        letter-spacing: 2px;
       }
       .progress-wrap-b h3 .value-right {
         float: right;
         color: var(--back);
+        font-size: 15px;
+        letter-spacing: 2px;
       }
       
       .progress-b {
-        width: 70%;
+        width: 90%;
         float: left;
         height: 5px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-right: solid 2px white;
+        
       }
       
 
@@ -941,20 +970,21 @@ body{
         display: table-cell;
         vertical-align: middle;
         height: 270px;
-        background: #fff;
-        opacity: 0;
+        background: var(--black);
+        opacity: 0.8;
         -webkit-transition: 0.3s;
         -o-transition: 0.3s;
         transition: 0.3s;
+        color: var(--back);
       }
-      .work .desc h3 {
+      .work .desc .accordion-main {
         font-size: 20px;
         -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
         transition: transform 0.3s, opacity 0.3s;
         -webkit-transform: translate3d(0, -15px, 0);
         transform: translate3d(0, -15px, 0);
       }
-      .work .desc span {
+      .work .desc .accordion {
         display: block;
         color: #999999;
         font-size: 14px;
@@ -988,6 +1018,392 @@ body{
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
       }
+
+      .accordion {
+        cursor: pointer;
+        border: 2px solid var(--light);
+        text-align: left;
+        font-weight: bold; 
+        background-color: transparent;
+        font-size: 16px;
+        color: var(--light);
+        font-family: "Indie Flower", cursive;
+    }
+    
+    .accordion-main {
+        cursor: pointer;
+        width: 100%;
+        border: 2px solid var(--black);
+        text-align: left;
+        outline: none;
+        background-color: transparent;
+        font-weight: 900;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-family: "Indie Flower", cursive;
+    }
+    
+    .accordion:hover, .accordion-main:hover {
+        background-color: var(--black);
+        color: var(--back);
+        text-decoration: none;
+    }
+    
+    .accordion.active{
+        border-left: 3px solid var(--light);
+        text-decoration: underline;
+    }
+    
+    .accordion-main.active {
+        border-left: #262626 1px solid;
+        text-decoration: none;
+    }
+    
+    .accordion:after {
+        content: '\002B';
+        color: var(--light);
+        font-weight: bold;
+        }
+    
+        .active:after {
+        content: "\2212";
+        }
+    
+      .accordion-main:after {
+        content: '\002B';
+        color: #262626;
+        font-weight: bold;
+        margin-left: 11em;
+        
+        }
+    
+        .active:after {
+        content: "\2212";
+        color: var(--light);
+        }
+    
+    .panell {
+        display: none;
+        background-color: transparent;
+        width: 100%;
+        border-radius: 0px;
+        letter-spacing: 2px;
+        padding: 1em;
+        height: 100%;
+    }
+    
+    .panell.show {
+        display: block;
+        background-color: var(--light);
+        color: var(--back);
+        height: 100%;
+    }
+
+    .panell button{
+      background-color: var(--black);
+      border: 1px solid var(--black);
+      border-radius: 5px;
+      padding:0.5em 2em;
+    }
+
+    .panell button:hover{
+      color: var(--back);
+      background-color: transparent;
+    }
+
+    .panell a{
+      color: var(--back);
+    }
+
+    .panell a:hover{
+      color: var(--back);
+      
+    }
+    
+    #reconstruction{
+      font-family: "Montserrat";
+      letter-spacing: 2px;
+    }
+
+    /*#reconstruction .accordion-main {
+      width: 100%;
+      text-align: left;
+      background-color: var(--light);
+      font-weight: 900;
+      font-size: 20px;
+      color: var(--back);
+      padding: 0.5em;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding-left: 1em;
+  }
+
+    #reconstruction .accordion {
+      text-align: left;
+      font-weight: bold;
+      background-color: transparent;
+      font-size: 18px;
+      color: var(--black);
+      border: none;
+      letter-spacing: 2px;
+      padding: 0.5em;
+      width: 100%;
+  }
+  
+  #reconstruction .accordion-main.active {
+      padding: 0.5em;
+      padding-left: 1em;
+      background-color: var(--black);
+  }
+
+  #reconstruction .accordion.active{
+    text-decoration: none;
+    background-color: var(--light);
+    color: var(--back);
+  }
+
+  #reconstruction .accordion:hover, .accordion-main:hover {
+    background-color: var(--light);
+    color: var(--back);
+    text-decoration: none;
+}
+  #reconstruction .accordion-main:after {
+    display: inline;
+    float: inline-end;
+    color: var(--back);
+  }
+
+  #reconstruction .accordion:after {
+      color: var(--black);
+      display:inline;
+      float: inline-end;
+  }
+
+  #reconstruction .active:after {
+      content: "\2212";
+      color: var(--back);
+  }
+  
+  #reconstruction .panell {
+        border-top: none;
+        display: none;
+        background-color: var(--back);
+        color: var(--black);
+        width: fit-content;
+        padding: .5em;
+        height: 100%;
+  }
+  
+  #reconstruction .panell.show {
+      display: block;
+      width: 100%;
+      
+  }*/
+
+  .next{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    font-family: "Indie Flower", cursive;
+  }
+
+  .oppot,
+  .design, 
+  .embed{
+    margin-bottom: 4em;
+    margin-top: 4em;
+    text-transform: capitalize;
+  }
+  .oppot h3{
+    font-family: "Indie Flower", cursive;
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .oppot p{
+    font-weight: normal;
+  }
+
+  #recon {
+        border-top: none;
+        display: block;
+        background-color: var(--back);
+        color: var(--black);
+        width: fit-content;
+        padding: 1em;
+        height: 100%;
+        margin-top: 2em;
+  }
+  
+  #recon td{
+    padding: 2em;
+  }
+
+  #recon th{
+    font-weight: 900;
+    text-align: center;
+    border-bottom: 1px solid var(--light);
+    padding-bottom: 2em;
+  }
+  
+  .pic{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    display: flex;
+  }
+
+  .ids{
+    columns: 2;
+    width: 100%;
+    margin-bottom: 2em;
+    position: relative;
+    text-transform: none;
+    font-weight: normal;
+    font-size: 1em;
+    font-family: "Darker Grotesque", sans-serif;
+  }
+
+  .ids h5,
+  .ids-b h5{
+    font-size: 1em;
+  }
+
+  .ids-b{
+    width: 480px;
+    margin-bottom: 2em;
+    position: relative;
+    float: inline-start;
+    text-transform: none;
+    font-weight: normal;
+    font-size: 1em;
+    font-family: "Darker Grotesque", sans-serif;
+  }
+
+  .ids-b ol li{
+    list-style-type:symbols();
+  }
+
+  .ids i{
+    color: green;
+  }
+
+  .ids-b i{
+    color: var(--light);
+  }
+
+  .pic, 
+  #figmaPlaceholder,
+  #figmaPlaceholder-2,
+  #figmaPlaceholder-3{
+    float: inline-start;
+  }
+
+  .pic img,
+  #figmaPlaceholder img,
+  #figmaPlaceholder-2 img,
+  #figmaPlaceholder-3 img {
+    width: 480px;
+    height: 360px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  }
+
+  #figmaPlaceholder img,
+  #figmaPlaceholder-2 img,
+  #figmaPlaceholder-3 img{
+    opacity: 1;
+    display: block;
+    
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  #figmaPlaceholder:hover img,
+  #figmaPlaceholder-2:hover img,
+  #figmaPlaceholder-3:hover img {
+    opacity: 0.3;
+  }
+
+  #figmaPlaceholder:hover .middle,
+  #figmaPlaceholder-2:hover .middle,
+  #figmaPlaceholder-3:hover .middle{
+  opacity: 1;
+  }
+
+  .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  margin-left: 12em;
+  margin-top: -10em;
+}
+
+
+.middle p{
+  background-color: var(--light);
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: 12px;
+}
+   .ids h4, .ids h5,
+   .ids-b h4, .ids-b h5{
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .pre-next{
+    display: flex;
+    justify-content: center;
+    
+    gap: 45em;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pre-next a{
+    padding: .5em;
+    background-color: var(--light);
+    color: var(--back);
+    border-radius: 5px;
+    font-size: 1.5em;
+    border: 1px solid #4a3931;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    
+  }
+
+  .pre-next a:hover{
+    background-color: transparent;
+    border: 1px solid #4a3931;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+
+  .pre-next i:last-child{
+    justify-self: flex-end;
+  }
+
+  .next, .prev {
+    font-family: "Darker Grotesque", sans-serif;
+    width: 20%;
+  }
+
+  .pre-next .next i{
+    margin-left: 5em;
+  }
+
+  .pre-next .prev i{
+    margin-right: 3em;
+    
+  }
       
       #fh5co-started {
         background-size: cover;
@@ -1029,7 +1445,7 @@ body{
         -webkit-flex-wrap: wrap;
         -moz-flex-wrap: wrap;
         width: 100%;
-        font-family: "Alumni Sans Pinstripe", sans-serif;
+        font-family: "Darker Grotesque", sans-serif;
         color: var(--light);
         font-weight: 900;
         
@@ -1127,6 +1543,7 @@ body{
         -o-transition: 0.5s;
         transition: 0.5s;
       }
+
       
       .row-pb-md {
         padding-bottom: 4em !important;
@@ -1573,9 +1990,16 @@ body{
         height: fit-content;
         background: #fff0;
         color: var(--back);
-        font-family: "Alumni Sans Pinstripe", sans-serif;
+        font-family: "Darker Grotesque", sans-serif;
         position: relative;
-        width: fit-content;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        letter-spacing: 10px;
+    }
+
+    .content h1{
+      margin-top: 10em;
     }
 
     .content h2{
