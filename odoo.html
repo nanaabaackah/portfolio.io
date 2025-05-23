@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="scripts/master.js"></script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>N.A.A - Portfolio - Odoo Customization</title>
+        <link rel="stylesheet" href="styles/about.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+        <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
+        <link rel="manifest" href="imgs/site.webmanifest">
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="styles/animate.css">
+        <!-- Icomoon Icon Fonts-->
+        <link rel="stylesheet" href="styles/icomoon.css">
+        <!-- Bootstrap  -->
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        <!-- Modernizr JS -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <script src="https://kit.fontawesome.com/cd912461da.js" crossorigin="anonymous"></script>
+        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>        
+    </head>
+    <body class="home">
+        <div class="fh5co-loader"></div>
+        <header>
+            <nav>
+                <ul id="dropdown-desktop">
+                    <li class="logo"><a href="index.html"><img src="imgs/logo2.svg"></a></li>
+                    <!--<li><a href="index.html">Home</a></li>-->
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <!--<li><a href="engineering.html">Software Engineering</a></li>
+                    <li><a href="business.html">Business Projects</a></li>
+                    <button id="dark-mode"><i class="fas fa-moon"></i></button>-->
+                <!--</ul>
+                <ul id="dropdown-mobile">
+                    <li class="logo"><a href="index.html"><img src="imgs/logo2.svg"></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-id-card-clip"></i></a></li>
+                    <li><a href="engineering.html">Software Engineering</a></li>
+                    <li><a href="business.html">Business Projects</a></li>
+                    <button id="dark-mode"><i class="fas fa-moon"></i></button>
+                </ul>-->
+            </nav>
+            
+        </header>
+        <main> 
+            <section id="sec_back-desktop">
+                <div id="fh5co-work">
+                    <div class="container">
+                        <div class="content">
+                            <div class="row animate-box">
+                                <div class="text-center fh5co-heading">
+                                    <h1>Customizing Odoo ERP to Automate Operations</h1>
+                                </div>
+                                <div class="oppot">
+                                    <h3>Overview</h3>
+                                    <p> As an ERP Systems Developer at IN Engineering & Surveying, I led a company-wide initiative to customize the Odoo ERP platform. The goal was to 
+                                        streamline manual processes across five departments, including CRM, Project Management, Accounting, Invoicing, Expenses and Sales, eLearning, Employees, Recruitment, Marketing Automation 
+                                        and other modules useful for the company. The result was a 50% increase in workflow 
+                                        automation and a 90% adoption rate within the first three months.
+                                    </p>
+                                    <h3>My Role</h3>
+                                    <ul>
+                                        <li><i class="fa-solid fa-code-commit"></i> Led customization and development in Python and Odoo Studio</li>
+                                        <li><i class="fa-solid fa-code-commit"></i> Gathered requirements from five departments</li>
+                                        <li><i class="fa-solid fa-code-commit"></i> Created new data models and UI views using XML/QWeb</li>
+                                        <li><i class="fa-solid fa-code-commit"></i> Built training resources and hosted workshops</li>
+                                    </ul>
+                                    <h3>Process</h3>
+                                    <ul>
+                                        <li><i class="fa-solid fa-code-commit"></i> <strong>Discovery:</strong> Stakeholder interviews and workflow mapping</li>
+                                        <li><i class="fa-solid fa-code-commit"></i> <strong>Development:</strong> Python logic, controller endpoints, and UI views</li>
+                                        <li><i class="fa-solid fa-code-commit"></i> <strong>Testing:</strong> QA environments and team feedback loops</li>
+                                        <li><i class="fa-solid fa-code-commit"></i> <strong>Rollout:</strong> Training sessions and system-wide launch</li>
+                                    </ul>
+                                    <h3>Customizations</h3>
+                                    <ol>
+                                        <li><i class="fa-solid fa-terminal"></i> Updated Project Method</li>
+                                        <p>Initial code that was created and being used had an error where the Project sheet report generated was sent multiple times to the same user
+                                            causing multiple unncessary emails. I improved the method 
+                                        </p>
+                                        <script src="https://gist.github.com/nanaabaackah/d2b9ad0b9544d4c03a280d52dd2c9ba6.js"></script>
+                                        <li><i class="fa-solid fa-terminal"></i> Customized Project Name</li>
+                                        <p>We wanted to create a standard automated process that loops through all posted invoices (<code>account.move</code> records). It then checks if the 
+                                            invoice is currently "in payment" (meaning it's being processed and fully paid) If so, send an email using a mail template called "Invoice Status"
+                                        </p>
+                                        <script src="https://gist.github.com/nanaabaackah/ca5e5441e136cc8aab9546a79b1463d5.js"></script>
+                                        <li><i class="fa-solid fa-terminal"></i> Auto Send Invoice Status</li>
+                                        <p>We wanted to create a standard project name auto generated whenever a job is accepted. This code retrieves the next available sequence number for 
+                                            projects using Odoo’s <code>ir.sequence</code>. <code>project.project</code> is the defined sequence code — this ensures every project gets a unique 
+                                            ID. If the record has a municipality value (<code>rec.mun</code>), include it in parentheses as part of the project name. The name format looks like:
+                                            "P00001 (Dundas) Site Prep - Smith Construction". If there's no municipality, the name excludes it. The current record (<code>rec</code>) is updated with 
+                                            the new project name and number.
+                                        </p>
+                                        <script src="https://gist.github.com/nanaabaackah/77568866ccdb643a08dee9c7f5192734.js"></script>
+                                        <li><i class="fa-solid fa-terminal"></i> Default use of 'Quote' change</li>
+                                        <p>The goal was to change the language used when sending estimates to clients. The default used is 'Quote' and we wanted to change this to be displayed as 'Estimate'
+                                        </p>
+                                        <script src="https://gist.github.com/nanaabaackah/a94b4a6854cce76f59fc6803bcf6ef64.js"></script>
+                                        <li><i class="fa-solid fa-terminal"></i> Project Summary (Internal)(Partially Implemented)</li>
+                                        <p>This method dynamically analyzes a project’s cost vs. revenue and communicates the insights through an automated email. This calculates key financial metrics for a specific project, such as:
+                                            <br>Total timesheet cost <br>Total sales order (SO) amount <br>Budget ratio = cost vs. revenue.<br>
+                                            The code searches the <code>project.profitability.report</code> model for records linked to the current project (<code>self.id</code>). Loops through each profitability record. Only sums 
+                                            amount_untaxed from unique sale orders (no double counting). Adds up <code>timesheet_cost</code> from all records. Uses <code>env.ref()</code> to fetch the email template by XML ID which is safer and faster.
+                                            Passes the metrics via context so they can be injected into the email template (<code>${object.timesheet_cost}</code>, etc.). <code>self.id</code> is passed as <code>res_id</code>, so the template 
+                                            knows which project record it's sending from.
+                                        </p>
+                                        <script src="https://gist.github.com/nanaabaackah/660d787b6aa81e54ccc5cdf1dd235bda.js"></script>
+                                        <li><i class="fa-solid fa-terminal"></i> Auto-Send Startup Email (Not implemented yet)</li>
+                                        <p>
+                                            This method is designed to loop through all confirmed sales orders (<code>state = 'sale'</code>). If the order is 2 days old, an onboarding email is automatically sent
+                                            using a mail template called "Project Startup: What to Expect".
+                                        </p>
+                                        <script src="https://gist.github.com/nanaabaackah/087b386b373f78071d0d84439db501a5.js"></script>
+                                    </ol>
+                                    <h3>Outcome</h3>
+                                    <ul>
+                                        <li><i class="fa-solid fa-code-commit"></i> 50% increase in process automation</li>
+                                        <li><i class="fa-solid fa-code-commit"></i> 90% ERP adoption within the first 3 months</li>
+                                        <li><i class="fa-solid fa-code-commit"></i> Improved team coordination and visibility</li>
+                                    </ul>
+                                    <h3>Tools & Skills</h3> 
+                                    <p>Canva, Odoo.sh, Visual Studio, Python, QWeb/XML, Odoo Studio, User Training, Process Documentation</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div id="reconstruction">
+                                    <div class="rec">
+                                        <div class="embed">
+                                            <h2>Code Embeds</h2>
+                                            <table id="recon-b">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Description</th>
+                                                        <th>Python</th>
+                                                        <th>QWeb/XML</th>
+                                                        <th>JS/HTML</th>
+                                                        <th>SQL via ORM</th>
+                                                        <th>Odoo Studio</th>
+                                                        <th>Odoo.sh</th>
+                                                        <th>Visual Basic</th>
+                                                        <th>Other</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1. Updated Project Method</td>
+                                                        <td class="check"><i class="fa-solid fa-check"></i></td><td class="check"><i class="fa-solid fa-check"></i></td>
+                                                        <td class="cross"><i class="fa-solid fa-xmark"></i></td><td class="check"><i class="fa-solid fa-check"></i></td><td class="used"><i class="fa-solid fa-gear"></i></td>
+                                                        <td class="check"><i class="fa-solid fa-check"></i></td><td class="cross"><i class="fa-solid fa-xmark"></i></td><td class="cross">—</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2. Customized Project Name</td>
+                                                        <td class="check"><i class="fa-solid fa-check"></i></td><td class="check"><i class="fa-solid fa-check"></i></td>
+                                                        <td class="cross"><i class="fa-solid fa-xmark"></i></td><td class="check"><i class="fa-solid fa-check"></i></td><td class="used"><i class="fa-solid fa-gear"></i></td>
+                                                        <td class="check"><i class="fa-solid fa-check"></i></td><td class="cross"><i class="fa-solid fa-xmark"></i></td><td class="cross">—</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3. Auto Send Invoice Status</td>
+                                                        <td class="check"><i class="fa-solid fa-check"></i></td><td class="check"><i class="fa-solid fa-check"></i></td>
+                                                        <td class="cross"><i class="fa-solid fa-xmark"></i></td><td class="check"><i class="fa-solid fa-check"></i></td><td class="cross"><i class="fa-solid fa-xmark"></i></td>
+                                                        <td class="check"><i class="fa-solid fa-check"></i></td><td class="cross"><i class="fa-solid fa-xmark"></i></td><td class="cross">—</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4. Default use of 'Quote' change</td>
+                                                        <td class="check"><i class="fa-solid fa-check"></i></td><td class="check"><i class="fa-solid fa-check"></i></td>
+                                                        <td class="cross"><i class="fa-solid fa-xmark"></i></td><td class="check"><i class="fa-solid fa-check"></i></td><td class="used"><i class="fa-solid fa-gear"></i></td>
+                                                        <td class="check"><i class="fa-solid fa-check"></i></td><td class="cross"><i class="fa-solid fa-xmark"></i></td><td class="cross">—</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5. Project Summary (Internal)</td>
+                                                        <td class="check"><i class="fa-solid fa-check"></i></td><td class="check"><i class="fa-solid fa-check"></i></td>
+                                                        <td class="cross"><i class="fa-solid fa-xmark"></i></td><td class="check"><i class="fa-solid fa-check"></i></td><td class="used"><i class="fa-solid fa-gear"></i></td>
+                                                        <td class="check"><i class="fa-solid fa-check"></i></td><td class="cross"><i class="fa-solid fa-xmark"></i></td><td class="cross">—</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6. Auto-Send Startup Email</td>
+                                                        <td class="check"><i class="fa-solid fa-check"></i></td><td class="check"><i class="fa-solid fa-check"></i></td>
+                                                        <td class="cross"><i class="fa-solid fa-xmark"></i></td><td class="check"><i class="fa-solid fa-check"></i></td><td class="used"><i class="fa-solid fa-gear"></i></td>
+                                                        <td class="check"><i class="fa-solid fa-check"></i></td><td class="cross"><i class="fa-solid fa-xmark"></i></td><td class="cross">—</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pre-next">
+                            <a class="prev" href="lms.html"><i class="fa-solid fa-left-long"></i>Previous</a>
+                            <a class="next" href="reconstruction.html">Next<i class="fa-solid fa-right-long"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>        
+            </section>
+        </main>
+        <footer> 
+            <div class="f-dropdown">
+                <nav>
+                    <!--<button id="menu"><a href="#"><i class="fa-solid fa-bars"></i></a></button>-->
+                    <ul id="f-menu">
+                        
+                        <li class="f-logo"><a href="index.html"><img src="imgs/logo2.svg"></a></li>
+                        <!--<li><a href="index.html">Home</a></li>-->
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <!--<li><a href="engineering.html">Software Engineering</a></li>
+                        <li><a href="business.html">Business Projects</a></li>
+                        <button id="dark-mode"><i class="fas fa-moon"></i></button>-->
+                    </ul>
+                </nav>
+            </div>
+            <div class="f-social-icons">
+                
+                <a href="https://www.linkedin.com/in/nana-aba-ackah/" target="_onblank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/nanaabaackah/portfolio.io" target="_onblank"><i class="fa fa-github"></i></a>
+                <a href="malito:nanaabaackah@gmail.com" ><i class="fa-solid fa-envelope"></i></a>
+                <a href="documents/Nana Aba Ackah Resume.pdf" target="_onblank"><i class="fa-solid fa-file-pdf"></i></a>
+            </div>
+            <span>&copy; 2025 - Created by Nana Aba Ackah<br> Styling design ideas from <a href="http://freehtml5.co/">FreeHTML5.co</a></span>
+
+        </footer>
+        <div class="gototop js-top">
+            <a href="#" class="js-gotop"><i class="fa-regular fa-hand-point-up"></i></a>
+        </div>
+        <!--Code Styling-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- jQuery Easing -->
+        <script src="js/jquery.easing.1.3.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Waypoints -->
+        <script src="js/jquery.waypoints.min.js"></script>
+        <!-- Stellar Parallax -->
+        <script src="js/jquery.stellar.min.js"></script>
+        <!-- Easy PieChart -->
+        <script src="js/jquery.easypiechart.min.js"></script>
+        <!-- Google Map -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+        <script src="js/google_map.js"></script>
+        
+        <!-- Main -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

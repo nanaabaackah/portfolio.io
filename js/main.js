@@ -179,4 +179,13 @@
 	document.getElementById('figmaPlaceholder-3').addEventListener('click', function () {
     this.innerHTML = '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1); position: relative;" width="480" height="360" src="https://embed.figma.com/design/ChqS2fTMUBsrs9jbTP3mew/Intranet?node-id=249-3&embed-host=share" allowfullscreen></iframe>';
 	});
+ 
 }());
+
+function openLightbox() {
+	document.getElementById("lightbox").style.display = "block";
+	}
+
+function closeLightbox() {
+	document.getElementById("lightbox").style.display = "none";
+}
