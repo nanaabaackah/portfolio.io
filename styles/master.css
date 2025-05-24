@@ -41,43 +41,50 @@ body{
     /*                Nav Styles                  */
     /**********************************************/
     
-    header{
+    #dropdown-desktop {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-top: 0.5em;
         background-color: transparent;
         justify-content: center;
+        width: 100%;
+        padding: 1em;
+        z-index: 2;
     }
-
     
-    header nav ul {
+    #dropdown-desktop ul {
         display: flex;
         flex-direction: row;
         padding: 1em;
     }
     
-    header nav li{
-        margin-right: 4em;
+    #dropdown-desktop li{
+        margin-right: 8em;
         text-align: center;
-        margin-left: 6em;
-        border-bottom: solid white 0.5px;
         font-size: 1em;
+        font-weight: bolder;
+        margin-top: 2em;
+        color: white;
     }
     
-    header nav a,
-    header nav a:visited {
+    #dropdown-desktop li a,
+    #dropdown-desktop li a:visited {
         text-decoration: none;
         display: block;
         padding: 1em;
-        color: var(--back);
+        color: white;
+        position: relative;
     }
     
-    header nav a:hover{
-        background-color: var(--light);
-        color: #ffffff;
+    #dropdown-desktop li a:hover{
+        
+        color: var(--black);  
     }
-    
+
+    #dropdown-desktop li a:focus{
+        color: var(--border);
+        background-color: var(--black);
+    }
     
     
     /**********************************************/
@@ -110,14 +117,19 @@ body{
 
     .match__item--middle{
         position: relative;    
-        display: inline; 
+        display: flex; 
         justify-content: center;
         align-items: center;
         width: 100%;
+        flex-direction: column;
+      
+        
     }
 
     .match__item--middle img{
         position: relative;
+        width: 800px;
+        margin-bottom: -5em;
     }
 
     .match-desktop a:hover{
@@ -129,7 +141,6 @@ body{
         color: #ffffff;
         font-size: 1.5em;
         text-transform: none;
-        margin-left: 12em;
     }
 
     .match-desktop h1{
@@ -149,6 +160,7 @@ body{
         margin-top:1em;
     }
 
+
     .social{
         margin-top: 2em;
         position: relative;
@@ -162,13 +174,9 @@ body{
         font-size: 2em;
     }
 
-    .social i:hover{
-        color: var(--light);
-    }
-
     #port{
         font-family: "Poiret One", sans-serif;
-        font-size: 5em;
+        font-size: 2em;
         color: white;
         font-weight: 900;
         text-transform: uppercase;
@@ -177,18 +185,21 @@ body{
 
     #folio{
         font-family: "Mrs Saint Delafield", cursive;
-        font-size: 6em;
+        font-size: 3em;
         color: white;
         font-weight: 100;
+    }
+    .enter{
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
     }
 
     .enter a{
         color: white;
         font-size: 30px;
-        right: 0;
-        float: right;
-        bottom: 0;
-        position: absolute;
+        justify-content: center;
+        position: relative;
         text-decoration: none;
         text-transform: none;
     }

@@ -153,10 +153,6 @@ body{
     #dropdown-desktop img{
         width: 250px;
         position: absolute;
-        -moz-transform: rotate(-5deg);
-        -ms-transform: rotate(-5deg);
-        -o-transform: rotate(-5deg);
-        transform: rotate(-7deg);
     }
     
     
@@ -1306,14 +1302,19 @@ body{
     text-align: left;
     border-right: 1px solid var(--light);
     font-family: "Darker Grotesque", sans-serif;
+    background-color: var(--light);
+    color: var(--back);
   }
 
   #recon-b th{
     font-weight: 900;
-    font-size: .8em;
+    font-size: .7em;
     text-align: center;
     border-bottom: 1px solid var(--light);
-    padding-bottom: 2em;
+    padding: 1em;
+    background-color: var(--black);
+    color: var(--back);
+    justify-content: center;
   }
   
   .pic{
@@ -1830,7 +1831,7 @@ body{
     }
 
     .f-logo img{
-        width: 150px;
+        width: 250px;
         position: relative;
     }
 
