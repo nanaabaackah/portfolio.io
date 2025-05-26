@@ -242,7 +242,7 @@ body{
         align-items: center;
         background-color: transparent;
         justify-content: center;
-        width: auto;
+        width: 100%;
         padding: .5em;
     }
     
@@ -253,7 +253,7 @@ body{
     }
     
     #dropdown li{
-        margin-right: 1.5em;
+        margin-right: .5em;
         text-align: center;
         font-size: 1em;
         font-weight: bolder;
@@ -308,7 +308,7 @@ body{
     .social i{
         color: #ffffff;
         margin-right: 1em;
-        font-size: 1.5em;
+        font-size: 2.5em;
     }
 
     .match-mobile{
