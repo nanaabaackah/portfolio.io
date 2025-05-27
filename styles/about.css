@@ -953,11 +953,13 @@ body{
       @media screen and (max-width: 768px) {
         .work {
           height: 400px;
+          background-color: none;
         }
       }
       @media screen and (max-width: 480px) {
         .work {
           height: 270px;
+          background-color: none;
         }
       }
       .work .desc {
@@ -995,6 +997,20 @@ body{
         .work .desc {
           opacity: 1;
           background: rgba(255, 255, 255, 0.6);
+        }
+        .work .desc h3 {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+        .work .desc span {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .work .desc {
+          opacity: 1;
         }
         .work .desc h3 {
           -webkit-transform: translate3d(0, 0, 0);
@@ -2021,7 +2037,7 @@ body{
 
     .who{
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
     }
 
     .overlay {
@@ -2079,10 +2095,12 @@ body{
 
     .social-icons a{
         text-decoration: none;
+        
     }
 
     .sec_one{
         font-size: 1.2em;
+        font-family: "Montserrat";
     }
 
     .who {
@@ -2145,11 +2163,13 @@ body{
         width: 100%;
         display: flex;
         justify-content: center;
-        letter-spacing: 10px;
+        letter-spacing: 1px;
+        flex-direction: column;
+        margin-top: 0em;
     }
 
     .content h1{
-      margin-top: 10em;
+      margin-top: 1em;
     }
 
     .content h2{
@@ -2158,23 +2178,23 @@ body{
         animation: slideInGradient 1.2s ease forwards;
         font-family: "Corinthia", cursive;
         text-transform: capitalize;
-        font-size: 1.6em;
+        font-size: 1em;
         transition: color 0.3s ease;
         margin-top: 1em;
-        margin-left: 1em;
     }
 
     .content h3{
-        font-size: 1.5em;
+        font-size: .8em;
         font-weight: 900;
         margin-bottom: .5em;
-        margin-left: 1em;
+        text-decoration: none;
     }
 
     .content h4{
-        font-size: 1.5em;
+        font-size: .7em;
         margin-bottom: .5em;
         font-style: italic;
+        text-transform: none;
     }
 
     .content ul{
@@ -2183,17 +2203,203 @@ body{
 
     .content li{
         margin-bottom: .2em;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
+        text-transform: none;
     }
-    #fh5co-skills{
-      background-color: var(--light);
+    .fh5co-bg-color{
+      background-color: transparent;
+      width: 100%;
+      color: var(--back);
+    }
 
-    }
+    .col-md-6 h3{
+        margin-top: 1em;
+        font-size: 16px;
+        text-decoration: none;
+      }
+
+      .progress-wrap {
+        width: 100%;
+        float: left;
+        margin-bottom: .5em;
+        
+      }
+      .progress-wrap h3 {
+        font-size: 20px;
+        display: block;
+        margin-bottom: 10px;
+        float: left;
+        width: 100%;
+        letter-spacing: 2px;
+        font-weight: 700;
+        color: var(--back);
+      }
+      .progress-wrap h3 .name-left {
+        float: left;
+        color: var(--back);
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+      .progress-wrap h3 .value-right {
+        float: right;
+        color: var(--light);
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+      
+      .progress-a {
+        width: 100%;
+        float: left;
+        height: 7px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-right: solid 2px var(--light);
+      }
+      
+      .progress-bar {
+        background-color: #2e3949;
+        height: 7px;
+        display: block;
+        box-shadow: none;
+        
+      }
+      .progress-bar.progress-bar-1 {
+        background-color: #644e45b2 !important;
+      }
+      .progress-bar.progress-bar-2 {
+        background-color: #e2480077 !important;
+      }
+      .progress-bar.progress-bar-3 {
+        background-color: #644e45b2 !important;
+      }
+      .progress-bar.progress-bar-4 {
+        background-color: #e2480077 !important;
+      }
+      .progress-bar.progress-bar-5 {
+        background-color: #644e45b2 !important;
+      }
+
+      .progress-bar.progress-bar-6 {
+        background-color: #e2480077 !important;
+      }
+
+      .progress-bar.progress-bar-7 {
+        background-color: #644e45b2 !important;
+      }
+
+      .progress-bar.progress-bar-8 {
+        background-color: #e2480077 !important;
+      }
+
+      .progress-bar.progress-bar-9 {
+        background-color: #644e45b2 !important;
+      }
+
+      .progress-wrap-b {
+        width: 50%;
+        float: left;
+        margin-bottom: .5em;
+        
+      }
+      .progress-wrap-b h3 {
+        font-size: 25px;
+        display: block;
+        margin-bottom: 10px;
+        float: left;
+        width: 90%;
+        text-decoration: none;
+        margin-top: 1em;
+        letter-spacing: 2px;
+      }
+      .progress-wrap-b h3 .name-left {
+        float: left;
+        color: var(--back);
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+      .progress-wrap-b h3 .value-right {
+        float: right;
+        color: var(--back);
+        font-size: 15px;
+        letter-spacing: 2px;
+      }
+      
+      .progress-b {
+        width: 90%;
+        float: left;
+        height: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-right: solid 2px white;
+      }
+
+      .progress-bar.progress-bar-1-b {
+        background-color: #a471f579 !important;
+      }
+      .progress-bar.progress-bar-2-b {
+        background-color: #e2480077 !important;
+      }
+      .progress-bar.progress-bar-3-b {
+        background-color: #a471f579 !important;
+      }
+      .progress-bar.progress-bar-4-b {
+        background-color: #e2480077 !important;
+      }
+      .progress-bar.progress-bar-5-b {
+        background-color: #a471f579 !important;
+      }
+
+      .progress-bar.progress-bar-6-b {
+        background-color: #e2480077 !important;
+      }
+
+      .progress-bar.progress-bar-7-b {
+        background-color: #a471f579 !important;
+      }
+
+      .progress-bar.progress-bar-8-b {
+        background-color: #e2480077 !important;
+      }
+
+      .progress-bar.progress-bar-9-b {
+        background-color: #a471f579 !important;
+      }
 
     .skills, .exp, .certi, .edu{
-        font-size: 1.3em;
+        font-size: 1em;
       }
     
+      .work .desc {
+        display: table-cell;
+        vertical-align: middle;
+        height: 270px;
+        background: var(--black);
+        opacity: 0.8;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        color: var(--back);
+      }
+      .work .desc .accordion-main {
+        font-size: 20px;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+        transition: transform 0.3s, opacity 0.3s;
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+      }
+
+      .work .desc a{
+        color: var(--back);
+      }
+      .work .desc .accordion {
+        display: block;
+        color: #999999;
+        font-size: 14px;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+        transition: transform 0.3s, opacity 0.3s;
+        -webkit-transform: translate3d(0, 15px, 0);
+        transform: translate3d(0, 15px, 0);
+      }
       .contact {
         margin-top: 0em;
       }
