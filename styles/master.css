@@ -243,22 +243,23 @@ body{
         background-color: transparent;
         justify-content: center;
         width: 100%;
-        padding: .5em;
+        padding:0em;
     }
     
     #dropdown ul {
         display: flex;
         flex-direction: row;
-        padding: .5em;
+        padding: 0em;
     }
     
     #dropdown li{
-        margin-right: .5em;
+        margin-right: 0em;
         text-align: center;
         font-size: 1em;
         font-weight: bolder;
         margin-top: 2em;
         color: white;
+        letter-spacing: 1px;
     }
     
     #dropdown li a,

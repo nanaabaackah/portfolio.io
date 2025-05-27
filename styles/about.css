@@ -414,7 +414,7 @@ body{
         padding-left: 0;
       }
       .write-up li::before {
-        content: '🌟';
+        
         margin-right: 10px;
         color: var(--light);
       }
@@ -906,9 +906,7 @@ body{
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-right: solid 2px white;
-        
       }
-      
 
       .progress-bar.progress-bar-1-b {
         background-color: #a471f579 !important;
@@ -1907,8 +1905,6 @@ body{
         color: #000
     }
 
-    
-
     footer span{
         display: inline;
         position: absolute;
@@ -1927,10 +1923,6 @@ body{
     }
 
     
-   
-
-    
-    
 @media screen and (max-width: 550px) {
     /**********************************************/
     /*                Nav Styles                  */
@@ -1943,12 +1935,11 @@ body{
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-color: transparent;
         justify-content: center;
         width: 100%;
-        margin-top: 1em;
         padding-bottom: 1em;
-        border-bottom: var(--back) solid 1px;
+        background-color: var(--light);
+        z-index: 2;
     }
 
     button{
@@ -1973,8 +1964,6 @@ body{
     #dropdown-mobile li:first-child a{
         background-color: transparent;
         border-bottom: none;
-        margin-top: -1.5em;
-        font-size: 4em;
     }
     #dropdown-mobile li a,
     #dropdown-mobile li a:visited {
@@ -1985,22 +1974,11 @@ body{
         position: relative;
     }
     
-    #dropdown-mobile li a:hover{
-        background-color: var(--light);
-        color: #0a0000;
-    }
-
-    #dropdown-mobile li:first-child a:hover{
-        background-color: transparent;
-        border-bottom: none;
-       
-    }
-
     #dropdown-mobile img{
         width: 100px;
-        position: absolute;
+        position: relative;
         margin-left: -1em;
-        margin-top: 0.3em;
+        margin-top: 0em;
     }
 
     
@@ -2018,11 +1996,6 @@ body{
     }
     
     #sec_back-mobile {
-        
-        display: none;
-    }
-
-    #sec_back-desktop{
         background: rgba(0, 0, 0, 0.43);
         margin-top: 3em;
         filter: alpha(opacity=0.6);
@@ -2032,23 +2005,41 @@ body{
         font-weight: 400;
         font-style: normal;
         border-radius: 20px;
-        margin: 2em;
+        margin: 1em;
         width: 90%;
+    }
+
+    #sec_back-desktop{
+       
+        display: none;
+        
     }
 
     strong{
         font-weight: 900;
     }
+
+    .who{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .overlay {
+        display: none;
+    }
     
     .profile {
         position: absolute;
+
         width: 130px;
         height: 150px;
         background:url("https://github.com/nanaabaackah/portfolio.io/blob/main/imgs/IMG_5131.JPG?raw=true");
         background-size: cover;
         border: 12px;
         border-top-left-radius: 35px !important;
-        border-radius: 6px
+        border-radius: 6px;
+        margin: 0em;
+        margin-right: 1em;
     }
 
     .wrapper {
@@ -2056,36 +2047,34 @@ body{
         margin: auto;
         align-items: center;
         float: left;
-        margin-top: 6em;
+        margin-top: 1em;
+        height: auto;
     }
 
     .social-icons {
-        display: flex;
+        display: inline-flex;
         list-style: none;
-        bottom: 0px;
         position: relative;
         text-align: center;
         justify-content: center;
-        left: 0px;
-        margin: 4em 20em;
-        
+        flex-direction: row;
+        margin-top: 2em;
+        margin-left: 1.5em;
+
     }
     
     .social-icons li {
         width: 16px;
         height: 16px;
-        border: 1px solid #eee;
+        border: 1px solid #fff;
         padding: 20px;
-        margin-right: 5px;
-        display: flex;
+        margin-right: 15px;
         justify-content: center;
         align-items: center;
         color: #fff;
         border-radius: 5px;
         transition: all 1s;
         position: relative;
-        margin-left: 0em;
-
     }
 
     .social-icons a{
@@ -2095,9 +2084,10 @@ body{
     .sec_one{
         font-size: 1.2em;
     }
+
     .who {
         margin:1.5em;
-        width: 100%;
+        width: 90%;
         
     }
 
@@ -2108,15 +2098,17 @@ body{
     }
 
     .write-up {
-        margin-left: 0em;
-        font-size: 20px;
+        font-size: 25px;
+        padding: 0em;
+        width: 90%;
+        margin: 0em;
+        margin-top: 6em;
         position: relative;
-        float: right;
-        display: block;
-        word-wrap: break-word;
-        text-align: justify;
-        text-transform:none;
-        margin-top: 9em;
+        text-wrap: break-word;
+    }
+
+    .write-up p {
+      margin-bottom: 0em;
     }
 
     .write-up h1,.write-up h2 {
@@ -2127,10 +2119,23 @@ body{
         font-size: 30px;
         transition: color 0.3s ease;
       }
+
       .write-up h1:hover,.write-up h2:hover {
         color: var(--accent);
       }
+      
+      .write-up a {
+        color: #aba2fb;
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
 
+      .write-up p,.write-up li {
+        line-height: 1;
+        animation: fadeInZoom 1s ease forwards;
+        transition: transform 0.3s ease;
+      }
+      
       .content {
         height: fit-content;
         background: #fff0;
@@ -2188,34 +2193,9 @@ body{
     .skills, .exp, .certi, .edu{
         font-size: 1.3em;
       }
-    .write-up p,.write-up li {
-        line-height: 1;
-        animation: fadeInZoom 1s ease forwards;
-        transition: transform 0.3s ease;
-      }
-      .write-up p:hover,.write-up li:hover {
-        transform: translateX(5px);
-      }
-      .write-up ul {
-        list-style-type: none;
-        padding-left: 0;
-      }
-      .write-up li::before {
-        content: '🌟';
-        margin-right: 10px;
-        color: #f39c12;
-      }
+    
       .contact {
         margin-top: 0em;
-      }
-      .write-up a {
-        color: #aba2fb;
-        text-decoration: none;
-        transition: color 0.3s ease, transform 0.3s ease;
-      }
-      .write-up a:hover {
-        color: var(--light);
-        transform: scale(1.05);
       }
 
       .box{
