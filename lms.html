@@ -229,62 +229,44 @@
                                         <div class="embed">
                                             <h2>Code Embeds</h2>
                                             <h4>Apps</h4>
-                                                <div class="ids-b">
-                                                    <h5>Idea</h5>
-                                                    <p>Create a lightweight internal learning platform where employees can browse educational content by category. Each grid item links 
-                                                        to a Google Drive folder containing self-paced learning resources.
-                                                    </p>
-                                                    <h5>Discussion</h5>
-                                                    <ul>
-                                                        <li><i class="fa-solid fa-code-commit"></i> Built using semantic HTML (<code>h1</code>, <code>h2</code>, <code>div</code>) and structured with a CSS grid layout</li>
-                                                        <li><i class="fa-solid fa-code-commit"></i> Each card includes an <code>img</code> preview, Font awesome icons, and a content block with linked headings and category descriptions</li>
-                                                        <li><i class="fa-solid fa-code-commit"></i> The layout is mobile-responsive using flexbox/grid, and designed for easy scalability</li>
-                                                        <li><i class="fa-solid fa-code-commit"></i> Ideal for integration with a CMS or lightweight JS filtering system for search or tagging</li>
-                                                    </ul>
-                                                    <h5>Solution</h5>
-                                                    <p>This static front-end component serves as a foundation for a self-paced learning portal:
-                                                    </p>
-                                                    <ul>
-                                                        <li><i class="fa-regular fa-square-check"></i> Clean UX using semantic HTML and reusable card components</li>
-                                                        <li><i class="fa-regular fa-square-check"></i> Easily integrates with cloud storage (Google Drive)</li>
-                                                        <li><i class="fa-regular fa-square-check"></i> Ready for extension with JavaScript (e.g., dynamic loading, filtering, modals)</li>
-                                                        <li><i class="fa-regular fa-square-check"></i> Scalable design suitable for teams looking to centralize learning materials without a full Learning Management System</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="ids-b">
-                                                    <h5>Idea</h5>
-                                                    <p>Implement a dynamic search bar that allows users to enter a query and open a new tab with relevant results. The goal is to integrate lightweight, client-side search functionality without a backend.
-                                                    </p>
-                                                    <h5>Code Explanaition</h5>
-                                                    <ul>
-                                                        <h6><code>submitSearch():</code></h6>
-                                                        <li><i class="fa-solid fa-code-commit"></i> Grabs the user's query from the input box.</li>
-                                                        <li><i class="fa-solid fa-code-commit"></i> Concatenates it with a base URL (<code>siteSearchUrl</code>) and an optional ending string (end).</li>
-                                                        <li><i class="fa-solid fa-code-commit"></i> Opens that final URL in a new browser tab (<code>_blank</code>).</li>
-                                                        <p><i class="fa-solid fa-triangle-exclamation"></i> Note: <code>siteSearchUrl</code> and <code>end</code> are currently empty strings, so the URL won’t work unless you define them (e.g., 'https://www.google.com/search?q=').</p>
-                                                        <h6><code>searchKeypress(e):</code></h6>
-                                                        <li><i class="fa-solid fa-code-commit"></i> Triggers a search when the user presses Enter (<code>keyCode === 13</code>).</li>
-                                                        <li><i class="fa-solid fa-code-commit"></i> <code>document.querySelector('button').click()</code> targets the button to return the search</li>
-                                                    </ul>
-                                                </div>     
-                                            <div class="lightbox-btn" >
-                                                <button onclick="openLightbox()" aria-label="Open LMS Design Lightbox">
-                                                View Full LMS Design <i class="fa-solid fa-up-right-from-square"></i>
-                                                </button>
+                                            <div class="ids-b">
+                                                <h5>Idea</h5>
+                                                <p>Create a lightweight internal learning platform where employees can browse educational content by category. Each grid item links 
+                                                    to a Google Drive folder containing self-paced learning resources.
+                                                </p>
+                                                <h5>Discussion</h5>
+                                                <ul>
+                                                    <li><i class="fa-solid fa-code-commit"></i> Built using semantic HTML (<code>h1</code>, <code>h2</code>, <code>div</code>) and structured with a CSS grid layout</li>
+                                                    <li><i class="fa-solid fa-code-commit"></i> Each card includes an <code>img</code> preview, Font awesome icons, and a content block with linked headings and category descriptions</li>
+                                                    <li><i class="fa-solid fa-code-commit"></i> The layout is mobile-responsive using flexbox/grid, and designed for easy scalability</li>
+                                                    <li><i class="fa-solid fa-code-commit"></i> Ideal for integration with a CMS or lightweight JS filtering system for search or tagging</li>
+                                                </ul>
+                                                <h5>Solution</h5>
+                                                <p>This static front-end component serves as a foundation for a self-paced learning portal:
+                                                </p>
+                                                <ul>
+                                                    <li><i class="fa-regular fa-square-check"></i> Clean UX using semantic HTML and reusable card components</li>
+                                                    <li><i class="fa-regular fa-square-check"></i> Easily integrates with cloud storage (Google Drive)</li>
+                                                    <li><i class="fa-regular fa-square-check"></i> Ready for extension with JavaScript (e.g., dynamic loading, filtering, modals)</li>
+                                                    <li><i class="fa-regular fa-square-check"></i> Scalable design suitable for teams looking to centralize learning materials without a full Learning Management System</li>
+                                                </ul>
                                             </div>
-
-                                            <div id="lightbox" class="lightbox" aria-modal="true" role="dialog">
-                                                <span class="close" onclick="closeLightbox()" aria-label="Close"><i class="fa-solid fa-circle-xmark"></i></span>
-                                                <div class="lightbox-content">
-                                                    <iframe 
-                                                    id="figmaFrame"
-                                                    src="https://embed.figma.com/design/ChqS2fTMUBsrs9jbTP3mew/Intranet?node-id=1026-4&embed-host=share"
-                                                    loading="lazy"
-                                                    allowfullscreen
-                                                    title="Figma LMS Design Preview">
-                                                    </iframe>
-                                                </div>
-                                            </div>
+                                            <div class="ids-b">
+                                                <h5>Idea</h5>
+                                                <p>Implement a dynamic search bar that allows users to enter a query and open a new tab with relevant results. The goal is to integrate lightweight, client-side search functionality without a backend.
+                                                </p>
+                                                <h5>Code Explanaition</h5>
+                                                <ul>
+                                                    <h6><code>submitSearch():</code></h6>
+                                                    <li><i class="fa-solid fa-code-commit"></i> Grabs the user's query from the input box.</li>
+                                                    <li><i class="fa-solid fa-code-commit"></i> Concatenates it with a base URL (<code>siteSearchUrl</code>) and an optional ending string (end).</li>
+                                                    <li><i class="fa-solid fa-code-commit"></i> Opens that final URL in a new browser tab (<code>_blank</code>).</li>
+                                                    <p><i class="fa-solid fa-triangle-exclamation"></i> Note: <code>siteSearchUrl</code> and <code>end</code> are currently empty strings, so the URL won’t work unless you define them (e.g., 'https://www.google.com/search?q=').</p>
+                                                    <h6><code>searchKeypress(e):</code></h6>
+                                                    <li><i class="fa-solid fa-code-commit"></i> Triggers a search when the user presses Enter (<code>keyCode === 13</code>).</li>
+                                                    <li><i class="fa-solid fa-code-commit"></i> <code>document.querySelector('button').click()</code> targets the button to return the search</li>
+                                                </ul>
+                                            </div>     
                                         </div>
                                     </div>
                                 </div>
