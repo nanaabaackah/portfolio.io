@@ -2004,7 +2004,7 @@ body{
     }
     
     #sec_back-mobile {
-        background: rgba(0, 0, 0, 0.43);
+        background: #00000073;
         margin-top: 3em;
         filter: alpha(opacity=0.6);
         display: flex;
@@ -2091,7 +2091,7 @@ body{
     }
 
     .sec_one{
-        font-size: 1.2em;
+        font-size: 1em;
         font-family: "Montserrat";
     }
 
@@ -2119,10 +2119,11 @@ body{
 
     .write-up p {
       margin-bottom: 0em;
+      color: #ffffff;
     }
 
     .write-up h1,.write-up h2 {
-        color: #ffe5d9;
+        color: #ffffff;
         margin-bottom: 8px;
         animation: slideInGradient 1.2s ease forwards;
         font-family: "Corinthia", cursive;
@@ -2190,7 +2191,8 @@ body{
     }
 
     .content ul{
-        margin-bottom: 1em;
+        margin-bottom: 1.5em;
+        text-align: justify;
     }
 
     .content li{
@@ -2206,7 +2208,7 @@ body{
 
     .col-md-6 h3{
         margin-top: 1em;
-        font-size: 16px;
+        font-size: 14px;
         text-decoration: none;
       }
 
@@ -2217,7 +2219,7 @@ body{
         
       }
       .progress-wrap h3 {
-        font-size: 20px;
+        font-size: 15px;
         display: block;
         margin-bottom: 10px;
         float: left;
@@ -2294,7 +2296,7 @@ body{
         
       }
       .progress-wrap-b h3 {
-        font-size: 25px;
+        font-size: 20px;
         display: block;
         margin-bottom: 10px;
         float: left;
@@ -2312,7 +2314,7 @@ body{
       .progress-wrap-b h3 .value-right {
         float: right;
         color: var(--back);
-        font-size: 15px;
+        font-size: 12px;
         letter-spacing: 2px;
       }
       
@@ -2358,7 +2360,7 @@ body{
       }
 
     .skills, .exp, .certi, .edu{
-        font-size: 1em;
+        font-size: .8em;
       }
     
       .work .desc {
