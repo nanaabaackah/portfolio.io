@@ -100,14 +100,49 @@ body{
         z-index: 2;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
     }
-    
+    .drop {
+        float: left;
+        overflow: hidden;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-left:.5em;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .drop:hover .dropdown-content {
+        display: block;
+    }
+
+    #dropdown-desktop button{
+        all:unset;
+    }
+
     #dropdown-desktop ul {
         display: flex;
         flex-direction: row;
         padding: 1em;
     }
     
-    #dropdown-desktop li{
+    #dropdown-desktop li,
+    #dropdown-desktop button{
         margin-right: 5em;
         text-align: center;
         margin-left: 5em;
@@ -118,7 +153,9 @@ body{
     }
    
     #dropdown-desktop li a,
-    #dropdown-desktop li a:visited {
+    #dropdown-desktop li a:visited,
+    #dropdown-desktop button a,
+    #dropdown-desktop button a:visited{
         text-decoration: none;
         display: block;
         padding: 1em;
@@ -128,7 +165,8 @@ body{
         border-bottom: solid white 0.5px;
     }
     
-    #dropdown-desktop li a:hover{
+    #dropdown-desktop li a:hover,
+    #dropdown-desktop button a:hover{
         background-color: var(--light);
         color: white;
     }
@@ -139,7 +177,8 @@ body{
        
     }
 
-    #dropdown-desktop li a:focus{
+    #dropdown-desktop li a:focus,
+    #dropdown-desktop button a:focus{
         color: var(--border);
         background-color: var(--black);
     }
